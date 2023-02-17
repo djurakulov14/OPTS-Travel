@@ -4,14 +4,16 @@ import MyButton from './_child/MyButton'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import 'swiper/css/navigation';
+import { Autoplay, Navigation } from "swiper";
 
 const TopSection = ({title, dsc}) => {
-
-  return (
-    <section className='h-[550px] w-full'>
+    
+    return (
+        <section className='h-[550px] w-full text-white'>
         <Header/>
-        <div className="bg absolute top-0 left-0 -z-10 h-[550px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.2)] after:z-[-1]" style={{background: "url(/images/chimgan.png)",backgroundSize: "cover",backgroundPosition: "center"}}>
+        <div className="bg absolute top-0 left-0 -z-10 h-[550px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]" style={{background: "url(/images/chimgan.png)",backgroundSize: "cover",backgroundPosition: "center"}}>
+        </div>
         <Swiper
         speed={1500}
         spaceBetween={30}
@@ -20,12 +22,11 @@ const TopSection = ({title, dsc}) => {
           delay: 25000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper container m-auto py-5 mt-32 mb-6">
+        slidesPerView={1}
+        loop={true}
+        modules={[Autoplay, Navigation]}
+        className="mySwiper mt-24">
         <SwiperSlide>
             <div className="info">
                 <div className="dsc flex flex-col gap-6 mb-6">
@@ -63,7 +64,6 @@ const TopSection = ({title, dsc}) => {
             </div>
         </SwiperSlide>
       </Swiper>
-        </div>
     </section>
   )
 }

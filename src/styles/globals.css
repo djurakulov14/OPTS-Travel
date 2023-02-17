@@ -8,7 +8,12 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  background-color: #1EB8D4;
+  width: 8px;
+}
 
-body{
-  color: white;
+::-webkit-scrollbar-thumb {
+  background-color: #83B63B;
+  border-radius: 100px;
 }
