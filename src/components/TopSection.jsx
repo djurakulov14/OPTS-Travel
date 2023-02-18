@@ -10,9 +10,9 @@ import { Autoplay, Navigation } from "swiper";
 const TopSection = ({title, dsc}) => {
     
     return (
-        <section className='h-[550px] w-full text-white'>
+        <section className='h-[600px] w-full text-white mb-20'>
         <Header/>
-        <div className="bg absolute top-0 left-0 -z-10 h-[550px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]" style={{background: "url(/images/chimgan.png)",backgroundSize: "cover",backgroundPosition: "center"}}>
+        <div className="bg absolute top-0 left-0 -z-10 h-[600px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]" style={{background: "url(/images/chimgan.png)",backgroundSize: "cover",backgroundPosition: "center"}}>
         </div>
         <Swiper
         speed={1500}
@@ -26,35 +26,17 @@ const TopSection = ({title, dsc}) => {
         slidesPerView={1}
         loop={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper mt-24">
-        <SwiperSlide>
+        className="mySwiper mt-24 !h-fit">
+        <SwiperSlide className=' !h-fit'>
             <div className="info">
                 <div className="dsc flex flex-col gap-6 mb-6">
                     <h1 className=' text-4xl font-bold'>{title}</h1>
                     <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc}</p>
                 </div>
-                <MyButton>Подробнее</MyButton>
+                <MyButton>Подроб</MyButton>
             </div>
         </SwiperSlide>
-        <SwiperSlide>
-            <div className="info">
-                <div className="dsc flex flex-col gap-6 mb-6">
-                    <h1 className=' text-4xl font-bold'>{title}</h1>
-                    <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc}</p>
-                </div>
-                <MyButton>Подробнее</MyButton>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="info">
-                <div className="dsc flex flex-col gap-6 mb-6">
-                    <h1 className=' text-4xl font-bold'>{title}</h1>
-                    <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc}</p>
-                </div>
-                <MyButton>Подробнее</MyButton>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className=' !h-fit'>
             <div className="info">
                 <div className="dsc flex flex-col gap-6 mb-6">
                     <h1 className=' text-4xl font-bold'>{title}</h1>

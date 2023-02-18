@@ -6,7 +6,7 @@ import { Autoplay } from "swiper";
 
 const CardsSection = ({title, arr}) => {
     return (
-        <div className=' flex flex-col gap-5 items-center'>
+      <div className=' flex flex-col gap-5 items-center mb-24'>
         <h1 className=' text-3xl font-bold mt-10'>{title}</h1>
         <Swiper
         speed={1500}
@@ -15,20 +15,14 @@ const CardsSection = ({title, arr}) => {
             disableOnInteraction:false
         }}
         loop={true}
-        slidesPerView={4.5}
+        slidesPerView={4}
         spaceBetween={30}
         modules={[Autoplay]}
-        className="mySwiper !m-auto !p-4"
-      >
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
-        <SwiperSlide><TourCard/></SwiperSlide>
+        className="mySwiper !m-auto !p-4 !mb-4"
+        >
+        {
+          arr.map(item => <SwiperSlide><TourCard/></SwiperSlide>)
+        }
       </Swiper>
         <MyButton>Все туры</MyButton>
     </div>

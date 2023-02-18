@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
   background-color: #1EB8D4;
   width: 8px;
@@ -16,4 +20,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: #83B63B;
   border-radius: 100px;
+}
+
+
+.title {
+  @apply text-3xl font-bold
 }

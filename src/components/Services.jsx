@@ -3,7 +3,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div className='flex justify-between mt-5'>
+    <div className='flex justify-between mt-5 mb-14'>
         <div className="first flex gap-2 items-center w-2/6">
             <Image src="/icons/bus.png" width={70} height={70}/>
             <div className="info">
