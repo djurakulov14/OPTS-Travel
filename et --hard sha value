@@ -1,8 +1,0 @@
-[33mbf826de[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD~2
-[33m04628ad[m HEAD@{1}: commit: fix
-[33mda03b7a[m HEAD@{2}: commit: added footer
-[33mbf826de[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{3}: commit: fixed bug
-[33m4ce4a8e[m HEAD@{4}: commit: added tours to home
-[33m165f0a4[m HEAD@{5}: commit: added header section
-[33m1bb371a[m HEAD@{6}: Branch: renamed refs/heads/main to refs/heads/main
-[33m1bb371a[m HEAD@{8}: commit (initial): Initial commit from Create Next App

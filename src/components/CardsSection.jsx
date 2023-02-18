@@ -21,7 +21,7 @@ const CardsSection = ({title, arr}) => {
         className="mySwiper !m-auto !p-4 !mb-4"
         >
         {
-          arr.map(item => <SwiperSlide><TourCard/></SwiperSlide>)
+          arr.map((item, index) => <SwiperSlide key={index}><TourCard/></SwiperSlide>)
         }
       </Swiper>
         <MyButton>Все туры</MyButton>

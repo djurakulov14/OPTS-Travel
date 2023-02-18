@@ -15,7 +15,7 @@ const Header = () => {
             <Link href='/' className='hover:underline'>Контакты</Link>
         </nav>
         <div className="flex items-center hover:cursor-pointer">
-            <Image src="/icons/russia.svg" width={35} height={35}/>
+            <Image src="/icons/russia.svg" width={35} height={35} alt='image'/>
             <p>RU</p>
         </div>
     </header>

@@ -5,7 +5,7 @@ import MyButton from './MyButton'
 const TourCard = () => {
   return (
     <div className=' w-[300px] rounded-xl overflow-hidden shadow-lg'>
-        <Image src="/images/historic.png" width={999} height={100}/>
+        <Image src="/images/historic.png" width={999} height={100}  alt='image'/>
         <div className="info p-3">
             <h1 className=' text-xl font-bold'>Тур по Ташкенту</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor natus quam. . .</p>

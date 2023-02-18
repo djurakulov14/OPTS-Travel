@@ -32,9 +32,9 @@ const Footer = () => {
                 <div className="about w-[30%] flex flex-col gap-3">
                     <h1 className='text-2xl font-semibold'>Контакты</h1>
                     <div className="info flex flex-col gap-1">
-                        <a target="_blank" href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center gap-1 hover:underline'><MdLocationPin/>Узбекистан, Самарканд, ул.Али-Кушчи 7</a>
+                        <a href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center gap-1 hover:underline'><MdLocationPin/>Узбекистан, Самарканд, ул.Али-Кушчи 7</a>
                         <a href='tel:+998993333232' className=' flex items-center gap-1 hover:underline'><FaPhoneAlt/>+99899 333-32-32, +99899 444-32-32</a>
-                        <a target="_blank" href='mailto:info@opts.tours' className=' flex items-center gap-1 hover:underline'><HiMail/>info@opts.tours</a>
+                        <a href='mailto:info@opts.tours' className=' flex items-center gap-1 hover:underline'><HiMail/>info@opts.tours</a>
                     </div>
                 </div>
             </div>
