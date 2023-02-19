@@ -5,7 +5,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header className='flex justify-between items-center'>
-        <div className="logo"><Image src="/icons/logo.png" width={220} height={50}/></div>
+        <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50}/></div>
         <nav className=' flex gap-4'>
             <Link href='/' className='hover:underline'>Главная</Link>
             <Link href='/cityPage' className='hover:underline'>Города Узбекистана</Link>
