@@ -14,7 +14,6 @@ const CardsSection = ({title, arr}) => {
             delay: 2000,
             disableOnInteraction:false
         }}
-        loop={true}
         slidesPerView={4}
         spaceBetween={30}
         modules={[Autoplay]}

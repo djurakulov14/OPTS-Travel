@@ -8,7 +8,7 @@ const Header = () => {
         <div className="logo"><Image src="/icons/logo.png" width={220} height={50}/></div>
         <nav className=' flex gap-4'>
             <Link href='/' className='hover:underline'>Главная</Link>
-            <Link href='/' className='hover:underline'>Города Узбекистана</Link>
+            <Link href='/cityPage' className='hover:underline'>Города Узбекистана</Link>
             <Link href='/' className='hover:underline'>Отели</Link>
             <Link href='/' className='hover:underline'>Туры</Link>
             <Link href='/' className='hover:underline'>О нас</Link>

@@ -26,3 +26,7 @@ body {
 .title {
   @apply text-3xl font-bold
 }
+
+.cont {
+  @apply container m-auto pt-5
+}

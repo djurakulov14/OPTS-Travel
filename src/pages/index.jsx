@@ -15,8 +15,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='container m-auto pt-5'>
-        <TopSection title="Тур по Ташкенту" dsc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. . ."/>
+      <main className='cont'>
+        <TopSection isSwiper={true} title="Тур по Ташкенту" dsc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. . ."/>
         <Services/>
         <CardsSection title="Популярные туры" arr={[1,2,3,4,5]} />
         <Video/>
