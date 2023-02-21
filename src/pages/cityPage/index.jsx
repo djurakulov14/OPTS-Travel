@@ -1,25 +1,32 @@
-import Footer from '@/components/Footer'
+import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import CityCard from '@/components/_child/CityCard'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-const City = () => {
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:3000/api/city")
+  const data = await res.json()
+
+  return {
+    props: {
+      city: data
+    }, // will be passed to the page component as props
+  }
+}
+
+const City = ({city}) => {
   const router = useRouter()
   return (
-    <div className='cont'>
-        <TopSection isSwiper={false} title={"Города Узбекистана"} dsc={"Все исторические города солнечного Узбекистана"}/>
-        <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
-          <Link href="/cityPage/city=samarkand"><CityCard/></Link>
-          <Link href="/"><CityCard/></Link>
-          <Link href="/"><CityCard/></Link>
-          <Link href="/"><CityCard/></Link>
-          <Link href="/"><CityCard/></Link>
-          <Link href="/"><CityCard/></Link> 
-        </div>
-        <Footer/>
-    </div>
+    <Layout>
+      <TopSection isSwiper={false} title={"Города Узбекистана"} dsc={"Все исторические города солнечного Узбекистана"}/>
+      <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
+        {
+          city.map(item => <Link href={item.link}><CityCard {...item}/></Link>)
+        }
+      </div>
+    </Layout>
   )
 }
 

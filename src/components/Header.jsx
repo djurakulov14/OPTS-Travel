@@ -1,15 +1,44 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Menu from './_child/Menu'
+import axios from 'axios'
+
+
 
 const Header = () => {
+  const [open, setOpen] = useState({cities: false, hotels: false})
+  const [arr, setArr] = useState([])
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/city")
+      .then(res => setArr(res.data))
+    
+  }, [])
+  const style = open.cities ? {display: "block"} : {display: "none"}
+
   return (
     <header className='flex justify-between items-center'>
         <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50}/></div>
         <nav className=' flex gap-4'>
             <Link href='/' className='hover:underline'>Главная</Link>
-            <Link href='/cityPage' className='hover:underline'>Города Узбекистана</Link>
-            <Link href='/' className='hover:underline'>Отели</Link>
+            <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
+              <Link href='/cityPage' className='hover:underline' onMouseEnter={() => setOpen({...open, cities: true})}>Города Узбекистана</Link>
+              <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style}>
+                <ul>
+                    {
+                      arr.map(item =>
+                          <li className=" h-4 py-4 flex items-center justify-left">
+                              <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
+                          </li>
+                      )
+                    }
+                </ul>
+              </div>
+            </div>
+            <div className="link"  onMouseLeave={() => setOpen({...open, hotels: false})}>
+              <Link href='/hotel' className='hover:underline' onMouseEnter={() => setOpen({...open, hotels: true})}>Отели</Link>
+              <Menu open={open.hotels} arr={[1,2,3]}/>
+            </div>
             <Link href='/' className='hover:underline'>Туры</Link>
             <Link href='/' className='hover:underline'>О нас</Link>
             <Link href='/' className='hover:underline'>Контакты</Link>
@@ -23,3 +52,4 @@ const Header = () => {
 }
 
 export default Header
+
