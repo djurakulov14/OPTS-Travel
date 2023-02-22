@@ -23,7 +23,7 @@ const City = ({city}) => {
       <TopSection isSwiper={false} title={"Города Узбекистана"} dsc={"Все исторические города солнечного Узбекистана"}/>
       <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
         {
-          city.map(item => <Link href={item.link}><CityCard {...item}/></Link>)
+          city.map(item => <Link key={item.id} href={item.link}><CityCard {...item}/></Link>)
         }
       </div>
     </Layout>

@@ -14,7 +14,7 @@ const Menu = ({open, arr}) => {
     <ul>
         {
           arr.map(item =>
-            <li className=" h-4 py-4 flex items-center justify-left">
+            <li key={item.id} className=" h-4 py-4 flex items-center justify-left">
               <Link href="/" className='hover:underline text-black'>{item.title}</Link>
             </li>
           )

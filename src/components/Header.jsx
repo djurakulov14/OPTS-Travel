@@ -30,7 +30,7 @@ const Header = () => {
             <ul>
                 {
                   arr.map(item =>
-                    <li className=" h-4 py-4 flex items-center justify-left">
+                    <li key={item.id} className=" h-4 py-4 flex items-center justify-left">
                       <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
                     </li>
                   )
@@ -44,7 +44,7 @@ const Header = () => {
             <ul>
                 {
                   cities.map(item =>
-                    <li className=" h-4 py-4 flex items-center justify-left">
+                    <li key={item.id} className=" h-4 py-4 flex items-center justify-left">
                       <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
                     </li>
                   )
