@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/city")
+  const res = await fetch("https://opts-travel.netlify.app/api/city")
   const data = await res.json()
 
   return {

@@ -11,9 +11,9 @@ const Header = () => {
   const [arr, setArr] = useState([])
   const [cities, setCities] = useState([])
   useEffect(() => {
-    axios.get("http://localhost:3000/api/city")
+    axios.get("https://opts-travel.netlify.app/api/city")
       .then(res => setArr(res.data))
-    axios.get("http://localhost:3000/api/hotelsOfCity")
+    axios.get("https://opts-travel.netlify.app/api/hotelsOfCity")
       .then(res => setCities(res.data))
   }, [])
   const style = open.cities ? {display: "block"} : {display: "none"}

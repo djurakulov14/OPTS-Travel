@@ -5,7 +5,7 @@ import HotelCard from '@/components/_child/HotelCard'
 
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/hotels")
+  const res = await fetch("https://opts-travel.netlify.app/api/hotels")
   const data = await res.json()
 
   return {

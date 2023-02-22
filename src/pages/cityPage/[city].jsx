@@ -8,9 +8,9 @@ import Layout from '@/Layout/Layout'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:3000/api/city")
+  const res = await fetch("https://opts-travel.netlify.app/api/city")
   const data = await res.json()
-  const response = await fetch("http://localhost:3000/api/hotels")
+  const response = await fetch("https://opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
   
   const param = context.params.city.split('=').at(-1)
