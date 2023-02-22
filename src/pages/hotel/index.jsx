@@ -1,7 +1,7 @@
+import React from 'react'
 import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import HotelCard from '@/components/_child/HotelCard'
-import React from 'react'
 
 
 export async function getStaticProps() {

@@ -1,6 +1,6 @@
+import React from 'react'
 import { Rating } from '@mui/material'
 import { useRouter } from 'next/router'
-import React from 'react'
 
 const HotelCard = ({title, stars, link, img, location}) => {
   const router = useRouter()

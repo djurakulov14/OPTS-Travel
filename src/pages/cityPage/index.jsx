@@ -1,9 +1,9 @@
+import React from 'react'
 import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import CityCard from '@/components/_child/CityCard'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
 
 export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/city")
