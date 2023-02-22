@@ -182,5 +182,69 @@ export const hotels = [
         stars: 4,
         link:"https://www.booking.com/Share-WHVN1V",
         img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/398786123.jpg?k=ddb71e2541cc0f2b5d20febe3bdea7576dcc13621ed9d441d71029d621bd141f&o=&hp=1"
+    },
+    {
+        id: 24,
+        cityId:5,
+        title: "The Royal Mezbon Hotel & SPA",
+        stars: 4,
+        link:"https://www.booking.com/Share-ZJds2Q4",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/208881579.jpg?k=648a0b78a63fdcb13e87b534a576cdf50fba9fcfeac22bdc9ad91360b85768e7&o=&hp=1"
+    },
+    {
+        id: 25,
+        cityId:5,
+        title: "Hyatt Regency Tashkent",
+        stars: 4,
+        link:"https://www.booking.com/hotel/uz/hyatt-regency-tashkent.ru.html",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/87360561.jpg?k=e789167ac658d34bff56c5f134238e1e5d8782e7ee022f226e1af5392493253e&o=&hp=1"
+    },
+    {
+        id: 26,
+        cityId:5,
+        title: "Hilton Tashkent City",
+        stars: 5,
+        link:"https://www.booking.com/Share-idShef",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247363645.jpg?k=b12c058b74b9a434f672fea7c825cb90397a767c8d67b609c0d1a5575e985bf2&o=&hp=1"
+    },
+    {
+        id: 27,
+        cityId:5,
+        title: "Wyndham Tashkent",
+        stars: 4,
+        link:"https://www.booking.com/Share-6OrJGE",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/296186428.jpg?k=7425a8247b482571f163efda303f4ffbe60d747ebaeedff8cf4a3cf05c276eb3&o=&hp=1"
+    },
+    {
+        id: 28,
+        cityId:5,
+        title: "Manifa Hotel",
+        stars: 4,
+        link:"https://www.booking.com/hotel/uz/manifa-tashkent.ru.html",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/319460221.jpg?k=199c99e463dd47f35f953891ac675cb7ed568140a07552d36d6ea835b1d285a9&o=&hp=1"
+    },
+    {
+        id: 25,
+        cityId:5,
+        title: "",
+        stars: 4,
+        link:"",
+        img: ""
+    },
+    {
+        id: 25,
+        cityId:5,
+        title: "",
+        stars: 4,
+        link:"",
+        img: ""
+    },
+    {
+        id: 25,
+        cityId:5,
+        title: "",
+        stars: 4,
+        link:"",
+        img: ""
     }
 ]

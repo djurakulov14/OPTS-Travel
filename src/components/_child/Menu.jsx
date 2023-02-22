@@ -13,11 +13,11 @@ const Menu = ({open, arr}) => {
     <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style}>
     <ul>
         {
-            arr.map(item =>
-                <li className=" h-4 py-4 flex items-center justify-left">
-                    <Link href="/" className='hover:underline text-black'>{item.title}</Link>
-                </li>
-            )
+          arr.map(item =>
+            <li className=" h-4 py-4 flex items-center justify-left">
+              <Link href="/" className='hover:underline text-black'>{item.title}</Link>
+            </li>
+          )
         }
     </ul>
   </div>

@@ -12,41 +12,51 @@ const Header = () => {
   useEffect(() => {
     axios.get("http://localhost:3000/api/city")
       .then(res => setArr(res.data))
-    
   }, [])
   const style = open.cities ? {display: "block"} : {display: "none"}
+  const style2 = open.hotels ? {display: "block"} : {display: "none"}
 
   return (
     <header className='flex justify-between items-center'>
-        <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50}/></div>
-        <nav className=' flex gap-4'>
-            <Link href='/' className='hover:underline'>Главная</Link>
-            <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
-              <Link href='/cityPage' className='hover:underline' onMouseEnter={() => setOpen({...open, cities: true})}>Города Узбекистана</Link>
-              <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style}>
-                <ul>
-                    {
-                      arr.map(item =>
-                          <li className=" h-4 py-4 flex items-center justify-left">
-                              <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
-                          </li>
-                      )
-                    }
-                </ul>
-              </div>
-            </div>
-            <div className="link"  onMouseLeave={() => setOpen({...open, hotels: false})}>
-              <Link href='/hotel' className='hover:underline' onMouseEnter={() => setOpen({...open, hotels: true})}>Отели</Link>
-              <Menu open={open.hotels} arr={[1,2,3]}/>
-            </div>
-            <Link href='/' className='hover:underline'>Туры</Link>
-            <Link href='/' className='hover:underline'>О нас</Link>
-            <Link href='/' className='hover:underline'>Контакты</Link>
-        </nav>
-        <div className="flex items-center hover:cursor-pointer">
-            <Image src="/icons/russia.svg" width={35} height={35} alt='image'/>
-            <p>RU</p>
+      <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50}/></div>
+      <nav className=' flex gap-4'>
+        <Link href='/' className='hover:underline'>Главная</Link>
+        <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
+          <Link href='/cityPage' className='hover:underline' onMouseEnter={() => setOpen({...open, cities: true})}>Города Узбекистана</Link>
+          <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style}>
+            <ul>
+                {
+                  arr.map(item =>
+                    <li className=" h-4 py-4 flex items-center justify-left">
+                      <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
+                    </li>
+                  )
+                }
+            </ul>
+          </div>
         </div>
+        <div className="link"  onMouseLeave={() => setOpen({...open, hotels: false})}>
+          <Link href='/hotel' className='hover:underline' onMouseEnter={() => setOpen({...open, hotels: true})}>Отели</Link>
+          <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style2}>
+            <ul>
+                {
+                  arr.map(item =>
+                    <li className=" h-4 py-4 flex items-center justify-left">
+                      <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
+                    </li>
+                  )
+                }
+            </ul>
+          </div>
+        </div>
+        <Link href='/' className='hover:underline'>Туры</Link>
+        <Link href='/' className='hover:underline'>О нас</Link>
+        <Link href='/' className='hover:underline'>Контакты</Link>
+      </nav>
+      <div className="flex items-center hover:cursor-pointer">
+        <Image src="/icons/russia.svg" width={35} height={35} alt='image'/>
+        <p>RU</p>
+      </div>
     </header>
   )
 }
