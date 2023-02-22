@@ -9,9 +9,12 @@ import axios from 'axios'
 const Header = () => {
   const [open, setOpen] = useState({cities: false, hotels: false})
   const [arr, setArr] = useState([])
+  const [cities, setCities] = useState([])
   useEffect(() => {
     axios.get("http://localhost:3000/api/city")
       .then(res => setArr(res.data))
+    axios.get("http://localhost:3000/api/hotelsOfCity")
+      .then(res => setCities(res.data))
   }, [])
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
@@ -40,7 +43,7 @@ const Header = () => {
           <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style2}>
             <ul>
                 {
-                  arr.map(item =>
+                  cities.map(item =>
                     <li className=" h-4 py-4 flex items-center justify-left">
                       <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
                     </li>

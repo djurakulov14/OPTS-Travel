@@ -10,25 +10,30 @@ import Layout from '@/Layout/Layout'
 export async function getServerSideProps(context) {
   const res = await fetch("http://localhost:3000/api/city")
   const data = await res.json()
+  const response = await fetch("http://localhost:3000/api/hotels")
+  const hotelss = await response.json()
   
   const param = context.params.city.split('=').at(-1)
   
   const obj = data.filter(item => item.id === +param)[0]
+  const hotels = hotelss.filter(item => item.cityId === +param)
+
 
   return {
     props: {
-      city: obj
+      city: obj,
+      hotels:hotels
     }, // will be passed to the page component as props
   }
 }
 
-const Cityid = ({city}) => {
+const Cityid = ({city, hotels}) => {
   return (
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle}/>
         <div className=" mb-32">
           <h1 className='title'>История города:</h1>
-          <p className='mb-8'>{city.history}</p>
+          <p className='mb-8 text-xl'>{city.history}</p>
           <h1 className='title text-center mb-8'>Достопримечательности</h1>
           <Swiper
           speed={1500}
@@ -45,8 +50,10 @@ const Cityid = ({city}) => {
             city.places.map((item, index) => <SwiperSlide key={index}><PlaceCard title={item}/></SwiperSlide>)
           }
       </Swiper>
-      <h1 className='title text-center mb-8'>Отели в этом городе</h1>
-      <Swiper
+        {city.title.includes("Шахрисабс") ? "" :
+        <>
+        <h1 className='title text-center mb-8'>Отели в этом городе</h1>
+          <Swiper
           speed={1500}
           slidesPerView={3}
           spaceBetween={30}
@@ -57,14 +64,14 @@ const Cityid = ({city}) => {
           modules={[Autoplay]}
           className="mySwiper"
           >
-        <SwiperSlide><HotelCard/></SwiperSlide>
-        <SwiperSlide><HotelCard/></SwiperSlide>
-        <SwiperSlide><HotelCard/></SwiperSlide>
-        <SwiperSlide><HotelCard/></SwiperSlide>
-        <SwiperSlide><HotelCard/></SwiperSlide>
-        <SwiperSlide><HotelCard/></SwiperSlide>
+        {
+          hotels.map(item => <SwiperSlide key={item.id}><HotelCard {...item}/></SwiperSlide>)
+        }
       </Swiper>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196505.4837712567!2d66.89922249921875!3d39.68575032082124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d191960077df7%3A0x487636d9d13f2f57!2z0KHQsNC80LDRgNC60LDQvdC0!5e0!3m2!1sru!2s!4v1676821439839!5m2!1sru!2s" width="100%" height="600" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </>  
+        }
+      <h1 className='title text-center mb-8'>Карта</h1>
+      <iframe src={city.map} width="100%" height="600" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </Layout>
   )
