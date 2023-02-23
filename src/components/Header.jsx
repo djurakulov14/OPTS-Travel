@@ -11,9 +11,9 @@ const Header = () => {
   const [arr, setArr] = useState([])
   const [cities, setCities] = useState([])
   useEffect(() => {
-    axios.get("https://opts-travel.netlify.app/api/city")
+    axios.get("http://localhost:3000/api/city")
       .then(res => setArr(res.data))
-    axios.get("https://opts-travel.netlify.app/api/hotelsOfCity")
+    axios.get("http://localhost:3000/api/hotelsOfCity")
       .then(res => setCities(res.data))
   }, [])
   const style = open.cities ? {display: "block"} : {display: "none"}
@@ -52,8 +52,8 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        <Link href='/' className='hover:underline'>Туры</Link>
-        <Link href='/' className='hover:underline'>О нас</Link>
+        <Link href='/tour' className='hover:underline'>Туры</Link>
+        <Link href='/aboutUs' className='hover:underline'>О нас</Link>
         <Link href='/' className='hover:underline'>Контакты</Link>
       </nav>
       <div className="flex items-center hover:cursor-pointer">
