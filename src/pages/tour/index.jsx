@@ -59,7 +59,7 @@ const Tours = () => {
         <TopSection isSwiper={false} title={"Туры"} dsc={"Все туры нашей компании"}/>
         <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
             {
-              arr.map(item => <TourCard/>)
+              arr.map(item => <TourCard key={item.id}/>)
             }
         </div>
     </Layout>
