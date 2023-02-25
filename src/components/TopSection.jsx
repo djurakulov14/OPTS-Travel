@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
 
-const TopSection = ({ isSwiper,title, dsc}) => {
+const TopSection = ({ isSwiper,title, dsc, dsc2}) => {
     
     return (
         <section className='h-[600px] w-full text-white mb-20'>
@@ -50,9 +50,14 @@ const TopSection = ({ isSwiper,title, dsc}) => {
         </Swiper>
         :
         <div className="info mt-32">
-            <div className="dsc flex flex-col gap-6 mb-6">
-                <h1 className=' text-4xl font-bold'>{title}</h1>
+            <div className="dsc flex flex-col">
+                <h1 className=' text-4xl font-bold mb-7'>{title}</h1>
                 <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc}</p>
+                {dsc2 ? 
+                    <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc2}</p>
+                    :
+                    ""                
+                }
             </div>
         </div>
         }

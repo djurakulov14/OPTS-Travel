@@ -12,7 +12,7 @@ const Footer = () => {
   return (
         <>
         <footer className='overflow-hidden'>
-            <div className="top flex justify-between mb-10 before:absolute before:left-0 before:z-[-1] before:bg-[#c4c4c4] before:w-full">
+            <div className="top flex justify-between mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full">
                 <div className="about w-[30%] flex flex-col gap-3">
                     <h1 className='text-2xl font-semibold'>О компании</h1>
                     <p>Туристическая компания «Omega Premier Travel Servis» является туроператором (out coming/incoming) в сфере международного туризма 8 лет. В команде собраны настоящие профессионалы — мультиязычные специалисты туристического бизнеса, предоставляющие исключительно высокий уровень сервиса.</p>

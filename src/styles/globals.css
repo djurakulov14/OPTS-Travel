@@ -8,9 +8,6 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-}
 
 ::-webkit-scrollbar {
   background-color: #1EB8D4;
@@ -29,4 +26,11 @@ body {
 
 .cont {
   @apply container m-auto pt-5
+}
+
+.stic {
+  position: sticky;
+  top: 30px;
+  left: 20px;
+  z-index: 122;
 }

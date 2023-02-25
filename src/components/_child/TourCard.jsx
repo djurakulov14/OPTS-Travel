@@ -1,8 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import MyButton from './MyButton'
+import { useRouter } from 'next/router'
 
 const TourCard = () => {
+
+  const router = useRouter()
+
+  function Push() {
+    router.push('/tour/id=1')
+  }
   return (
     <div className=' w-[300px] rounded-xl overflow-hidden shadow-lg'>
         <Image src="/images/historic.png" width={999} height={100}  alt='image'/>
@@ -10,7 +17,7 @@ const TourCard = () => {
             <h1 className=' text-xl font-bold'>Тур по Ташкенту</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor natus quam. . .</p>
             <h2 className='text-xl font-bold mb-3'>1200$</h2>
-            <MyButton>Подробнее</MyButton>
+            <MyButton onClick={Push}>Подробнее</MyButton>
         </div>
     </div>
   )

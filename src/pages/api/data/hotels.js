@@ -27,21 +27,30 @@ export const hotels = [
         location: "Отель в Бухаре"
     },
     {
-        id: 19,
+        id: 15,
         cityId:2,
-        title: "Khujra Studios",
+        title: "Sultan Hotel Bukhara",
         stars: 4,
-        link:"https://www.booking.com/Share-S0z2FC",
-        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/319797249.jpg?k=caac1ea4454cfe4fbab0249e2c1d52bbce8af761266404a1ffcf4ae936bd8524&o=&hp=1",
+        link:"https://www.booking.com/Share-p1pKq9",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/302787568.jpg?k=477dd543ce3ad36fe0ff66cc27212e8b2ae20c41cfd356accb77e135fc5f6e89&o=&hp=1",
         location: "Отель в Бухаре"
     },
     {
-        id: 4,
+        id: 9,
         cityId:2,
-        title: "Hotel Volida Boutique",
+        title: "Hotel GOLDEN MINARET",
         stars: 4,
-        link:"https://www.booking.com/Share-oFXFyS",
-        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/139237147.jpg?k=22ba37152fa108c3aff04a966fe8dd4f6764ec5f3aba8ff72c12db0f6d7228a2&o=&hp=1",
+        link:"https://www.booking.com/Share-THKQwm",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/383533075.jpg?k=1465427a2532f8f8f9ddc475a332b0e6b42dd4d601abb7b4923d248f4bc64d94&o=&hp=1",
+        location: "Отель в Бухаре"
+    },
+    {
+        id: 8,
+        cityId:2,
+        title: "Mukhlisabegim Hotel",
+        stars: 4,
+        link:"https://www.booking.com/Share-Ekow5s7",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/274071994.jpg?k=9784f919c82e7a1ef7c37ac80a7cc3a7e642ea2adc326cd299ccce278dcfb2f3&o=&hp=1",
         location: "Отель в Бухаре"
     },
     {
@@ -72,24 +81,6 @@ export const hotels = [
         location: "Отель в Бухаре"
     },
     {
-        id: 8,
-        cityId:2,
-        title: "Mukhlisabegim Hotel",
-        stars: 4,
-        link:"https://www.booking.com/Share-Ekow5s7",
-        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/274071994.jpg?k=9784f919c82e7a1ef7c37ac80a7cc3a7e642ea2adc326cd299ccce278dcfb2f3&o=&hp=1",
-        location: "Отель в Бухаре"
-    },
-    {
-        id: 9,
-        cityId:2,
-        title: "Hotel GOLDEN MINARET",
-        stars: 4,
-        link:"https://www.booking.com/Share-THKQwm",
-        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/383533075.jpg?k=1465427a2532f8f8f9ddc475a332b0e6b42dd4d601abb7b4923d248f4bc64d94&o=&hp=1",
-        location: "Отель в Бухаре"
-    },
-    {
         id: 10,
         cityId:2,
         title: "Labi Rud Hotel Premium",
@@ -105,6 +96,24 @@ export const hotels = [
         stars: 4,
         link:"https://www.booking.com/Share-8xxr3o",
         img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/300052191.jpg?k=8a7fafaea49304758f11357312ad173c252b6c107b959f9ba6447ec080120999&o=&hp=1",
+        location: "Отель в Бухаре"
+    },
+    {
+        id: 19,
+        cityId:2,
+        title: "Khujra Studios",
+        stars: 4,
+        link:"https://www.booking.com/Share-S0z2FC",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/319797249.jpg?k=caac1ea4454cfe4fbab0249e2c1d52bbce8af761266404a1ffcf4ae936bd8524&o=&hp=1",
+        location: "Отель в Бухаре"
+    },
+    {
+        id: 4,
+        cityId:2,
+        title: "Hotel Volida Boutique",
+        stars: 4,
+        link:"https://www.booking.com/Share-oFXFyS",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/139237147.jpg?k=22ba37152fa108c3aff04a966fe8dd4f6764ec5f3aba8ff72c12db0f6d7228a2&o=&hp=1",
         location: "Отель в Бухаре"
     },
     {
@@ -132,15 +141,6 @@ export const hotels = [
         stars: 4,
         link:"https://www.booking.com/Share-GM7pTX",
         img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/269095427.jpg?k=4c1a09beccf27beb5b76f9909174e015b1ef9b13f6e0b93daa054991f048e379&o=&hp=1",
-        location: "Отель в Бухаре"
-    },
-    {
-        id: 15,
-        cityId:2,
-        title: "Sultan Hotel Bukhara",
-        stars: 4,
-        link:"https://www.booking.com/Share-p1pKq9",
-        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/302787568.jpg?k=477dd543ce3ad36fe0ff66cc27212e8b2ae20c41cfd356accb77e135fc5f6e89&o=&hp=1",
         location: "Отель в Бухаре"
     },
     {
