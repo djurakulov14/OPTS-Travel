@@ -19,6 +19,39 @@ const TourPage = () => {
       setOpen(false);
     };
 
+    const submitForm = (e) => {      
+      e.preventDefault()
+
+      let data = {}
+  
+      let fm = new FormData(e.target)
+  
+      fm.forEach((value, key) => {
+        data[key] = value
+      })
+
+      fetch("http://localhost:3000/api/buyTour", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+        }).then((res) => {
+          console.log(res);
+            if (!res.ok){ 
+                alert("error")
+            } else {
+              alert("Сообщение отправлено")
+                e.target.name.value = ""
+                e.target.email.value = ""
+                e.target.phone.value = ""
+            }
+            return res.json();
+          });
+  
+      console.log(data);
+      
+  }
+
+
   return (
     <Layout>
         <TopSection isSwiper={false} title={"Тур по Узбекистану"} dsc={"Ташкент-Самарканд-Бухара-Шахрисабс-Ургенч"} dsc2={"8-дней / 7-ночей"}/>
@@ -95,38 +128,44 @@ const TourPage = () => {
           <DialogContentText>
             После отправки заявки на бронирование тура, с вами свяжется наш оператор.
           </DialogContentText>
+          <form onSubmit={submitForm}>
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="email"
             label="Email"
             type="email"
             fullWidth
-            variant="standard"
+            variant="outlined"
+            required
+            name='email'
           />
             <TextField
-            autoFocus
             margin="dense"
             id="name"
             label="Ф.И.О"
-            type="email"
+            type="text"
             fullWidth
-            variant="standard"
+            variant="outlined"
+            required
+            name='name'
           />
             <TextField
-            autoFocus
             margin="dense"
-            id="name"
+            id="phone"
             label="Номер телефона"
-            type="email"
+            type="tel"
             fullWidth
-            variant="standard"
+            variant="outlined"
+            required
+            name='phone'
           />
+            <DialogActions>
+              <Button onClick={handleClose}>Отмена</Button>
+              <Button type='submit' onClick={handleClose}>Забронировать</Button>
+            </DialogActions>
+          </form>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Отмена</Button>
-          <Button onClick={handleClose}>Забронировать</Button>
-        </DialogActions>
       </Dialog>
     </Layout>
   )
