@@ -21,23 +21,23 @@ const Contacts = () => {
           data[key] = value
         })
     
-        // fetch("http://localhost:3000/api/contact", {
-        //     method: "POST",
-        //     body: JSON.stringify(data),
-        //     headers: { "Content-Type": "application/json", Accept: "application/json" },
-        // }).then((res) => {
-        //     if (!res.ok){ 
-        //         alert("error")
-        //     } else {
-        //         e.target.name.value = ""
-        //         e.target.email.value = ""
-        //         e.target.phone.value = ""
-        //         e.target.massage.value = ""
-        //         alert("nice baby")
+        fetch("https://main--opts-travel.netlify.app/api/contact", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+        }).then((res) => {
+            if (!res.ok){ 
+                alert("error")
+            } else {
+                e.target.name.value = ""
+                e.target.email.value = ""
+                e.target.phone.value = ""
+                e.target.massage.value = ""
+                alert("nice baby")
 
-        //     }
-        //     return res.json();
-        //   });
+            }
+            return res.json();
+          });
 
         console.log(data);
 
