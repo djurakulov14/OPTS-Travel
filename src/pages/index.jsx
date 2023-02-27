@@ -1,13 +1,62 @@
 import Layout from '@/Layout/Layout'
 import CardsSection from '@/components/CardsSection'
-import Footer from '@/components/Footer'
 import Services from '@/components/Services'
 import TopSection from '@/components/TopSection'
 import Video from '@/components/Video'
 import Head from 'next/head'
 
+export async function getStaticProps() {
+  // const res = await fetch("http://localhost:3000/api/tours", {
+  //   method: "GET"
+  // })
+  // const data = await res.json()
 
-export default function Home() {
+  // console.log(res, data);
+
+
+  const data = [
+    {
+      id:1,
+      title: "По древним городам Узбекистана",
+      duration: 7,
+      cities: "Ташкент/Самарканд/Бухара/Хива" ,
+      days: [
+          "Встреча в аэропорту Самарканда и трансфер в отель. Свободное время. Ужин. Ночь в отеле.",
+          "Завтрак в гостинице. Знакомство с достопримечательностями Самарканда. Площадь Регистан. Мавзолей Гур-Эмир. Мечеть Биби-Ханум. Мавзолеев Шахи-Зинда. Обсерватория Улегбека. Свободное время. Ночь в отеле.",
+          "Завтрак в гостинице. Размещение в отеле. Знакомство с достопримечательностями Бухары. Площадь Ляби-Хауз. Медресе Кукельдаш. Медресе Надир ДиванБеги. Торговые Купала. Демонстрационная комната Бухарской золотошвейной фабрики. Ночь в отеле. ",
+          "Завтрак в отеле. Мавзолей Саманидов. Мавзолей Чашма-Аюб. Комплекс Боло-Хауз. Крепость Арк. Мавзолей Пой-Калян. Медресе Абдуллазиз Хана. Медресе Улугбека. Дворец Ситораи Мохи Хоса. Комплекс Накшбандию Ночь в отеле. ",
+          "Завтрак в гостинице. Перезд в Хиву. Свободное время, посещение сувенирных лавок. Ночь в отеле.",
+          "Завтрак в гостинице. Знакомство с достопримечательностями Хивы. Комплекс Пахвалана Махмуда. Крепость Куня Арк. Минарет Ислам Ходжа. Дворец Таш-Хаули. Медресе Алакули-Хана. Джума-мечеть. Медресе Мухаммад Амин-Хана. Музей Авесты. Ночь в отеле. ",
+          "Завтрак в гостинице. Трансфер в аэропорт. Перелёт домой"
+      ],
+      img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+  },
+  {
+      id:2,
+      title: "По древним городам Узбекистана",
+      duration: 7,
+      cities: "Ташкент/Самарканд/Бухара/Хива" ,
+      days: [
+          "Встреча в аэропорту Самарканда и трансфер в отель. Свободное время. Ужин. Ночь в отеле.",
+          "Завтрак в гостинице. Знакомство с достопримечательностями Самарканда. Площадь Регистан. Мавзолей Гур-Эмир. Мечеть Биби-Ханум. Мавзолеев Шахи-Зинда. Обсерватория Улегбека. Свободное время. Ночь в отеле.",
+          "Завтрак в гостинице. Размещение в отеле. Знакомство с достопримечательностями Бухары. Площадь Ляби-Хауз. Медресе Кукельдаш. Медресе Надир ДиванБеги. Торговые Купала. Демонстрационная комната Бухарской золотошвейной фабрики. Ночь в отеле. ",
+          "Завтрак в отеле. Мавзолей Саманидов. Мавзолей Чашма-Аюб. Комплекс Боло-Хауз. Крепость Арк. Мавзолей Пой-Калян. Медресе Абдуллазиз Хана. Медресе Улугбека. Дворец Ситораи Мохи Хоса. Комплекс Накшбандию Ночь в отеле. ",
+          "Завтрак в гостинице. Перезд в Хиву. Свободное время, посещение сувенирных лавок. Ночь в отеле.",
+          "Завтрак в гостинице. Знакомство с достопримечательностями Хивы. Комплекс Пахвалана Махмуда. Крепость Куня Арк. Минарет Ислам Ходжа. Дворец Таш-Хаули. Медресе Алакули-Хана. Джума-мечеть. Медресе Мухаммад Амин-Хана. Музей Авесты. Ночь в отеле. ",
+          "Завтрак в гостинице. Трансфер в аэропорт. Перелёт домой",
+      ],
+      img: "https://images.unsplash.com/photo-1583658554203-d867c9baa7bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+  }
+  ]
+
+  return {
+    props: {
+      data: data
+    }, // will be passed to the page component as props
+  }
+}
+
+export default function Home({data}) {
   return (
     <>
       <Head>
@@ -18,7 +67,7 @@ export default function Home() {
       </Head>
       <main>
         <Layout>
-          <TopSection isSwiper={true} title="Тур по Ташкенту" dsc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. . ."/>
+          <TopSection arr={data} isSwiper={true} title="Тур по Ташкенту" dsc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. . ."/>
           <Services/>
           <CardsSection title="Популярные туры" arr={[1,2,3,4,5]} />
           <Video/>

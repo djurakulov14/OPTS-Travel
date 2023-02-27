@@ -41,21 +41,21 @@ const Tours = () => {
       duration: "4 дней/3 ночей"
     },
     {
-      id:5,
+      id:6,
       title: "Каменная Летопись Веков",
       body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quo rerum cumque ut earum corrupti eius nam laborum dolorum nemo!",
       price: 1200,
       duration: "12 дней/11 ночей"
     },
     {
-      id:5,
+      id:8,
       title: "Каменная Летопись Веков",
       body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quo rerum cumque ut earum corrupti eius nam laborum dolorum nemo!",
       price: 1200,
       duration: "4 дней/3 ночей"
     },
     {
-      id:5,
+      id:9,
       title: "Каменная Летопись Веков",
       body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quo rerum cumque ut earum corrupti eius nam laborum dolorum nemo!",
       price: 1200,

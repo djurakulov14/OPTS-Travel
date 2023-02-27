@@ -34,9 +34,9 @@ const handler = async (req, res) => {
         transporter.sendMail({
             ...mailOptions,
             ...generateEmailContent(req.body),
+            subject: "qwerty" ,
             html: `<h1>Связь</h1> <p><strong>Имя:</strong> ${req.body.name}</p> <p><strong>Email:</strong>${req.body.email}</p> <p><strong>Phone:</strong>${req.body?.phone}</p> <p><strong>Message:</strong>${req.body.massage}</p>`
         })
-        
         return res.status(200).json({ success: true });
   };
   export default handler;

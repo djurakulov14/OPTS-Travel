@@ -30,22 +30,22 @@ const TourPage = () => {
         data[key] = value
       })
 
-      fetch("http://localhost:3000/api/buyTour", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-        }).then((res) => {
-          console.log(res);
-            if (!res.ok){ 
-                alert("error")
-            } else {
-              alert("Сообщение отправлено")
-                e.target.name.value = ""
-                e.target.email.value = ""
-                e.target.phone.value = ""
-            }
-            return res.json();
-          });
+      // fetch("http://localhost:3000/api/buyTour", {
+      //       method: "POST",
+      //       body: JSON.stringify(data),
+      //       headers: { "Content-Type": "application/json", Accept: "application/json" },
+      //   }).then((res) => {
+      //     console.log(res);
+      //       if (!res.ok){ 
+      //           alert("error")
+      //       } else {
+      //         alert("Сообщение отправлено")
+      //           e.target.name.value = ""
+      //           e.target.email.value = ""
+      //           e.target.phone.value = ""
+      //       }
+      //       return res.json();
+      //     });
   
       console.log(data);
       

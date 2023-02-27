@@ -21,23 +21,23 @@ const Contacts = () => {
           data[key] = value
         })
     
-        fetch("http://localhost:3000/api/contact", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-        }).then((res) => {
-            if (!res.ok){ 
-                alert("error")
-            } else {
-                e.target.name.value = ""
-                e.target.email.value = ""
-                e.target.phone.value = ""
-                e.target.massage.value = ""
-                alert("nice baby")
+        // fetch("http://localhost:3000/api/contact", {
+        //     method: "POST",
+        //     body: JSON.stringify(data),
+        //     headers: { "Content-Type": "application/json", Accept: "application/json" },
+        // }).then((res) => {
+        //     if (!res.ok){ 
+        //         alert("error")
+        //     } else {
+        //         e.target.name.value = ""
+        //         e.target.email.value = ""
+        //         e.target.phone.value = ""
+        //         e.target.massage.value = ""
+        //         alert("nice baby")
 
-            }
-            return res.json();
-          });
+        //     }
+        //     return res.json();
+        //   });
 
         console.log(data);
 
@@ -87,7 +87,7 @@ const Contacts = () => {
                 </div>
                 <div className="right">
                     <h1 className='title mb-3'>Локация:</h1>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.8545868541881!2d66.91915879517765!3d39.65616255175086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b2174a42a7b64b2!2sOMEGA%20PREMIER%20TRAVEL%20SERVIS!5e0!3m2!1sru!2s!4v1677322352320!5m2!1sru!2s" width="800" height="600" style={{border: 0}} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.8545868541881!2d66.91915879517765!3d39.65616255175086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b2174a42a7b64b2!2sOMEGA%20PREMIER%20TRAVEL%20SERVIS!5e0!3m2!1sru!2s!4v1677322352320!5m2!1sru!2s" width="800" height="600" style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <form className=' w-fit flex flex-col gap-5 mb-20' onSubmit={submitForm}>
