@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
+import Image from 'next/image';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     const [image, setImage] = useState(arr ? arr[0]?.img : "/images/chimgan.png")
@@ -13,7 +14,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     function changeImage(event) {
         event.slides.forEach(el => {
             if(el.classList.contains("swiper-slide-active")){
-                setImage(el.children.img.src)
+                setImage(el.lastChild.innerText);
             }
         });
     }
@@ -51,8 +52,8 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
                                 <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{item.duration} дней/ {item.duration - 1} ночей</p>
                             </div>
                             <MyButton>Подробнее</MyButton>
-                        </div>
-                        <img src={item.img} id='img' alt="imge" className=' hidden' />
+                         </div>
+                        <p className='hidden'>{item.img}</p>
                     </SwiperSlide>
                 </>
             )
