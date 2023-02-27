@@ -121,7 +121,7 @@ const TourPage = () => {
             </div>
         </div>
         <Dialog open={open} onClose={handleClose}>
-        <DialogTitle className='flex justify-between'>Бронирование тура "Имя тура"
+        <DialogTitle className='flex justify-between'><span>Бронирование тура "Имя тура"</span>
         <RxCrossCircled onClick={handleClose} className=' cursor-pointer'/>
         </DialogTitle>
         <DialogContent>
