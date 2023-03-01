@@ -7,17 +7,22 @@ import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     const [image, setImage] = useState(arr ? arr[0]?.img : "/images/chimgan.png")
 
     function changeImage(event) {
-        event.slides.forEach(el => {
-            if(el.classList.contains("swiper-slide-active")){
-                setImage(el.lastChild.innerText);
-            }
-        });
+        if(arr){
+            event.slides.forEach(el => {
+                if(el.classList.contains("swiper-slide-active")){
+                    setImage(el.lastChild.innerText);
+                }
+            });
+        }
     }
+
+    const {t} = useTranslation("main")
 
     return (
         <section className='h-[600px] w-full text-white mb-20'>
@@ -49,9 +54,9 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
                         <div className="info">
                             <div className="dsc flex flex-col gap-6 mb-6">
                                 <h1 className=' text-4xl font-bold'>{item.title}</h1>
-                                <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{item.duration} дней/ {item.duration - 1} ночей</p>
+                                <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{item.duration} {t("days")}/ {item.duration - 1} {t("nights")}</p>
                             </div>
-                            <MyButton>Подробнее</MyButton>
+                            <MyButton>{t("more")}</MyButton>
                          </div>
                         <p className='hidden'>{item.img}</p>
                     </SwiperSlide>

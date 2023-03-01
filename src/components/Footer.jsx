@@ -5,34 +5,37 @@ import { HiMail } from 'react-icons/hi';
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
+import { useTranslation } from 'next-i18next';
 
 
 
 const Footer = () => {
+
+    const {t} = useTranslation("footer")
+
   return (
         <>
         <footer className='overflow-hidden'>
             <div className="top flex justify-between mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full">
                 <div className="about w-[30%] flex flex-col gap-3">
-                    <h1 className='text-2xl font-semibold'>О компании</h1>
-                    <p>Туристическая компания «Omega Premier Travel Servis» является туроператором (out coming/incoming) в сфере международного туризма 8 лет. В команде собраны настоящие профессионалы — мультиязычные специалисты туристического бизнеса, предоставляющие исключительно высокий уровень сервиса.</p>
+                    <h1 className='text-2xl font-semibold'>{t("aboutCompTitle")}</h1>
+                    <p>{t("aboutComp")}</p>
                 </div>
                 <div className="useful w-[30%] flex flex-col gap-3">
-                    <h1 className='text-2xl font-semibold '>Полезные ресурсы</h1>
+                    <h1 className='text-2xl font-semibold '>{t("useful")}</h1>
                     <div className="info flex flex-col gap-1">
-                        <a className='hover:underline' href="https://book.uzairways.com/ru">Купить авиабилеты онлайн</a>
-                        <a className='hover:underline' href="https://www.uzairways.com/ru/statform">Расписание рейсов</a>
-                        <a className='hover:underline' href="https://railway.uz/ru/interaktivnye_uslugi/spravochnye_telefony/">Купить авиабилеты онлайн</a>
-                        <a className='hover:underline' href="https://e-ticket.railway.uz/ru/home">Купить ж/д билет</a>
-                        <a className='hover:underline' href="https://avtoticket.uz/">Купить билет на междугородные автобусы</a>
-                        <a className='hover:underline' href="https://e-visa.gov.uz/main">Подать заявку на E-Visa</a>
-                        <a className='hover:underline' href="http://emehmon.uz/user/login">Получить временную регистрацию</a>
+                        <a className='hover:underline' href="https://book.uzairways.com/ru">{t("tickets")}</a>
+                        <a className='hover:underline' href="https://www.uzairways.com/ru/statform">{t("flight")}</a>
+                        <a className='hover:underline' href="https://e-ticket.railway.uz/ru/home">{t("railway")}</a>
+                        <a className='hover:underline' href="https://avtoticket.uz/">{t("bus")}</a>
+                        <a className='hover:underline' href="https://e-visa.gov.uz/main">{t("evisa")}</a>
+                        <a className='hover:underline' href="http://emehmon.uz/user/login">{t("regist")}</a>
                     </div>
                 </div>
                 <div className="about w-[30%] flex flex-col gap-3">
-                    <h1 className='text-2xl font-semibold'>Контакты</h1>
+                    <h1 className='text-2xl font-semibold'>{t("contacts")}</h1>
                     <div className="info flex flex-col gap-1">
-                        <a href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center gap-1 hover:underline'><MdLocationPin/>Узбекистан, Самарканд, ул.Али-Кушчи 7</a>
+                        <a href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center gap-1 hover:underline'><MdLocationPin/>{t("addres")}</a>
                         <a href='tel:+998993333232' className=' flex items-center gap-1 hover:underline'><FaPhoneAlt/>+99899 333-32-32, +99899 444-32-32</a>
                         <a href='mailto:info@opts.tours' className=' flex items-center gap-1 hover:underline'><HiMail/>info@opts.tours</a>
                     </div>

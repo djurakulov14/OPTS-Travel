@@ -4,24 +4,30 @@ import TopSection from '@/components/TopSection'
 import CityCard from '@/components/_child/CityCard'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
-export async function getStaticProps() {
+export async function getStaticProps({locale}) {
   const res = await fetch("https://main--opts-travel.netlify.app/api/city")
   const data = await res.json()
 
 
   return {
     props: {
-      city: data
+      city: data,
+      ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
     }, // will be passed to the page component as props
   }
 }
 
 const City = ({city}) => {
   const router = useRouter()
+
+  const {t} = useTranslation("main")
+
   return (
     <Layout>
-      <TopSection isSwiper={false} title={"Города Узбекистана"} dsc={"Все исторические города солнечного Узбекистана"}/>
+      <TopSection isSwiper={false} title={t("citiesOfTitle")} dsc={t("citiesOf")}/>
       <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
         {
           city.map(item => <Link key={item.id} href={item.link}><CityCard {...item}/></Link>)

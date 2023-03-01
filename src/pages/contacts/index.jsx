@@ -3,12 +3,15 @@ import TopSection from '@/components/TopSection'
 import MyButton from '@/components/_child/MyButton';
 import { TextField } from '@mui/material';
 import axios from 'axios';
+import { useTranslation } from 'next-i18next';
 import React from 'react'
 import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
 
 
 const Contacts = () => {
+
+    const {t} = useTranslation()
 
     const submitForm = (e) => {      
         e.preventDefault()
@@ -21,7 +24,7 @@ const Contacts = () => {
           data[key] = value
         })
     
-        fetch("https://main--opts-travel.netlify.app/api/contact", {
+        fetch("https://opts-travel.netlify.app/api/contact", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -39,7 +42,6 @@ const Contacts = () => {
             return res.json();
           });
 
-        console.log(data);
 
 
     }

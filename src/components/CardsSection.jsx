@@ -3,8 +3,12 @@ import MyButton from './_child/MyButton'
 import TourCard from './_child/TourCard'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+import { useTranslation } from 'next-i18next';
 
 const CardsSection = ({title, arr}) => {
+
+  const {t} = useTranslation("main")
+
     return (
       <div className=' flex flex-col gap-5 items-center mb-24'>
         <h1 className=' text-3xl font-bold mt-10'>{title}</h1>
@@ -17,13 +21,13 @@ const CardsSection = ({title, arr}) => {
         slidesPerView={4}
         spaceBetween={30}
         modules={[Autoplay]}
-        className="mySwiper !m-auto !p-4 !mb-4"
+        className="mySwiper !m-auto !p-4"
         >
         {
           arr.map((item, index) => <SwiperSlide key={index}><TourCard/></SwiperSlide>)
         }
       </Swiper>
-        <MyButton>Все туры</MyButton>
+        <MyButton>{t("alltours")}</MyButton>
     </div>
   )
 }

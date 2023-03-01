@@ -5,7 +5,19 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import React, { useState } from 'react'
 import ReactStars from 'react-stars'
 import { RxCrossCircled } from 'react-icons/rx';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
+
+export async function getServerSideProps({locale}) {
+
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
+    }, // will be passed to the page component as props
+  }
+}
 
 const TourPage = () => {
 
@@ -30,12 +42,11 @@ const TourPage = () => {
         data[key] = value
       })
 
-      fetch("https://main--opts-travel.netlify.app/api/buyTour", {
+      fetch("https://opts-travel.netlify.app/api/buyTour", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },
         }).then((res) => {
-          console.log(res);
             if (!res.ok){ 
                 alert("error")
             } else {
@@ -47,27 +58,27 @@ const TourPage = () => {
             return res.json();
           });
   
-      console.log(data);
       
   }
 
+  const {t} = useTranslation("main")
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={"Тур по Узбекистану"} dsc={"Ташкент-Самарканд-Бухара-Шахрисабс-Ургенч"} dsc2={"8-дней / 7-ночей"}/>
+        <TopSection isSwiper={false} title={"Тур по Узбекистану"} dsc={"Ташкент-Самарканд-Бухара-Шахрисабс-Ургенч"} dsc2={`8 ${t("days")}/9 ${t("nights")}`}/>
 
         <div className="content">
             <div className="way flex justify-between items-center mb-20">
                 <div className="acc">
-                    <h1 className='title mb-3'>Маршрут:</h1>
+                    <h1 className='title mb-3'>{t("route")}:</h1>
                     <Accordionn/>
                 </div>
                 <div className="price sticky top-[100px] z-50 bg-[#1EB8D4] w-[40%] text-white p-3 rounded-lg flex flex-col justify-between gap-5">
                     <div className="prices">
-                        <h1>Цены:</h1>
+                        <h1 className='text-lg font-semibold'>{t("price")}:</h1>
                         <table className=' border-solid border-2 p-4 w-full rounded-xl'>
                             <tr className='text-center'>
-                                <th className='border-solid border-2'>Кол-во персон:</th>
+                                <th className='border-solid border-2'>{t("person")}:</th>
                                 <th className='border-solid border-2'><ReactStars count={3} value={3} edit={false} className='flex justify-center'/></th>
                                 <th className='border-solid border-2'><ReactStars count={4} value={4} edit={false} className='flex justify-center'/></th>
                             </tr>
@@ -82,41 +93,41 @@ const TourPage = () => {
                                 <td className='border-solid border-2'>+120$</td>
                             </tr>
                         </table>
-                        <p className=' text-base leading-5'>Если вы хотите групповой тур то напешите нам и мы подберём для вас подходящий тур по низкой цене.</p>
+                        <p className=' text-base leading-5'>{t("morePeople")}</p>
                     </div>
-                    <button onClick={handleClickOpen} className=' border-[#1EB8D4] border-solid border-2 bg-white text-[#1EB8D4] w-full py-2 rounded-xl'>Забронировать</button>
+                    <button onClick={handleClickOpen} className=' border-[#1EB8D4] border-solid border-2 bg-white text-[#1EB8D4] w-full py-2 rounded-xl'>{t("book")}</button>
                 </div>
             </div>
             <div className="incuded mb-20 w-fit">
-                <h1 className='title'>Влючено/Не включено</h1>
+                <h1 className='title'>{t("include")}/{t("notInclude")}</h1>
                     <div className="inc mb-7">
-                        <h1 className=' text-lg font-semibold'>Включено:</h1>
+                        <h1 className=' text-lg font-semibold'>{t("include")}:</h1>
                         <ul>
-                            <li>Размещение в комфортабельных гостиницах в двухместных номерах</li>
-                            <li>Питание: завтрак в отелях</li>
-                            <li>Комфортабельный кондиционированный транспорт на весь маршрут </li>
-                            <li>Все встречи и проводы в аэропорту</li>
-                            <li>Местные гиды-экскурсоводы в городах на время экскурсии.</li>
-                            <li>Экскурсии согласно программе тура</li>
-                            <li>Отличное настроение :)</li>
+                            <li>{t("ras")}</li>
+                            <li>{t("pit")}</li>
+                            <li>{t("air")}</li>
+                            <li>{t("meets")}</li>
+                            <li>{t("loc")}</li>
+                            <li>{t("ex")}</li>
+                            <li>{t("mood")}</li>
                         </ul>
                     </div>
 
                 <div className="uninc">
-                    <h1 className=' text-lg font-semibold'>Не включено:</h1>
+                    <h1 className=' text-lg font-semibold'>{t("notInclude")}:</h1>
                     <ul>
-                        <li>Международный Авиабилет</li>
-                        <li>Питание (обед и ужин)</li>
-                        <li>Входные билеты на указанные монументы</li>
-                        <li>Сборы за фото и видеосъемку на памятниках</li>
-                        <li>Чаевые, и носильщики в отелях/аэропорту</li>
-                        <li>Личные расходы</li>
-                        <li>Другие услуги не указанные выше</li>
+                        <li>{t("unticket")}</li>
+                        <li>{t("unpit")}</li>
+                        <li>{t("ent")}</li>
+                        <li>{t("fee")}</li>
+                        <li>{t("tip")}</li>
+                        <li>{t("expan")}</li>
+                        <li>{t("other")}</li>
                     </ul>
                 </div>
             </div>
             <div className="dsc mb-20">
-                <h1 className='title'>Описание:</h1>
+                <h1 className='title'>{t("dsc")}:</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis officiis ea ut dicta, autem aliquam assumenda quis voluptas tenetur pariatur deleniti molestias hic quia nam blanditiis at eveniet possimus illo rerum eligendi, dolores repellat debitis repudiandae fuga? Distinctio inventore sequi repellendus harum quae! Obcaecati, praesentium alias libero veniam omnis maxime repudiandae, enim molestiae atque, fuga nam modi. Dolorem nam eos recusandae dolores animi adipisci temporibus voluptatem incidunt quidem, consequatur earum repellendus illum at quam, accusantium minus voluptatum dicta beatae repellat suscipit quaerat perferendis quia? Maiores cum magnam odit, veniam iusto omnis ea cupiditate deserunt libero dolore quasi saepe dolor eos!</p>
             </div>
         </div>
@@ -162,7 +173,7 @@ const TourPage = () => {
           />
             <DialogActions>
               <Button onClick={handleClose}>Отмена</Button>
-              <Button type='submit' onClick={handleClose}>Забронировать</Button>
+              <Button type='submit' onClick={handleClose}>{t("book")}</Button>
             </DialogActions>
           </form>
         </DialogContent>

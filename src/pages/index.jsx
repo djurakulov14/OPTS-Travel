@@ -4,24 +4,30 @@ import Services from '@/components/Services'
 import TopSection from '@/components/TopSection'
 import Video from '@/components/Video'
 import Head from 'next/head'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
-export async function getStaticProps() {
+export async function getStaticProps({locale}) {
   const res = await fetch("https://main--opts-travel.netlify.app/api/tours", {
     method: "GET"
   })
   const data = await res.json()
 
-  console.log(res, data);
+
 
 
   return {
     props: {
-      data: data
-    }, // will be passed to the page component as props
+      data: data,
+      ...(await serverSideTranslations(locale, ["header", "expirience", "footer", "main"])),
+    },
   }
 }
 
 export default function Home({data}) {
+
+  // const {t} = useTranslation("common")
+
   return (
     <>
       <Head>
@@ -32,7 +38,7 @@ export default function Home({data}) {
       </Head>
       <main>
         <Layout>
-          <TopSection arr={data} isSwiper={true} title="Тур по Ташкенту" dsc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. . ."/>
+          <TopSection arr={data} isSwiper={true} />
           <Services/>
           <CardsSection title="Популярные туры" arr={[1,2,3,4,5]} />
           <Video/>

@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import HotelCard from '@/components/_child/HotelCard'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
 
 
 export async function getServerSideProps(context) {
@@ -14,12 +16,16 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      hotels: filtered
+      hotels: filtered,
+      ...(await serverSideTranslations(locale, ["header", "footer"])),
     }, // will be passed to the page component as props
   }
 }
 
 const HotelinCity = ({hotels}) => {
+
+
+
   const loc = hotels[0].location.replace('ь','и')
   return (
     <Layout>

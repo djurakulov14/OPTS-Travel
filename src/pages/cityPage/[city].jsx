@@ -5,6 +5,9 @@ import { Swiper ,SwiperSlide } from 'swiper/react'
 import { PlaceCard } from '@/components/_child/PlaceCard'
 import HotelCard from '@/components/_child/HotelCard'
 import Layout from '@/Layout/Layout'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 
 export async function getServerSideProps(context) {
@@ -22,19 +25,27 @@ export async function getServerSideProps(context) {
   return {
     props: {
       city: obj,
-      hotels:hotels
+      hotels:hotels,
+      ...(await serverSideTranslations(context.locale, ["header", "footer", "main"])),
     }, // will be passed to the page component as props
   }
 }
 
 const Cityid = ({city, hotels}) => {
+
+  const {t} = useTranslation("main")
+
+  const router = useRouter()
+
+  console.log(router);
+
   return (
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle}/>
         <div className=" mb-32">
-          <h1 className='title'>История города:</h1>
+          <h1 className='title'>{t("history")}</h1>
           <p className='mb-8 text-xl'>{city.history}</p>
-          <h1 className='title text-center mb-8'>Достопримечательности</h1>
+          <h1 className='title text-center mb-8'>{t("places")}</h1>
           <Swiper
           speed={1500}
           slidesPerView={3}
@@ -49,10 +60,10 @@ const Cityid = ({city, hotels}) => {
           {
             city.places.map((item, index) => <SwiperSlide key={index}><PlaceCard title={item}/></SwiperSlide>)
           }
-      </Swiper>
+       </Swiper>
         {city.title.includes("Шахрисабс") ? "" :
         <>
-        <h1 className='title text-center mb-8'>Отели в этом городе</h1>
+        <h1 className='title text-center mb-8'>{t("hotelCity")}</h1>
           <Swiper
           speed={1500}
           slidesPerView={3}
@@ -70,7 +81,7 @@ const Cityid = ({city, hotels}) => {
       </Swiper>
         </>  
         }
-      <h1 className='title text-center mb-8'>Карта</h1>
+      <h1 className='title text-center mb-8'>{t("map")}</h1>
       <iframe src={city.map} width="100%" height="600" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </Layout>

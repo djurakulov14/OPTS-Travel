@@ -1,7 +1,18 @@
 import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import TourCard from '@/components/_child/TourCard'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
+
+export async function getStaticProps({locale}) {
+  
+  
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
+      }, // will be passed to the page component as props
+    }
+  }
 
 const AboutUs = () => {
   return (
