@@ -1,6 +1,7 @@
 import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import TourCard from '@/components/_child/TourCard'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
 
@@ -9,56 +10,59 @@ export async function getStaticProps({locale}) {
   
     return {
       props: {
-        ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
+        ...(await serverSideTranslations(locale, ["header", "footer", "about", "expirience"])),
       }, // will be passed to the page component as props
     }
   }
 
 const AboutUs = () => {
+
+    const {t} = useTranslation("about")
+
   return (
     <Layout>
-        <TopSection isSwiper={false} title={"О нас"} dsc={"Вся информация о нашей компании"}/>
+        <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")}/>
         <div className="content">
             <div className="top flex justify-between items-top mb-24">
                 <div className="exp w-[30%] flex flex-col gap-3">
-                    <h1 className='title'>Опыт работы</h1>
-                    <p>Мы являемся туроператором (out coming/incoming) в сфере международного туризма 8 лет. В команде собраны настоящие профессионалы — мультиязычные специалисты туристического бизнеса, предоставляющие исключительно высокий уровень сервиса.</p>
+                    <h1 className='title'>{t("expTitle")}</h1>
+                    <p>{t("exp")}</p>
                 </div>
                 <div className="pod w-[30%] flex flex-col gap-3">
-                    <h1 className='title'>Индивидуальный подход</h1>
-                    <p>Туроператоры нашей компании могут разработать и организовать для вас туры в любой регион Узбекистана, предоставляя как комплексное, так и отдельное обслуживание на свободной базе.</p>
+                    <h1 className='title'>{t("approachTitle")}</h1>
+                    <p>{t("approach")}</p>
                 </div>
                 <div className="lic w-[30%] flex flex-col gap-3">
-                    <h1 className='title'>Услуги лицензированы</h1>
-                    <p>Лицензия на туроператорскую деятельность № Т-0042-08 Государственного Комитета по развитию туризма. Добро пожаловать в Узбекистан!</p>
+                    <h1 className='title'>{t("licenceTitle")}</h1>
+                    <p>{t("licence")}</p>
                 </div>
             </div>
             <div className="list flex flex-col gap-3 mb-24">
-                <h1 className=' title w-2/3'>Мы готовы создать для вас индивидуальные туры по историческим городам, если в предварительной заявке будет указано:</h1>
+                <h1 className=' title w-2/3'>{t("customTour")}</h1>
                 <ul className='list-disc pl-5'>
-                    <li>Удобное для вас время года;</li>
-                    <li>Желаемое количество дней пребывания на маршруте;</li>
-                    <li>Города посещения;</li>
-                    <li>Категория обслуживания.</li>
+                    <li>{t("time")}</li>
+                    <li>{t("numDays")}</li>
+                    <li>{t("citiesVisit")}</li>
+                    <li>{t("category")}</li>
                 </ul>
             </div>
             <div className="list flex flex-col gap-3 mb-24">
-                <h1 className=' title w-2/3'>Перечень туристических услуг, предлагаемых заказчику:</h1>
+                <h1 className=' title w-2/3'>{t("sivices")}</h1>
                 <ul className='list-disc  pl-5'>
-                    <li>Туристический автотранспорт любой категории и вместимости;</li>
-                    <li>Бронирование и размещение в гостиницах любой категории;</li>
-                    <li>Локальные экскурсоводы на различных языках;</li>
-                    <li>Сопровождение гидов-переводчиков по всему маршруту;</li>
-                    <li>Бронирование и выкуп авиабилетов как на внутренние рейсы, так и на международные;</li>
-                    <li>Бронирование и выкуп ж/д билетов на электропоезда внутри Узбекистана;</li>
-                    <li>Питание — европейская кухня и узбекская национальная;</li>
-                    <li>Организация дополнительных услуг, не входящих в основную программу обслуживания;</li>
-                    <li>Аренда помещений для проведения конференций, семинаров, круглых столов и т.п.;</li>
-                    <li>Организация встреч со специалистами в различных областях экономики Узбекистана.</li>
+                    <li>{t("touristAuto")}</li>
+                    <li>{t("bookingCategory")}</li>
+                    <li>{t("guides")}</li>
+                    <li>{t("soop")}</li>
+                    <li>{t("bookTickets")}</li>
+                    <li>{t("bookRailway")}</li>
+                    <li>{t("food")}</li>
+                    <li>{t("org")}</li>
+                    <li>{t("etc")}</li>
+                    <li>{t("orgMeets")}</li>
                 </ul>
             </div>
             <div className="magazine flex flex-col gap-3 mb-24">
-                <h1 className='title'>Наши журналы</h1>
+                <h1 className='title'>{t("journal")}</h1>
                 <div className="flex flex-wrap justify-between gap-8">
                     <TourCard/>
                     <TourCard/>

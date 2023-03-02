@@ -10,15 +10,72 @@ import { useRouter } from 'next/router'
 
 const Header = () => {
   const [open, setOpen] = useState({cities: false, hotels: false})
-  const [arr, setArr] = useState([])
-  const [cities, setCities] = useState([])
+  const hotelsOfCities = [
+    {
+        id:1,
+        title: "Отели в Самарканде",
+        link: "/hotel/id=1",
+    },
+    {
+        id:2,
+        title: "Отели в Бухаре",
+        link: "/hotel/id=2",
+    },
+    {
+        id:3,
+        title: "Отели в Хиве",
+        link: "/hotel/id=3",
+    },
+    {
+        id:5,
+        title: "Отели в Ташкенте",
+        link: "/hotel/id=5",
+    },
+    {
+        id:6,
+        title: "Отели в Коканд",
+        link: "/hotel/id=6",
+    },
+    {
+        id:7,
+        title: "Отели в Намангане",
+        link: "/hotel/id=7",
+    }
+]
 
-  useEffect(() => {
-    axios.get("http://localhost:3000/api/city")
-      .then(res => setArr(res.data))
-    axios.get("http://localhost:3000/api/hotelsOfCity")
-      .then(res => setCities(res.data))
-  }, [])
+const cities = [
+  {
+      id:1,
+      title: "Самарканд",
+      link: "/cityPage/id=1",
+  },
+  {
+      id:2,
+      title: "Бухара",
+      link: "/cityPage/id=2",
+  },
+  {
+      id:3,
+      title: "Хива",
+      link: "/cityPage/id=3",
+  },
+  {
+      id:5,
+      title: "Ташкент",
+      link: "/cityPage/id=5",
+  },
+  {
+      id:6,
+      title: "Коканд",
+      link: "/cityPage/id=6",
+  },
+  {
+      id:7,
+      title: "Наманган",
+      link: "/cityPage/id=7",
+  }
+]
+
 
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
@@ -37,7 +94,7 @@ const Header = () => {
           <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style}>
             <ul>
                 {
-                  arr.map(item =>
+                  cities.map(item =>
                     <li key={item.id} className=" h-4 py-4 flex items-center justify-left">
                       <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
                     </li>
@@ -51,7 +108,7 @@ const Header = () => {
           <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style2}>
             <ul>
                 {
-                  cities.map(item =>
+                  hotelsOfCities.map(item =>
                     <li key={item.id} className=" h-4 py-4 flex items-center justify-left">
                       <Link href={item.link} className='hover:underline text-black'>{item.title}</Link>
                     </li>
