@@ -14,7 +14,7 @@ export async function getStaticProps({locale}) {
   return {
     props: {
       hotels: data,
-      ...(await serverSideTranslations(locale, ["header", "footer"])),
+      ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
     }, // will be passed to the page component as props
   }
 }
@@ -22,11 +22,11 @@ export async function getStaticProps({locale}) {
 
 const Hotel = ({hotels}) => {
 
-  const {t} = useTranslation()
+  const {t} = useTranslation("main")
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={t("hotelCity")} dsc={t("hotel")}/>
+        <TopSection isSwiper={false} title={t("hotelTtitle")} dsc={t("hotel")}/>
         <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
             {
               hotels.map(item => <HotelCard key={item.id} {...item}/>)

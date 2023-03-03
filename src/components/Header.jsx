@@ -122,9 +122,9 @@ const cities = [
         <Link href='/contacts' className='hover:underline'>{t("contact")}</Link>
       </nav>
       <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
-        <div className="flex items-center hover:cursor-pointer">
-          <Image src="/icons/russia.svg" width={35} height={35} alt='image'/>
-          <p>RU</p>
+        <div className="flex items-center gap-1 hover:cursor-pointer">
+          <Image src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image'/>
+          <p>{lng === 'ru' ? "РУ" : "EN"}</p>
         </div>
       </Link>
     </header>

@@ -666,12 +666,120 @@ export const hotels = [
         location: "Отель в Самарканде"
     },
     {
-        id: 77,
+        id: 75,
         cityId:1,
         title: "Hilton Garden Inn Samarkand",
         stars: 4,
         link:"https://www.booking.com/Share-2h2cSr",
         img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/403532780.jpg?k=eef987812817a865b71d3196a2d4c0881daefd6f59d2bbe3b4ba71662f72d1ef&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 76,
+        cityId:1,
+        title: "Reikartz Amar Samarkand",
+        stars: 4,
+        link:"https://www.booking.com/Share-05PtSVJ",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/427414367.jpg?k=8c9aebd3d193c311ae37f3b5b7a38204d0fee951d224fdf596c4ed31ad700c00&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 77,
+        cityId:1,
+        title: "Silk Road Empire Hotel",
+        stars: 4,
+        link:"https://www.booking.com/Share-ffgqM1",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/350421068.jpg?k=f3fbdc97d8e0a8129d97d90cc45da24eaef078895901639f668cc8ee0ebb9f94&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 78,
+        cityId:1,
+        title: "Medina Hotel",
+        stars: 4,
+        link:"https://www.booking.com/Share-BYxY4L",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/401382268.jpg?k=c46c0daaa94f377f656cef2bfbb12ff41595ba059fcfca1923d264cc877fe508&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 79,
+        cityId:1,
+        title: "Shohjahon Palace",
+        stars: 4,
+        link:"https://www.booking.com/Share-ycuMj2",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/356714408.jpg?k=e52f47ffd887f8adea840392cbf5d08a55f8afd3f1ffcffe0a07e0561bbf4def&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 80,
+        cityId:1,
+        title: "Savitsky Plaza",
+        stars: 4,
+        link:"https://www.booking.com/Share-Xf9G99",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/424588496.jpg?k=d95b9ffd1be4b7c3965aa61aa1f3cedb07c25d651c391ed5ca17af02724fb4ba&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 81,
+        cityId:1,
+        title: "Lia! by Minyoun Stars of Ulugbek",
+        stars: 4,
+        link:"https://www.booking.com/Share-oHO45c",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/424584524.jpg?k=6dd683285f406ab45986bee303f85589fbda90a39930be22fc884f68a6b16950&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 82,
+        cityId:1,
+        title: "Boutique Hotel Arka",
+        stars: 4,
+        link:"https://www.booking.com/Share-2UDJkf",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/352976084.jpg?k=519a92a43d5206ae09c9caf883a99feed159654720e58c9577e694e85db4c531&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 83,
+        cityId:1,
+        title: "Durdona hotel",
+        stars: 4,
+        link:"https://www.booking.com/Share-6uWSBQN",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/382487934.jpg?k=da34941b0115906f0b55bbd4e9211891f18760090660e5687713c0b1341b2da1&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 84,
+        cityId:1,
+        title: "Royal Hotel",
+        stars: 4,
+        link:"https://www.booking.com/Share-wP1vt4u",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/271145840.jpg?k=c4dc1a280000b6b36d63ac00ca398e3e9db8f39a3c95903fc36b0cf8baa473d1&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 85,
+        cityId:1,
+        title: "Samarkand Regency Amir Temur",
+        stars: 4,
+        link:"https://www.booking.com/Share-l8Cw7l",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/425365516.jpg?k=29be5a19285268f8255a4f1253ba47038cc798cb1c7a62ecfaa53b3c22591bcb&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 86,
+        cityId:1,
+        title: "Silk Road by Minyoun",
+        stars: 4,
+        link:"https://www.booking.com/Share-1S7KXLg",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/424594165.jpg?k=fd3d5564588dec18e4967f4e3aabb852ceca379fc51e103484ff3c2159c68f7e&o=&hp=1",
+        location: "Отель в Самарканде"
+    },
+    {
+        id: 87,
+        cityId:1,
+        title: "Sultan Hotel Boutique",
+        stars: 4,
+        link:"https://www.booking.com/Share-eCiuWxf",
+        img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/30537792.jpg?k=e486ed6e87e1d767d425a0ebdad807d61ee75630c8c1594cb30ba8ad6a0fe518&o=&hp=1",
         location: "Отель в Самарканде"
     }
 ]

@@ -14,8 +14,6 @@ export async function getStaticProps({locale}) {
   const data = await res.json()
 
 
-
-
   return {
     props: {
       data: data,
@@ -26,7 +24,7 @@ export async function getStaticProps({locale}) {
 
 export default function Home({data}) {
 
-  // const {t} = useTranslation("common")
+  const {t} = useTranslation("main")
 
   return (
     <>
@@ -40,7 +38,7 @@ export default function Home({data}) {
         <Layout>
           <TopSection arr={data} isSwiper={true} />
           <Services/>
-          <CardsSection title="Популярные туры" arr={[1,2,3,4,5]} />
+          <CardsSection title={t("popular")} arr={[1,2,3,4,5]} />
           <Video/>
         </Layout>
       </main>

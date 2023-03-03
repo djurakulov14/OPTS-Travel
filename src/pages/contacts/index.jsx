@@ -90,9 +90,9 @@ const Contacts = () => {
                         </div>
                     </div>
                     <div className="media flex flex-col gap-1 mb-16">
-                        <h1 className='title'>{t("graph")}</h1>
+                        <h1 className='title'>{t("grahp")}</h1>
                         <div className="links flex flex-col text-lg font-medium">
-                            <p>{t("graphTime")}</p>
+                            <p>{t("grpTime")}</p>
                             <p>{t("lunch")}</p>
                         </div>
                     </div>
