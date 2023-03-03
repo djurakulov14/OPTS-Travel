@@ -6,6 +6,7 @@ import Video from '@/components/Video'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { useState } from 'react'
 
 export async function getStaticProps({locale}) {
   const res = await fetch("https://main--opts-travel.netlify.app/api/tours", {
@@ -25,6 +26,21 @@ export async function getStaticProps({locale}) {
 export default function Home({data}) {
 
   const {t} = useTranslation("main")
+  let pageWidth = 0
+  let slides = 4
+
+  if (typeof window !== "undefined") {
+    var width = window.innerWidth;
+    pageWidth = width
+ }
+
+ if(pageWidth <= 1024){
+  slides = 2
+ } else if(pageWidth <= 1280){
+  slides = 3
+ }
+
+
 
   return (
     <>
@@ -38,7 +54,7 @@ export default function Home({data}) {
         <Layout>
           <TopSection arr={data} isSwiper={true} />
           <Services/>
-          <CardsSection title={t("popular")} arr={[1,2,3,4,5]} />
+          <CardsSection title={t("popular")} slides={slides} arr={[1,2,3,4,5]} />
           <Video/>
         </Layout>
       </main>

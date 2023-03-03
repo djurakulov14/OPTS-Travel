@@ -25,9 +25,9 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     const {t} = useTranslation("main")
 
     return (
-        <section className='h-[600px] w-full text-white mb-20'>
+        <section className='h-[600px] w-full text-white mb-20 max-md:h-[450px]'>
         <Header/>
-            <div className="bg absolute top-0 left-0 z-[-1] h-[600px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]  delay-200" style={{background: `url(${image})`,backgroundSize: "cover",backgroundPosition: "center"}}>
+            <div className="bg absolute top-0 left-0 z-[-1] h-[600px] max-md:h-[450px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]  delay-200" style={{background: `url(${image})`,backgroundSize: "cover",backgroundPosition: "center"}}>
             </div>
         {
             isSwiper ?
@@ -53,10 +53,10 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
                     <SwiperSlide onClick={changeImage} key={item.id} className=' !h-fit'>
                         <div className="info">
                             <div className="dsc flex flex-col gap-6 mb-6">
-                                <h1 className=' text-4xl font-bold'>{item.title}</h1>
-                                <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{item.duration} {t("days")}/ {item.duration - 1} {t("nights")}</p>
+                                <h1 className=' text-4xl font-bold max-md:text-3xl'>{item.title}</h1>
+                                <p className=' text-2xl font-normal max-md:text-xl text-[#DFDFDF] w-2/4'>{item.duration} {t("days")}/ {item.duration - 1} {t("nights")}</p>
                             </div>
-                            <MyButton>{t("more")}</MyButton>
+                            <MyButton style={{fontSixe: "16px"}} >{t("more")}</MyButton>
                          </div>
                         <p className='hidden'>{item.img}</p>
                     </SwiperSlide>

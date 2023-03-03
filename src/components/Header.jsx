@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './_child/Menu'
 import axios from 'axios'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { IoMenu } from 'react-icons/io5';
+
 
 
 
 const Header = () => {
-  const [open, setOpen] = useState({cities: false, hotels: false})
+  const [open, setOpen] = useState({cities: false, hotels: false, menu: false})
   const hotelsOfCities = [
     {
         id:1,
@@ -79,6 +81,7 @@ const cities = [
 
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
+  const style3 = open.menu ? {display: "block"} : {display: "none"}
 
   const {t, i18n} = useTranslation("header")
   const lng = i18n.language
@@ -86,8 +89,8 @@ const cities = [
 
   return (
     <header className='flex justify-between items-center'>
-      <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50}/></div>
-      <nav className=' flex gap-4'>
+      <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
+      <nav className=' flex gap-4 max-lg:hidden'>
         <Link href='/' className='hover:underline'>{t("main")}</Link>
         <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
           <Link href='/cityPage' className='hover:underline' onMouseEnter={() => setOpen({...open, cities: true})}>{t("cities")}</Link>
@@ -121,12 +124,29 @@ const cities = [
         <Link href='/aboutUs' className='hover:underline'>{t("about")}</Link>
         <Link href='/contacts' className='hover:underline'>{t("contact")}</Link>
       </nav>
-      <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
-        <div className="flex items-center gap-1 hover:cursor-pointer">
-          <Image src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image'/>
-          <p>{lng === 'ru' ? "РУ" : "EN"}</p>
+      <div className=" flex items-center gap-5" >
+        <div className=" hidden max-lg:block" onClick={() => setOpen({...open, menu: !open.menu})}>
+          <div>
+            <IoMenu size={25}/>
+          </div>
+          <div className=' bg-slate-50 p-3 rounded-xl rounded-tr-none	absolute right-16 z-10' style={style3}  >
+            <ul>
+                <li><Link href='/' className=' text-black hover:underline'>{t("main")}</Link></li>
+                <li><Link href='/cityPage' className='text-black hover:underline' >{t("cities")}</Link></li>
+                <li><Link href='/hotel' className=' text-black hover:underline'>{t("hotels")}</Link></li>
+                <li><Link href='/tour' className='text-black hover:underline'>{t("tours")}</Link></li>
+                <li><Link href='/aboutUs' className=' text-black hover:underline'>{t("about")}</Link></li>
+                <li><Link href='/contacts' className=' text-black hover:underline'>{t("contact")}</Link></li>
+            </ul>
+          </div>
         </div>
-      </Link>
+        <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
+          <div className="flex items-center gap-1 hover:cursor-pointer">
+            <Image src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
+            <p>{lng === 'ru' ? "РУ" : "EN"}</p>
+          </div>
+        </Link>
+      </div>
     </header>
   )
 }

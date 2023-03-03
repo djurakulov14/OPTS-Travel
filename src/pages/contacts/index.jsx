@@ -2,7 +2,6 @@ import Layout from '@/Layout/Layout'
 import TopSection from '@/components/TopSection'
 import MyButton from '@/components/_child/MyButton';
 import { TextField } from '@mui/material';
-import axios from 'axios';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react'

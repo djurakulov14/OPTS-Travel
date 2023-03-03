@@ -22,7 +22,7 @@ const Layout = ({children}) => {
   
 
   return (
-    <div className='cont'>
+    <div className='cont max-[660px]:px-6'>
         {children}
         <Footer/>
         <BsArrowUpCircle style={show ? {display: "block"} : {display: "none"}} size={40} onClick={scrollTop} className=' delay-200 cursor-pointer text-[#1EB8D4] fixed z-20 bottom-[8%] right-[2%]'/>

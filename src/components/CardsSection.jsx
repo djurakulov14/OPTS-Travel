@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import { useTranslation } from 'next-i18next';
 
-const CardsSection = ({title, arr}) => {
+const CardsSection = ({title, arr, slides}) => {
 
   const {t} = useTranslation("main")
 
@@ -18,7 +18,7 @@ const CardsSection = ({title, arr}) => {
             delay: 2000,
             disableOnInteraction:false
         }}
-        slidesPerView={4}
+        slidesPerView={slides}
         spaceBetween={30}
         modules={[Autoplay]}
         className="mySwiper !m-auto !p-4"

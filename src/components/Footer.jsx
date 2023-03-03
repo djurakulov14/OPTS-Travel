@@ -16,12 +16,12 @@ const Footer = () => {
   return (
         <>
         <footer className='overflow-hidden'>
-            <div className="top flex justify-between mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full">
-                <div className="about w-[30%] flex flex-col gap-3">
+            <div className="top flex justify-between max-md:flex-col mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full">
+                <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
                     <h1 className='text-2xl font-semibold'>{t("aboutCompTitle")}</h1>
                     <p>{t("aboutComp")}</p>
                 </div>
-                <div className="useful w-[30%] flex flex-col gap-3">
+                <div className="useful w-[30%] flex flex-col gap-3 max-md:w-full">
                     <h1 className='text-2xl font-semibold '>{t("useful")}</h1>
                     <div className="info flex flex-col gap-1">
                         <a className='hover:underline' href="https://book.uzairways.com/ru">{t("tickets")}</a>
@@ -32,7 +32,7 @@ const Footer = () => {
                         <a className='hover:underline' href="http://emehmon.uz/user/login">{t("regist")}</a>
                     </div>
                 </div>
-                <div className="about w-[30%] flex flex-col gap-3">
+                <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
                     <h1 className='text-2xl font-semibold'>{t("contacts")}</h1>
                     <div className="info flex flex-col gap-1">
                         <a href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center gap-1 hover:underline'><MdLocationPin/>{t("addres")}</a>

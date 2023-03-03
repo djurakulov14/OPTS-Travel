@@ -14,7 +14,7 @@ const TourCard = ({title, duration, price}) => {
     router.push('/tour/id=1')
   }
   return (
-    <div className=' w-[300px] rounded-xl overflow-hidden shadow-lg'>
+    <div className=' w-[300px] rounded-xl overflow-hidden shadow-lg max-sm:w-[100%]'>
         <Image src="/images/historic.png" width={999} height={100}  alt='image'/>
         <div className="info p-3">
             <h1 className=' text-xl font-bold'>{title}</h1>
