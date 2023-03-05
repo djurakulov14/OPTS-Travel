@@ -37,3 +37,37 @@ body{
   left: 20px;
   z-index: 122;
 }
+
+
+.list-transition-enter {
+  /*We give the list the initial dimension of the list button*/
+  /* top: 0; */
+  width: 100%;
+  max-height: 40px;
+  color: transparent;
+  background-color: white;
+  }
+  /* This is where we can add the transition*/
+  .list-transition-enter-active {
+  /* top: 0; */
+  width: 100%;
+  max-height: 200px;
+  background-color: #fff;
+  transition: all 400ms;
+  }
+  /* This fires as soon as the this.state.showList is false */
+  .list-transition-exit {
+  /* top: 0; */
+  width: 200px;
+  max-height: 200px;
+  background-color: #fff;
+  }
+  /* fires as element leaves the DOM*/
+  .list-transition-exit-active {
+  /* top: 0; */
+  width: 120px;
+  max-height: 40px;
+  color: transparent;
+  background-color: #ffff;
+  transition: all 400ms;
+  }

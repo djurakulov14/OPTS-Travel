@@ -25,7 +25,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     const {t} = useTranslation("main")
 
     return (
-        <section className='h-[600px] w-full text-white mb-20 max-md:h-[450px]'>
+        <section className='h-[600px] w-full text-white mb-18 max-md:h-[450px]'>
         <Header/>
             <div className="bg absolute top-0 left-0 z-[-1] h-[600px] max-md:h-[450px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]  delay-200" style={{background: `url(${image})`,backgroundSize: "cover",backgroundPosition: "center"}}>
             </div>

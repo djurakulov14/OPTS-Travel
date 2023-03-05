@@ -6,6 +6,7 @@ import axios from 'axios'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { IoMenu } from 'react-icons/io5';
+import { CSSTransition } from 'react-transition-group'
 
 
 
@@ -129,7 +130,13 @@ const cities = [
           <div>
             <IoMenu size={25}/>
           </div>
-          <div className=' bg-slate-50 p-3 rounded-xl rounded-tr-none	absolute right-16 z-10' style={style3}  >
+          <CSSTransition
+            in={open.menu}
+            timeout={400}
+            classNames="list-transition"
+            unmountOnExit
+            appear>
+          <div className=' bg-slate-50 p-3 absolute w-full left-0 z-10' style={style3}  >
             <ul>
                 <li><Link href='/' className=' text-black hover:underline'>{t("main")}</Link></li>
                 <li><Link href='/cityPage' className='text-black hover:underline' >{t("cities")}</Link></li>
@@ -139,6 +146,7 @@ const cities = [
                 <li><Link href='/contacts' className=' text-black hover:underline'>{t("contact")}</Link></li>
             </ul>
           </div>
+          </CSSTransition>
         </div>
         <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
           <div className="flex items-center gap-1 hover:cursor-pointer">
