@@ -28,7 +28,7 @@ const City = ({city}) => {
   return (
     <Layout>
       <TopSection isSwiper={false} title={t("citiesOfTitle")} dsc={t("citiesOf")}/>
-      <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
+      <div className="content flex flex-wrap justify-around gap-8 relative -top-52 max-md:-top-24">
         {
           city.map(item => <Link key={item.id} href={item.link}><CityCard {...item}/></Link>)
         }

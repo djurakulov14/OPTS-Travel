@@ -10,8 +10,9 @@
   
     /* Center slide text vertically */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
   }
   
 

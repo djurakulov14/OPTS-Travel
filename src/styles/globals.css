@@ -24,7 +24,7 @@ body{
 
 
 .title {
-  @apply text-3xl font-bold
+  @apply text-3xl font-bold max-md:text-2xl
 }
 
 .cont {

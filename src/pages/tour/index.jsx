@@ -83,7 +83,7 @@ const Tours = () => {
   return (
     <Layout>
         <TopSection isSwiper={false} title={t("tourTitle")} dsc={t("tour")}/>
-        <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
+        <div className="content flex flex-wrap justify-between gap-8 relative -top-52 max-md:-top-24">
             {
               arr.map(item => <TourCard key={item.id} {...item}/>)
             }

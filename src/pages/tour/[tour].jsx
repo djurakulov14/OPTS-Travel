@@ -68,36 +68,12 @@ const TourPage = () => {
         <TopSection isSwiper={false} title={"Тур по Узбекистану"} dsc={"Ташкент-Самарканд-Бухара-Шахрисабс-Ургенч"} dsc2={`8 ${t("days")}/9 ${t("nights")}`}/>
 
         <div className="content">
-            <div className="way flex justify-between items-center mb-20">
-                <div className="acc">
+          <div className=" flex justify-between max-md:flex-col">
+            <div className="way ">
+                <div className="acc mb-20">
                     <h1 className='title mb-3'>{t("route")}:</h1>
                     <Accordionn/>
                 </div>
-                <div className="price sticky top-[100px] z-50 bg-[#1EB8D4] w-[40%] text-white p-3 rounded-lg flex flex-col justify-between gap-5">
-                    <div className="prices">
-                        <h1 className='text-lg font-semibold'>{t("price")}:</h1>
-                        <table className=' border-solid border-2 p-4 w-full rounded-xl'>
-                            <tr className='text-center'>
-                                <th className='border-solid border-2'>{t("person")}:</th>
-                                <th className='border-solid border-2'><ReactStars count={3} value={3} edit={false} className='flex justify-center'/></th>
-                                <th className='border-solid border-2'><ReactStars count={4} value={4} edit={false} className='flex justify-center'/></th>
-                            </tr>
-                            <tr className='text-center'>
-                                <td className='border-solid border-2'>1</td>
-                                <td className='border-solid border-2'>660$</td>
-                                <td className='border-solid border-2'>+150$</td>
-                            </tr>
-                            <tr className='text-center'>
-                                <td className='border-solid border-2'>2</td>
-                                <td className='border-solid border-2'>600$</td>
-                                <td className='border-solid border-2'>+120$</td>
-                            </tr>
-                        </table>
-                        <p className=' text-base leading-5'>{t("morePeople")}</p>
-                    </div>
-                    <button onClick={handleClickOpen} className=' border-[#1EB8D4] border-solid border-2 bg-white text-[#1EB8D4] w-full py-2 rounded-xl'>{t("book")}</button>
-                </div>
-            </div>
             <div className="incuded mb-20 w-fit">
                 <h1 className='title'>{t("include")}/{t("notInclude")}</h1>
                     <div className="inc mb-7">
@@ -126,6 +102,32 @@ const TourPage = () => {
                     </ul>
                 </div>
             </div>
+            </div>
+              <div className="price sticky top-[20px] z-50 bg-[#1EB8D4] w-[40%] max-md:w-full mb-20 h-fit text-white p-3 rounded-lg flex flex-col justify-between gap-5">
+                    <div className="prices">
+                        <h1 className='text-lg font-semibold'>{t("price")}:</h1>
+                        <table className=' border-solid border-2 p-4 w-full rounded-xl'>
+                            <tr className='text-center'>
+                                <th className='border-solid border-2'>{t("person")}:</th>
+                                <th className='border-solid border-2'><ReactStars count={3} value={3} edit={false} className='flex justify-center'/></th>
+                                <th className='border-solid border-2'><ReactStars count={4} value={4} edit={false} className='flex justify-center'/></th>
+                            </tr>
+                            <tr className='text-center'>
+                                <td className='border-solid border-2'>1</td>
+                                <td className='border-solid border-2'>660$</td>
+                                <td className='border-solid border-2'>+150$</td>
+                            </tr>
+                            <tr className='text-center'>
+                                <td className='border-solid border-2'>2</td>
+                                <td className='border-solid border-2'>600$</td>
+                                <td className='border-solid border-2'>+120$</td>
+                            </tr>
+                        </table>
+                        <p className=' text-base leading-5'>{t("morePeople")}</p>
+                    </div>
+                    <button onClick={handleClickOpen} className=' border-[#1EB8D4] border-solid border-2 bg-white text-[#1EB8D4] w-full py-2 rounded-xl'>{t("book")}</button>
+                </div>
+          </div>
             <div className="dsc mb-20">
                 <h1 className='title'>{t("dsc")}:</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis officiis ea ut dicta, autem aliquam assumenda quis voluptas tenetur pariatur deleniti molestias hic quia nam blanditiis at eveniet possimus illo rerum eligendi, dolores repellat debitis repudiandae fuga? Distinctio inventore sequi repellendus harum quae! Obcaecati, praesentium alias libero veniam omnis maxime repudiandae, enim molestiae atque, fuga nam modi. Dolorem nam eos recusandae dolores animi adipisci temporibus voluptatem incidunt quidem, consequatur earum repellendus illum at quam, accusantium minus voluptatum dicta beatae repellat suscipit quaerat perferendis quia? Maiores cum magnam odit, veniam iusto omnis ea cupiditate deserunt libero dolore quasi saepe dolor eos!</p>

@@ -35,20 +35,36 @@ const Cityid = ({city, hotels}) => {
 
   const {t} = useTranslation("main")
 
-  const router = useRouter()
 
-  console.log(router);
 
+  let pageWidth = 0
+  let slides = 3
+  let map = 500
+
+  if (typeof window !== "undefined") {
+    var width = window.innerWidth;
+    pageWidth = width
+ }
+
+ if(pageWidth <= 660){
+  map = 200
+  slides = 1
+ } else if(pageWidth <= 1024){
+  map = 400
+  slides = 2
+ } else if(pageWidth <= 1280){
+  slides = 3
+ }
   return (
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle}/>
-        <div className=" mb-32">
+        <div className=" mb-32 ma">
           <h1 className='title'>{t("history")}</h1>
-          <p className='mb-8 text-xl'>{city.history}</p>
+          <p className='mb-8 text-xl max-md:text-base'>{city.history}</p>
           <h1 className='title text-center mb-8'>{t("places")}</h1>
           <Swiper
           speed={1500}
-          slidesPerView={3}
+          slidesPerView={slides}
           spaceBetween={30}
           autoplay={{
             delay: 2000,
@@ -66,7 +82,7 @@ const Cityid = ({city, hotels}) => {
         <h1 className='title text-center mb-8'>{t("hotelCity")}</h1>
           <Swiper
           speed={1500}
-          slidesPerView={3}
+          slidesPerView={slides}
           spaceBetween={30}
           autoplay={{
             delay: 2000,
@@ -82,7 +98,7 @@ const Cityid = ({city, hotels}) => {
         </>  
         }
       <h1 className='title text-center mb-8'>{t("map")}</h1>
-      <iframe src={city.map} width="100%" height="600" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src={city.map} width="100%" height={map + "px"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </Layout>
   )

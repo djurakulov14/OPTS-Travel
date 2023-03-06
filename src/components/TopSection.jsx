@@ -65,12 +65,12 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
             }
         </Swiper>
         :
-        <div className="info mt-32">
+        <div className="info mt-32 max-md:mt-20">
             <div className="dsc flex flex-col">
-                <h1 className=' text-4xl font-bold mb-7'>{title}</h1>
-                <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc}</p>
+                <h1 className=' text-4xl font-bold mb-7 max-md:text-2xl'>{title}</h1>
+                <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4 max-md:text-xl max-md:w-full'>{dsc}</p>
                 {dsc2 ? 
-                    <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4'>{dsc2}</p>
+                    <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4 max-md:w-5/6'>{dsc2}</p>
                     :
                     ""                
                 }

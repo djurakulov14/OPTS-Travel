@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       hotels: filtered,
-      ...(await serverSideTranslations(locale, ["header", "footer"])),
+      ...(await serverSideTranslations(context.locale, ["header", "footer"])),
     }, // will be passed to the page component as props
   }
 }
@@ -30,7 +30,7 @@ const HotelinCity = ({hotels}) => {
   return (
     <Layout>
       <TopSection isSwiper={false} title={loc} dsc={"Самые лучшие отели этого города разных классов"}/>
-      <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
+      <div className="content flex flex-wrap justify-between gap-8 relative -top-52 max-md:-top-24">
         {
           hotels.map(item => <HotelCard key={item.id} {...item}/>)
         }

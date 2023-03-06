@@ -52,7 +52,7 @@ export default function Accordionn() {
   };
 
   return (
-    <div className='w-[70%]'>
+    <div className='w-[70%] max-md:w-full'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>Collapsible Group Item #1</Typography>

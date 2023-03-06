@@ -27,7 +27,7 @@ const Hotel = ({hotels}) => {
   return (
     <Layout>
         <TopSection isSwiper={false} title={t("hotelTtitle")} dsc={t("hotel")}/>
-        <div className="content flex flex-wrap justify-between gap-8 relative -top-52">
+        <div className="content flex flex-wrap justify-between gap-8 relative -top-52 max-md:-top-24">
             {
               hotels.map(item => <HotelCard key={item.id} {...item}/>)
             }
