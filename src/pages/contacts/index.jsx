@@ -50,16 +50,28 @@ const Contacts = () => {
             }
             return res.json();
           });
-
-
-
     }
+
+    let pageWidth = 0
+    let map = 500
+  
+    if (typeof window !== "undefined") {
+      var width = window.innerWidth;
+      pageWidth = width
+   }
+  
+
+    if(pageWidth <= 660){
+        map = 200
+       } else if(pageWidth <= 1024){
+        map = 400
+       }
 
   return (
     <Layout>
         <TopSection isSwiper={false} title={t("contTitle")} dsc={t("cont")}/>
         <div className="content ">
-            <div className=" flex justify-between mb-20">
+            <div className=" flex justify-between mb-20 max-lg:flex-col max-lg:gap-6">
                 <div className="left">
                     <div className="media flex flex-col gap-1 mb-16">
                         <h1 className='title'>{t("media")}</h1>
@@ -98,15 +110,15 @@ const Contacts = () => {
                 </div>
                 <div className="right">
                     <h1 className='title mb-3'>{t("location")}</h1>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.8545868541881!2d66.91915879517765!3d39.65616255175086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b2174a42a7b64b2!2sOMEGA%20PREMIER%20TRAVEL%20SERVIS!5e0!3m2!1sru!2s!4v1677322352320!5m2!1sru!2s" width="800" height="600" style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.8545868541881!2d66.91915879517765!3d39.65616255175086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b2174a42a7b64b2!2sOMEGA%20PREMIER%20TRAVEL%20SERVIS!5e0!3m2!1sru!2s!4v1677322352320!5m2!1sru!2s" width="100%" height={map + "px"} style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <form className=' w-fit flex flex-col gap-5 mb-20' onSubmit={submitForm}>
                 <h1 className='title '>{t("formTitle")}</h1>
                 <div className="top flex gap-5">
                     <TextField name='name' label={t("formName")} required/>
-                    <TextField name='email' label="Email" required/>
-                    <TextField name='phone' label={t("formPhone")}/>
+                    <TextField name='email' type='email' label="Email" required/>
+                    <TextField name='phone' type='number' label={t("formPhone")}/>
                 </div>
                     <TextField name='massage' label={t("formMassege")} fullWidth  required rows={3}/>
                     <MyButton type="submit">{t("btnSend")}</MyButton>

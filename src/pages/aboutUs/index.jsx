@@ -23,22 +23,22 @@ const AboutUs = () => {
     <Layout>
         <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")}/>
         <div className="content">
-            <div className="top flex justify-between items-top mb-24">
-                <div className="exp w-[30%] flex flex-col gap-3">
+            <div className="top flex justify-between items-top mb-24 max-lg:flex-col max-lg:gap-5">
+                <div className="exp w-[30%] flex flex-col gap-3 max-lg:w-full">
                     <h1 className='title'>{t("expTitle")}</h1>
                     <p>{t("exp")}</p>
                 </div>
-                <div className="pod w-[30%] flex flex-col gap-3">
+                <div className="pod w-[30%] flex flex-col gap-3 max-lg:w-full">
                     <h1 className='title'>{t("approachTitle")}</h1>
                     <p>{t("approach")}</p>
                 </div>
-                <div className="lic w-[30%] flex flex-col gap-3">
+                <div className="lic w-[30%] flex flex-col gap-3 max-lg:w-full">
                     <h1 className='title'>{t("licenceTitle")}</h1>
                     <p>{t("licence")}</p>
                 </div>
             </div>
-            <div className="list flex flex-col gap-3 mb-24">
-                <h1 className=' title w-2/3'>{t("customTour")}</h1>
+            <div className="list flex flex-col gap-3 mb-24  max-lg:w-full">
+                <h1 className=' title w-2/3  max-lg:w-full'>{t("customTour")}</h1>
                 <ul className='list-disc pl-5'>
                     <li>{t("time")}</li>
                     <li>{t("numDays")}</li>
@@ -46,7 +46,7 @@ const AboutUs = () => {
                     <li>{t("category")}</li>
                 </ul>
             </div>
-            <div className="list flex flex-col gap-3 mb-24">
+            <div className="list flex flex-col gap-3 mb-24  max-lg:w-full">
                 <h1 className=' title w-2/3'>{t("sivices")}</h1>
                 <ul className='list-disc  pl-5'>
                     <li>{t("touristAuto")}</li>

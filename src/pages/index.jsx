@@ -18,14 +18,14 @@ export async function getStaticProps({locale}) {
   return {
     props: {
       data: data,
-      ...(await serverSideTranslations(locale, ["header", "expirience", "footer", "main"])),
+      ...(await serverSideTranslations(locale, ["header", "expirience", "footer", "main", "about"])),
     },
   }
 }
 
 export default function Home({data}) {
 
-  const {t} = useTranslation("main")
+  const {t} = useTranslation("main", "about")
   let pageWidth = 0
   let slides = 4
 
