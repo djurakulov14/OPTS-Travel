@@ -53,19 +53,24 @@ const Contacts = () => {
     }
 
     let pageWidth = 0
-    let map = 500
+    let map = 600
   
     if (typeof window !== "undefined") {
       var width = window.innerWidth;
       pageWidth = width
+      if(pageWidth <= 660){
+          map = 200
+          console.log(200);
+      } else if(pageWidth <= 1024){
+          console.log(400);
+          map = 400
+      } else if(pageWidth <= 1280){
+          console.log(600);
+          map = 600
+      }
    }
   
 
-    if(pageWidth <= 660){
-        map = 200
-       } else if(pageWidth <= 1024){
-        map = 400
-       }
 
   return (
     <Layout>
@@ -108,7 +113,7 @@ const Contacts = () => {
                         </div>
                     </div>
                 </div>
-                <div className="right">
+                <div className="right w-[65%] max-lg:w-full">
                     <h1 className='title mb-3'>{t("location")}</h1>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.8545868541881!2d66.91915879517765!3d39.65616255175086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b2174a42a7b64b2!2sOMEGA%20PREMIER%20TRAVEL%20SERVIS!5e0!3m2!1sru!2s!4v1677322352320!5m2!1sru!2s" width="100%" height={map + "px"} style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>

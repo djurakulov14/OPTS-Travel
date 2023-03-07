@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Menu from './_child/Menu'
-import axios from 'axios'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { IoMenu } from 'react-icons/io5';
@@ -90,7 +88,7 @@ const cities = [
 
   return (
     <header className='flex justify-between items-center'>
-      <div className="logo"><Image src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
+      <div className="logo cursor-pointer" onClick={() => router.push('/')}><Image src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
       <nav className=' flex gap-4 max-lg:hidden'>
         <Link href='/' className='hover:underline'>{t("main")}</Link>
         <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
