@@ -7,6 +7,8 @@ import ReactStars from 'react-stars'
 import { RxCrossCircled } from 'react-icons/rx';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import axios from 'axios'
+
 
 
 export async function getServerSideProps({locale}) {
@@ -42,21 +44,31 @@ const TourPage = () => {
         data[key] = value
       })
 
-      fetch("https://opts-travel.netlify.app/api/buyTour", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json", Accept: "application/json" },
-        }).then((res) => {
-            if (!res.ok){ 
-                alert("error")
-            } else {
-              alert("Сообщение отправлено")
-                e.target.name.value = ""
-                e.target.email.value = ""
-                e.target.phone.value = ""
-            }
-            return res.json();
-          });
+      // fetch("https://opts-travel.netlify.app/api/buyTour", {
+      //       method: "POST",
+      //       body: JSON.stringify(data),
+      //       headers: { "Content-Type": "application/json", Accept: "application/json" },
+      //   }).then((res) => {
+      //       if (!res.ok){ 
+      //           alert("error")
+      //       } else {
+      //         alert("Сообщение отправлено")
+      //           e.target.name.value = ""
+      //           e.target.email.value = ""
+      //           e.target.phone.value = ""
+      //       }
+      //       return res.json();
+      //     });
+      axios.post("http://localhost:3000/api/buyTour", data)
+        .then(res => {
+        if (res.status !== 200){ 
+            alert("error")
+        } else {
+          alert("Сообщение отправлено")
+            e.target.reset()
+        }
+        console.log(res);
+      })
   
       
   }

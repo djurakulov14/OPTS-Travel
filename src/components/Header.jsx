@@ -81,6 +81,7 @@ const cities = [
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
   const style3 = open.menu ? {display: "block"} : {display: "none"}
+  const [list, setList] = useState(false)
 
   const {t, i18n} = useTranslation("header")
   const lng = i18n.language
@@ -133,16 +134,18 @@ const cities = [
             timeout={400}
             classNames="list-transition"
             unmountOnExit
+            onEntering={() => setList(!list)}
+            onExit={() => setList(!list)}
             appear>
-          <div className=' bg-slate-50 p-3 absolute w-full left-0 z-10' style={style3}  >
-            <ul>
-                <li><Link href='/' className=' text-black hover:underline'>{t("main")}</Link></li>
-                <li><Link href='/cityPage' className='text-black hover:underline' >{t("cities")}</Link></li>
-                <li><Link href='/hotel' className=' text-black hover:underline'>{t("hotels")}</Link></li>
-                <li><Link href='/tour' className='text-black hover:underline'>{t("tours")}</Link></li>
-                <li><Link href='/aboutUs' className=' text-black hover:underline'>{t("about")}</Link></li>
-                <li><Link href='/contacts' className=' text-black hover:underline'>{t("contact")}</Link></li>
-            </ul>
+          <div className=' bg-slate-50 p-3 absolute w-full left-0 z-10 overflow-hidden' style={style3}  >
+              <ul className='trans' style={list ? {opacity: 1} : {opacity: 0}} >
+                  <li><Link href='/' className=' text-black hover:underline'>{t("main")}</Link></li>
+                  <li><Link href='/cityPage' className='text-black hover:underline' >{t("cities")}</Link></li>
+                  <li><Link href='/hotel' className=' text-black hover:underline'>{t("hotels")}</Link></li>
+                  <li><Link href='/tour' className='text-black hover:underline'>{t("tours")}</Link></li>
+                  <li><Link href='/aboutUs' className=' text-black hover:underline'>{t("about")}</Link></li>
+                  <li><Link href='/contacts' className=' text-black hover:underline'>{t("contact")}</Link></li>
+              </ul>
           </div>
           </CSSTransition>
         </div>
