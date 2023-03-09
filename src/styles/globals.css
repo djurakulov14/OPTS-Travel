@@ -75,23 +75,3 @@ body{
   .trans{
     transition: 200ms linear;
   }
-
-  .list-items-enter {
-    opacity: 0.5;
-    transition: 300ms;
-    }
-    /* This is where we can add the transition*/
-    .list-items-enter-active {
-    transition: 300ms;
-    opacity: 1;
-    }
-    /* This fires as soon as the this.state.showList is false */
-    .list-items-exit {
-    transition: 300ms;
-    opacity: 0.5;
-    }
-    /* fires as element leaves the DOM*/
-    .list-items-exit-active {
-    transition: 300ms;
-    opacity: 0;
-    }
