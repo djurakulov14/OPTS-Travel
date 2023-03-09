@@ -9,7 +9,8 @@ import { useTranslation } from 'next-i18next'
 import { useState } from 'react'
 
 export async function getStaticProps({locale}) {
-  const res = await fetch("https://main--opts-travel.netlify.app/api/tours", {
+
+  const res = await fetch("https://opts-travel.netlify.app/api/tours", {
     method: "GET"
   })
   const data = await res.json()
@@ -54,7 +55,7 @@ export default function Home({data}) {
         <Layout>
           <TopSection arr={data} isSwiper={true} />
           <Services/>
-          <CardsSection title={t("popular")} slides={slides} arr={[1,2,3,4,5]} />
+          <CardsSection title={t("popular")} slides={slides} arr={data} />
           <Video/>
         </Layout>
       </main>

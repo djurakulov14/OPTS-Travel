@@ -11,17 +11,22 @@ import axios from 'axios'
 
 
 
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps(context) {
+  const res = await fetch("https://opts-travel.netlify.app/api/tours")
+  const data = await res.json()
+  const param = await context.params.tour.split('=').at(-1)
 
+  const filtered = await data.filter(item => item.id === +param)
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
+      data: filtered,
+      ...(await serverSideTranslations(context.locale, ["header", "footer", "main"])),
     }, // will be passed to the page component as props
   }
 }
 
-const TourPage = () => {
+const TourPage = ({data}) => {
 
     const [open, setOpen] = useState(false);
 
@@ -33,7 +38,7 @@ const TourPage = () => {
       setOpen(false);
     };
 
-    const submitForm = (e) => {      
+    const submitForm = (e) => {
       e.preventDefault()
 
       let data = {}
@@ -44,21 +49,6 @@ const TourPage = () => {
         data[key] = value
       })
 
-      // fetch("https://opts-travel.netlify.app/api/buyTour", {
-      //       method: "POST",
-      //       body: JSON.stringify(data),
-      //       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      //   }).then((res) => {
-      //       if (!res.ok){ 
-      //           alert("error")
-      //       } else {
-      //         alert("Сообщение отправлено")
-      //           e.target.name.value = ""
-      //           e.target.email.value = ""
-      //           e.target.phone.value = ""
-      //       }
-      //       return res.json();
-      //     });
       axios.post("http://localhost:3000/api/buyTour", data)
         .then(res => {
         if (res.status !== 200){ 
@@ -72,19 +62,21 @@ const TourPage = () => {
   
       
   }
-
   const {t} = useTranslation("main")
+
+
+  data = data[0]
+
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={"Тур по Узбекистану"} dsc={"Ташкент-Самарканд-Бухара-Шахрисабс-Ургенч"} dsc2={`8 ${t("days")}/9 ${t("nights")}`}/>
-
+        <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={`${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}`}/>
         <div className="content">
-          <div className=" flex justify-between max-md:flex-col">
+          <div className=" flex justify-between max-md:flex-col gap-5">
             <div className="way ">
                 <div className="acc mb-20">
                     <h1 className='title mb-3'>{t("route")}:</h1>
-                    <Accordionn/>
+                    <Accordionn data={data}/>
                 </div>
             <div className="incuded mb-20 w-fit">
                 <h1 className='title'>{t("include")}/{t("notInclude")}</h1>

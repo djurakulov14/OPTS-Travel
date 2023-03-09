@@ -8,9 +8,10 @@ import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
-const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
-    const [image, setImage] = useState(arr ? arr[0]?.img : "/images/chimgan.png")
+const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
+    const [image, setImage] = useState(arr ? arr[0]?.img : img ? img : "/images/chimgan.png")
 
     function changeImage(event) {
         if(arr){
@@ -23,6 +24,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
     }
 
     const {t} = useTranslation("main")
+    const router = useRouter()
 
     return (
         <section className='h-[600px] w-full text-white mb-18 max-md:h-[450px]'>
@@ -56,7 +58,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2}) => {
                                 <h1 className=' text-4xl font-bold max-md:text-3xl'>{item.title}</h1>
                                 <p className=' text-2xl font-normal max-md:text-xl text-[#DFDFDF] w-2/4'>{item.duration} {t("days")}/ {item.duration - 1} {t("nights")}</p>
                             </div>
-                            <MyButton style={{fontSixe: "16px"}} >{t("more")}</MyButton>
+                            <MyButton onClick={() => router.push(`/tour/id=${item.id}`)} style={{fontSixe: "16px"}} >{t("more")}</MyButton>
                          </div>
                         <p className='hidden'>{item.img}</p>
                     </SwiperSlide>
