@@ -55,7 +55,7 @@ export default function Accordionn({data}) {
     <div className='w-[100%] max-md:w-full'>
       {
         data.days.map((item, index) => 
-      <Accordion expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
+      <Accordion key={index} expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
         <AccordionSummary aria-controls={`panel${index + 1}d-content`} id={`panel${index + 1}d-header`}>
           <Typography>{index + 1 + " День"}</Typography>
         </AccordionSummary>
@@ -63,8 +63,8 @@ export default function Accordionn({data}) {
           <Typography>
             <ul className='list-disc pl-3'>
             {
-              item.split('.').map(item => 
-                <li className=''>{item}</li>  
+              item.split('.').map((item, index) => 
+                <li key={index} className=''>{item}</li>  
               )
             }
             </ul>
