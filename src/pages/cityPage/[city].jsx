@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("https://main--opts-travel.netlify.app/api/city")
+  const res = await fetch("http://localhost:3000/api/city")
   const data = await res.json()
   const response = await fetch("https://main--opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
@@ -44,18 +44,18 @@ const Cityid = ({city, hotels}) => {
   if (typeof window !== "undefined") {
     var width = window.innerWidth;
     pageWidth = width
+    if(pageWidth <= 660){
+     map = 200
+     slides = 1
+    } else if(pageWidth <= 1024){
+     map = 400
+     slides = 2
+    } else if(pageWidth <= 1280){
+     map = 600
+     slides = 3
+    }
  }
 
- if(pageWidth <= 660){
-  map = 200
-  slides = 1
- } else if(pageWidth <= 1024){
-  map = 400
-  slides = 2
- } else if(pageWidth <= 1280){
-  map = 600
-  slides = 3
- }
   return (
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle}/>
@@ -75,7 +75,7 @@ const Cityid = ({city, hotels}) => {
           className="mySwiper !m-auto"
           >
           {
-            city.places.map((item, index) => <SwiperSlide key={index}><PlaceCard title={item}/></SwiperSlide>)
+            city.places.map((item) => <SwiperSlide key={item.id}><PlaceCard {...item}/></SwiperSlide>)
           }
        </Swiper>
         {city.title.includes("Шахрисабс") ? "" :
