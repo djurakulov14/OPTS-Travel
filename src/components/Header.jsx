@@ -11,10 +11,14 @@ import { CSSTransition } from 'react-transition-group'
 
 const Header = () => {
   const [open, setOpen] = useState({cities: false, hotels: false, menu: false})
-  const hotelsOfCities = [
+  const {t, i18n} = useTranslation("header")
+  const lng = i18n.language
+  const router = useRouter()
+
+  const hotelsOfCities = lng === 'ru' ? [
     {
         id:1,
-        title: "Отели в Самарканде",
+        title: "Отели в Самарканде", 
         link: "/hotel/id=1",
     },
     {
@@ -43,8 +47,41 @@ const Header = () => {
         link: "/hotel/id=7",
     }
 ]
+:
+[
+  {
+      id:1,
+      title: "Hotels in Samarkand", 
+      link: "/hotel/id=1",
+  },
+  {
+      id:2,
+      title: "Hotels in Bukhara",
+      link: "/hotel/id=2",
+  },
+  {
+      id:3,
+      title: "Hotels in Khiva",
+      link: "/hotel/id=3",
+  },
+  {
+      id:5,
+      title: "Hotels in Tashkent",
+      link: "/hotel/id=5",
+  },
+  {
+      id:6,
+      title: "Hotels in Kokand",
+      link: "/hotel/id=6",
+  },
+  {
+      id:7,
+      title: "Hotels in Namangan",
+      link: "/hotel/id=7",
+  }
+]
 
-const cities = [
+const cities = lng === 'ru' ? [
   {
       id:1,
       title: "Самарканд",
@@ -76,16 +113,45 @@ const cities = [
       link: "/cityPage/id=7",
   }
 ]
-
+:
+[
+  {
+      id:1,
+      title: "Samarkand",
+      link: "/cityPage/id=1",
+  },
+  {
+      id:2,
+      title: "Bukhara",
+      link: "/cityPage/id=2",
+  },
+  {
+      id:3,
+      title: "Khiva",
+      link: "/cityPage/id=3",
+  },
+  {
+      id:5,
+      title: "Tashkent",
+      link: "/cityPage/id=5",
+  },
+  {
+      id:6,
+      title: "Kokand",
+      link: "/cityPage/id=6",
+  },
+  {
+      id:7,
+      title: "Namangan",
+      link: "/cityPage/id=7",
+  }
+]
 
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
   const style3 = open.menu ? {display: "block"} : {display: "none"}
   const [list, setList] = useState(false)
-
-  const {t, i18n} = useTranslation("header")
-  const lng = i18n.language
-  const router = useRouter()
+  
 
   return (
     <header className='flex justify-between items-center'>

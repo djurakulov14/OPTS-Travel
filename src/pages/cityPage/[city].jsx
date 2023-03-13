@@ -53,6 +53,7 @@ const Cityid = ({city, hotels}) => {
   map = 400
   slides = 2
  } else if(pageWidth <= 1280){
+  map = 600
   slides = 3
  }
   return (
