@@ -8,6 +8,7 @@ import { RxCrossCircled } from 'react-icons/rx';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 
 
@@ -67,6 +68,9 @@ const TourPage = ({data}) => {
 
   data = data[0]
 
+  const router = useRouter()
+
+  console.log(router);
 
   return (
     <Layout>
