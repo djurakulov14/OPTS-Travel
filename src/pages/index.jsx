@@ -34,8 +34,9 @@ export default function Home({data}) {
     var width = window.innerWidth;
     pageWidth = width
  }
-
- if(pageWidth <= 1024){
+ if(pageWidth <= 640){
+  slides = 1
+ } else if(pageWidth <= 1024){
   slides = 2
  } else if(pageWidth <= 1280){
   slides = 3
