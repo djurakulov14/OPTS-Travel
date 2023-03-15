@@ -98,6 +98,11 @@ const cities = lng === 'ru' ? [
       link: "/cityPage/id=3",
   },
   {
+      id:3,
+      title: "Шахрисабс",
+      link: "/cityPage/id=4",
+  },
+  {
       id:5,
       title: "Ташкент",
       link: "/cityPage/id=5",
@@ -129,6 +134,11 @@ const cities = lng === 'ru' ? [
       id:3,
       title: "Khiva",
       link: "/cityPage/id=3",
+  },
+  {
+      id:4,
+      title: "Shakhrisabs",
+      link: "/cityPage/id=4",
   },
   {
       id:5,

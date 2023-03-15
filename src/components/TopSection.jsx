@@ -11,7 +11,8 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
-    const [image, setImage] = useState(arr ? arr[0]?.img : img ? img : "/images/chimgan.png")
+    console.log(img);
+    const [image, setImage] = useState(img ? img : "/images/chimgan.png")
 
     function changeImage(event) {
         if(arr){
@@ -50,7 +51,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
             onClick={changeImage}
             >
             {
-                arr.map(item => 
+                arr.map(item =>
                 <>
                     <SwiperSlide onClick={changeImage} key={item.id} className=' !h-fit'>
                         <div className="info">

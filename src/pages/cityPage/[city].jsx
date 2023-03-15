@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://opts-travel.netlify.app/api/city")
+  const res = await fetch("https://opts-travel.netlify.app/api/city")
   const data = await res.json()
   const response = await fetch("https://main--opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
@@ -58,7 +58,7 @@ const Cityid = ({city, hotels}) => {
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={city.title} dsc={city.subTitle}/>
+        <TopSection isSwiper={false} title={city.title} dsc={city.subTitle} img={city.img}/>
         <div className=" mb-32 ma">
           <h1 className='title'>{t("history")}</h1>
           <p className='mb-8 text-xl max-md:text-base'>{city.history}</p>

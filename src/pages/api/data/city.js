@@ -3,6 +3,7 @@ export const cities = [
         id:1,
         title: "Самарканд",
         subTitle: "Жемчужина востока",
+        img: "https://images.unsplash.com/photo-1557841089-d82280fcc341?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1165&q=80",
         places: [{
             id: 1,
             title: "Шахи зинда",
@@ -35,31 +36,32 @@ export const cities = [
     {
         id:2,
         title: "Бухара",
-        subTitle: "Жемчужина востока",
+        subTitle: "Центр Исламской религии",
+        img: "https://images.unsplash.com/photo-1673005583423-2dc598cfb7c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1730&q=80",
         places: [{
             id: 1,
             title: "Ляби Хауз",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/xaos-0-0-0-0-1582872376.jpg"
+            img: "https://adrastravel.com/wp-content/uploads/2021/05/khanaka-nadir-divan-begi-1.jpg"
         },
         {
             id: 2,
             title: "Цитадель Арк",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/cropped-images/ark-0-0-0-0-1582872696-0-0-0-0-1582872840.jpg"
+            img: "https://adrastravel.com/wp-content/uploads/2021/05/bukhara-ark-min.jpg"
         },
         {
             id: 3,
             title: "Медресе Мири Араб",
-            img: "https://uzbekistan.travel/storage/app/media/nargizav/IMG_2309.jpg"
+            img: "https://canaan.travel/wp-content/uploads/2021/01/medrese-miri-arab.jpg"
         },
         {
             id: 4,
             title: "Пои-Калон",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/cropped-images/poikalon-641-46-0-0-1582871540-0-0-0-0-1582871789.jpg"
+            img: "https://ru.silkroaddestinations.com/wp-content/uploads/2017/02/infotur.jpg"
         },
         {
             id: 5,
             title: "Медресе Абдуллазизхана",
-            img: "https://uzbekistan.travel/storage/app/media/02bukhara16-min.jpg"
+            img: "https://www.advantour.com/img/uzbekistan/bukhara/abdullazizkhan-madrasah1.jpg"
         }],
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49061.003945203855!2d64.42279810000001!3d39.777536299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50060e65993cd5%3A0xc87beaf40e48e767!2z0JHRg9GF0LDRgNCw!5e0!3m2!1sru!2s!4v1677069405623!5m2!1sru!2s" ,
         link: "/cityPage/id=2",
@@ -68,31 +70,32 @@ export const cities = [
     {
         id:3,
         title: "Хива",
-        subTitle: "Жемчужина востока",
+        subTitle: "Столица Тюркского мира",
+        img: "https://images.unsplash.com/photo-1665739825278-5205b5fd3b90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1636&q=80",
         places: [{
             id: 1,
             title: "Ичан Кала",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/cropped-images/khiva1-0-0-0-0-1582874946-0-0-0-0-1582875134.jpg"
+            img: "https://canaan.travel/wp-content/uploads/2020/12/ichan-kala.jpg"
         },
         {
             id: 2,
             title: "Крепость Куня Арк",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/kunya%20ark-0-0-0-0-1588586498.jpg"
+            img: "https://adrastravel.com/wp-content/uploads/2021/11/ark-khiva.jpg"
         },
         {
             id: 3,
             title: "Мавзолей Пахвалан Махмуда",
-            img: "https://uzbekistan.travel/storage/app/media/Yuliya/Pakhlavan%20Makhmud/cropped-images/IMG_3063-0-0-0-0-1602673200.jpg"
+            img: "https://canaan.travel/wp-content/uploads/2020/12/kompleks-pahlavan-mahmuda.jpg"
         },
         {
             id: 4,
             title: "Дворец Нуруллабая",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/1596534870646.png"
+            img: "https://idei.club/raznoe/uploads/posts/2022-12/thumbs/1672225605_idei-club-p-dvorets-nurullabaya-khiva-dizain-krasivo-8.jpg"
         },
         {
             id: 5,
             title: "Мавзолей Уч Авлиё",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/mavzoley-uch-avliya.jpg"
+            img: "https://www.turkestantravel.com/wp-content/uploads/2021/01/Uch-Avliyo.jpg"
         }],
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47892.90630123388!2d60.350003199999996!3d41.38914655000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfa413ffe48cf9%3A0xcd75f47f7a6dc0cd!2z0KXQuNCy0LA!5e0!3m2!1sru!2s!4v1677069506095!5m2!1sru!2s",
         link: "/cityPage/id=3",
@@ -101,16 +104,17 @@ export const cities = [
     {
         id:4,
         title: "Шахрисабс",
-        subTitle: "Жемчужина востока",
+        subTitle: "Родина Амира Темура",
+        img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/03/00/52/la-moschea-di-kok-gumbaz.jpg?w=600&h=400&s=1",
         places: [{
             id: 1,
             title: "Дворец Ак Сарай",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/Aksaray1-0-0-0-0-1587717494.jpg"
+            img: "https://legacy.uz//media/news/0/-pe2im4.jpg"
         },
         {
             id: 2,
             title: "Исторический центр Шахрисабза",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/shahrisabz-0-0-0-0-1582968821.jpg"
+            img: "https://www.gazeta.uz/media/img/2016/03/ENrM7H14592159353382_l.jpg"
         }],
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49573.55818492793!2d66.8312931!3d39.05299685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4c9aa35638ab11%3A0xc2a494e199b7b4b0!2z0KjQsNGF0YDQuNGB0LDQsdC3!5e0!3m2!1sru!2s!4v1677069555345!5m2!1sru!2s",
         link: "/cityPage/id=4",
@@ -119,31 +123,32 @@ export const cities = [
     {
         id:5,
         title: "Ташкент",
-        subTitle: "Жемчужина востока",
+        subTitle: "Современный мегаполис",
+        img: "https://images.unsplash.com/photo-1654861857666-1e8c438cbe4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
         places: [{
             id: 1,
             title: "Мечеть Минор",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/minor.jpg"
+            img: "https://www.advantour.com/img/uzbekistan/tashkent/minor-mosque3.jpg"
         },
         {
             id: 2,
             title: "Хазрати Имам",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/4cd8bd53.jpg"
+            img: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/Hazrat-Imam-Complex.jpg"
         },
         {
             id: 3,
             title: "Медресе Барак-Хана",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/153638925516682502-0-0-0-0-1583401955.jpg"
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxab7ihU4n1pSEcdaHO8j6q3Re8BKLjYpmWQ&usqp=CAU"
         },
         {
             id: 4,
             title: "Медресе Кукельдаш",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/IMG_0531-0-0-0-0-1591182295.jpg"
+            img: "https://canaan.travel/wp-content/uploads/2021/01/medrese-kukeldash.jpg"
         },
         {
             id: 5,
             title: "Медресе Муйи Муборак",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/1.jpeg"
+            img: "https://canaan.travel/wp-content/uploads/2020/12/zdanie-medrese-muyi-muborak.jpg"
         }],
         map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.25298617416!2d69.2793667!3d41.28259745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YI!5e0!3m2!1sru!2s!4v1677069598628!5m2!1sru!2s" ,
         link: "/cityPage/id=5",
@@ -152,16 +157,17 @@ export const cities = [
     {
         id:6,
         title: "Коканд",
-        subTitle: "Жемчужина востока",
+        subTitle: "Город ремесленников",
+        img: "https://media.istockphoto.com/id/1033065752/photo/the-khudayar-khan-palace-is-the-most-popular-landmarks-of-fergana-valley-kokand-uzbekistan.jpg?b=1&s=170667a&w=0&k=20&c=OqLSoa1EwIT4SkyAYe83tpLJoeQEi2B1lwxkVMN2cIY=",
         places: [{
             id: 1,
             title: "Дворец Худояр-хана",
-            img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/1-0-0-0-0-1583484255-0-0-0-0-1585225098.jpg"
+            img: "https://www.advantour.com/img/uzbekistan/kokand/khudoyar-khan-palace1.jpg"
         },
         {
             id: 2,
             title: "Усыпальница царей – Дахма-и-Шахан",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/photo_2020-06-10_14-32-48.jpg"
+            img: "https://www.orexca.com/img/uzbekistan/kokand/dahma_shahon_burial-vault.jpg"
         }],
         map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48517.39143182736!2d70.9311247!3d40.534144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38baeeeb2e1c3e7f%3A0x816d723cc5842908!2z0JrQvtC60LDQvdC0!5e0!3m2!1sru!2s!4v1677069628083!5m2!1sru!2s" ,
         link: "/cityPage/id=6",
@@ -170,21 +176,22 @@ export const cities = [
     {
         id:7,
         title: "Наманган",
-        subTitle: "Жемчужина востока",
+        subTitle: "Город цветов",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-cZOjIQdHoMkaO6SU_AynkMPNbZCby7ruw&usqp=CAU",
         places: [{
             id: 1,
             title: "Мавзолей Ходжа Амина",
-            img: "https://uzbekistan.travel/storage/app/media/Yuliya/cropped-images/130-2-0-0-0-0-1603196647.jpg"
+            img: "http://www.tgt.ru/ext_images/982/img_e8595966333333d1c7286e2c1470e8c7"
         },
         {
             id: 2,
             title: "Комплекс Мавлон-бува",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/7.jpg"
+            img: "https://toucanslandmarks.s3.amazonaws.com/media/com_scatalog/images/listings/m/2020072409205823663.jpg"
         },
         {
             id: 3,
             title: "Поселок Чадак и «Плачущая скала»",
-            img: "https://uzbekistan.travel/storage/app/media/uploaded-files/chadak.jpg"
+            img: "https://visitcentralasia.org/storage/caz/images/attractions/2t0a5686.jpg"
         }],
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96400.09269286704!2d71.64462255!3d40.9704676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4c1b2e60eea5%3A0x36ef7252c4c12106!2z0J3QsNC80LDQvdCz0LDQvQ!5e0!3m2!1sru!2s!4v1677069670979!5m2!1sru!2s" ,
         link: "/cityPage/id=6",
