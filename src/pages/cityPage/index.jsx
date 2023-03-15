@@ -27,7 +27,7 @@ const City = ({city}) => {
 
   return (
     <Layout>
-      <TopSection isSwiper={false} title={t("citiesOfTitle")} dsc={t("citiesOf")}/>
+      <TopSection isSwiper={false} title={t("citiesOfTitle")} dsc={t("citiesOf")} img={"https://images.unsplash.com/photo-1669664321446-d6f903bddc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>
       <div className="content flex flex-wrap justify-around gap-8 relative -top-52 max-md:-top-24">
         {
           city.map(item => <Link key={item.id} href={item.link}><CityCard {...item}/></Link>)

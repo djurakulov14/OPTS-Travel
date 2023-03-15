@@ -21,7 +21,7 @@ const AboutUs = () => {
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")}/>
+        <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")} img={"https://images.unsplash.com/photo-1585734524189-30daa0b32a19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>
         <div className="content">
             <div className="top flex justify-between items-top mb-24 max-lg:flex-col max-lg:gap-5">
                 <div className="exp w-[30%] flex flex-col gap-3 max-lg:w-full">

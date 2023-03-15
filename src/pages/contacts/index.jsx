@@ -71,7 +71,7 @@ const Contacts = () => {
 
   return (
     <Layout>
-        <TopSection isSwiper={false} title={t("contTitle")} dsc={t("cont")}/>
+        <TopSection isSwiper={false} title={t("contTitle")} dsc={t("cont")} img={"https://images.unsplash.com/photo-1561670653-9fb4207e997d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2166&q=80"}/>
         <div className="content ">
             <div className=" flex justify-between mb-20 max-lg:flex-col max-lg:gap-6">
                 <div className="left">

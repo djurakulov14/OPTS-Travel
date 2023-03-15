@@ -29,7 +29,7 @@ const HotelinCity = ({hotels}) => {
   const loc = hotels[0].location.replace('ь','и')
   return (
     <Layout>
-      <TopSection isSwiper={false} title={loc} dsc={"Самые лучшие отели этого города разных классов"}/>
+      <TopSection isSwiper={false} title={loc} dsc={"Самые лучшие отели этого города разных классов"} img={"https://images.unsplash.com/photo-1665317535953-75f73dfe07d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>
       <div className="content flex flex-wrap justify-between gap-8 relative -top-52 max-md:-top-24">
         {
           hotels.map(item => <HotelCard key={item.id} {...item}/>)
