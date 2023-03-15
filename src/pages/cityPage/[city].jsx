@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:3000/api/city")
+  const res = await fetch("http://opts-travel.netlify.app/api/city")
   const data = await res.json()
   const response = await fetch("https://main--opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
