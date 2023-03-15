@@ -58,7 +58,6 @@ const TourPage = ({data}) => {
           alert("Сообщение отправлено")
             e.target.reset()
         }
-        console.log(res);
       })
   
       
@@ -70,7 +69,6 @@ const TourPage = ({data}) => {
 
   const router = useRouter()
 
-  console.log(router);
 
   return (
     <Layout>

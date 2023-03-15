@@ -11,7 +11,6 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
-    console.log(img);
     const [image, setImage] = useState(img ? img : "/images/chimgan.png")
 
     function changeImage(event) {

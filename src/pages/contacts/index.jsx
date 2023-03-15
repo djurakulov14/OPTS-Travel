@@ -60,12 +60,9 @@ const Contacts = () => {
       pageWidth = width
       if(pageWidth <= 660){
           map = 200
-          console.log(200);
       } else if(pageWidth <= 1024){
-          console.log(400);
           map = 400
       } else if(pageWidth <= 1280){
-          console.log(600);
           map = 600
       }
    }
