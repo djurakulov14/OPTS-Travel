@@ -9,7 +9,7 @@ const Video = () => {
   return (
     <div className=' flex flex-col gap-4 items-center justify-center mt-7 h-[600px] max-md:h-[400px] w-full mb-24 max-lg:mb-6 text-center max-[560px]:h-[300px] max-[400px]:h-[250px]'>
       <div className="forvid w-screen h-[600px] max-md:h-[400px] absolute z-[-1] left-0 bg-center overflow-hidden max-[560px]:h-[300px] max-[400px]:h-[250px]">
-        <video autoPlay muted className="bg w-screen bg-center">
+        <video autoPlay muted loop className="bg w-screen bg-center">
           <source  src='https://samcity.uz/images/video.mp4' type='video/mp4'/>
         </video>
       </div>

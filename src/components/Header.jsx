@@ -166,7 +166,7 @@ const cities = lng === 'ru' ? [
   return (
     <header className='flex justify-between items-center'>
       <div className="logo cursor-pointer" onClick={() => router.push('/')}><Image src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
-      <nav className=' flex gap-4 max-lg:hidden'>
+      <nav className=' flex gap-7 max-lg:hidden'>
         <Link href='/' className='hover:underline'>{t("main")}</Link>
         <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
           <Link href='/cityPage' className='hover:underline' onMouseEnter={() => setOpen({...open, cities: true})}>{t("cities")}</Link>
