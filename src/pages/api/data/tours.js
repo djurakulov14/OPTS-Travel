@@ -24,7 +24,7 @@ export const tours = [
             "Завтрак в отеле. Мавзолей Саманидов. Мавзолей Чашма-Аюб. Комплекс Боло-Хауз. Крепость Арк. Мавзолей Пой-Калян. Медресе Абдуллазиз Хана. Медресе Улугбека. Дворец Ситораи Мохи Хоса. Комплекс Накшбандию Ночь в отеле. ",
             "Завтрак в гостинице. Перезд в Хиву. Свободное время, посещение сувенирных лавок. Ночь в отеле.",
         ],
-        img: "https://images.unsplash.com/photo-1557841621-230db92a8a12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        img: "https://images.unsplash.com/photo-1674723889508-53f32cad9ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjB8OFhYV0xueG51ZjR8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60"
     },
     {
         id:3,

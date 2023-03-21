@@ -4,6 +4,7 @@ import MyButton from '@/components/_child/MyButton';
 import { TextField } from '@mui/material';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
 import React from 'react'
 import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
@@ -70,6 +71,10 @@ const Contacts = () => {
 
 
   return (
+    <>
+    <Head>
+        <title>OPTS - Contacts</title>
+    </Head>
     <Layout>
         <TopSection isSwiper={false} title={t("contTitle")} dsc={t("cont")} img={"https://images.unsplash.com/photo-1561670653-9fb4207e997d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2166&q=80"}/>
         <div className="content ">
@@ -127,6 +132,7 @@ const Contacts = () => {
             </form>
         </div>
     </Layout>
+    </>
   )
 }
 

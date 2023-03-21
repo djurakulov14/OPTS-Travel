@@ -6,6 +6,7 @@ import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 
 
@@ -15,21 +16,28 @@ const Footer = () => {
 
   return (
         <>
-        <footer className='overflow-hidden'>
+        <footer className=''>
             <div className="top flex justify-between max-md:flex-col mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full max-md:gap-3">
                 <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
-                    <h1 className='text-2xl font-semibold'>{t("aboutCompTitle")}</h1>
-                    <p>{t("aboutComp")}</p>
+                    <h1 className='text-2xl font-semibold text-[#1EB8D4]'>Наши Услуги</h1>
+                    <ul className=' list-disc pl-5'>
+                        <li><Link href='/tour'>Туры в Узбекистан</Link></li>
+                        <li><Link href='/hotel'>Отели Узбекистана</Link></li>
+                        <li>Транспортные услуги</li>
+                        <li><Link href='/mice'>MICE</Link></li>
+                    </ul>
                 </div>
                 <div className="useful w-[30%] flex flex-col gap-3 max-md:w-full">
                     <h1 className='text-2xl font-semibold '>{t("useful")}</h1>
-                    <div className="info flex flex-col gap-1">
-                        <a className='hover:underline' href="https://book.uzairways.com/ru">{t("tickets")}</a>
-                        <a className='hover:underline' href="https://www.uzairways.com/ru/statform">{t("flight")}</a>
-                        <a className='hover:underline' href="https://e-ticket.railway.uz/ru/home">{t("railway")}</a>
-                        <a className='hover:underline' href="https://avtoticket.uz/">{t("bus")}</a>
-                        <a className='hover:underline' href="https://e-visa.gov.uz/main">{t("evisa")}</a>
-                        <a className='hover:underline' href="http://emehmon.uz/user/login">{t("regist")}</a>
+                    <div className="info">
+                        <ul className='list-disc pl-5'>
+                            <li><a className='hover:underline' href="https://book.uzairways.com/ru">{t("tickets")}</a></li>
+                            <li><a className='hover:underline' href="https://www.uzairways.com/ru/statform">{t("flight")}</a></li>
+                            <li><a className='hover:underline' href="https://e-ticket.railway.uz/ru/home">{t("railway")}</a></li>
+                            <li><a className='hover:underline' href="https://avtoticket.uz/">{t("bus")}</a></li>
+                            <li><a className='hover:underline' href="https://e-visa.gov.uz/main">{t("evisa")}</a></li>
+                            <li><a className='hover:underline' href="http://emehmon.uz/user/login">{t("regist")}</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">

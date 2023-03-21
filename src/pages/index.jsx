@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 export async function getStaticProps({locale}) {
 
-  const res = await fetch("https://opts-travel.netlify.app/api/tours", {
+  const res = await fetch("http://localhost:3000/api/tours", {
     method: "GET"
   })
   const data = await res.json()

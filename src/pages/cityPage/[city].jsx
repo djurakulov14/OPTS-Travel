@@ -8,6 +8,7 @@ import Layout from '@/Layout/Layout'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 
 export async function getServerSideProps(context) {
@@ -57,6 +58,10 @@ const Cityid = ({city, hotels}) => {
  }
 
   return (
+    <>
+    <Head>
+      <title>OPTS - City</title>
+    </Head>
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle} img={city.img}/>
         <div className=" mb-32 ma">
@@ -93,7 +98,7 @@ const Cityid = ({city, hotels}) => {
           className="mySwiper"
           >
         {
-          hotels.map(item => <SwiperSlide key={item.id}><HotelCard {...item}/></SwiperSlide>)
+          hotels.map(item => <SwiperSlide key={item.id}><HotelCard {...item} swiper={true}/></SwiperSlide>)
         }
       </Swiper>
         </>  
@@ -102,6 +107,7 @@ const Cityid = ({city, hotels}) => {
       <iframe src={city.map} width="100%" height={map + "px"} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </Layout>
+    </>
   )
 }
 

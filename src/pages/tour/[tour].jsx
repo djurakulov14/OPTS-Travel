@@ -9,11 +9,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("https://opts-travel.netlify.app/api/tours")
+  const res = await fetch("http://localhost:3000/api/tours")
   const data = await res.json()
   const param = await context.params.tour.split('=').at(-1)
 
@@ -71,6 +72,10 @@ const TourPage = ({data}) => {
 
 
   return (
+<>
+    <Head>
+      <title>OPTS - Tour</title>
+    </Head>
     <Layout>
         <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={`${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}`}/>
         <div className="content">
@@ -187,6 +192,7 @@ const TourPage = ({data}) => {
         </DialogContent>
       </Dialog>
     </Layout>
+</>
   )
 }
 

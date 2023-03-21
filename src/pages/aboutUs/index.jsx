@@ -3,6 +3,7 @@ import TopSection from '@/components/TopSection'
 import TourCard from '@/components/_child/TourCard'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Head from 'next/head'
 import React from 'react'
 
 export async function getStaticProps({locale}) {
@@ -20,6 +21,10 @@ const AboutUs = () => {
     const {t} = useTranslation("about")
 
   return (
+    <>
+    <Head>
+        <title>OPTS - {t("usTitle")}</title>
+    </Head>
     <Layout>
         <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")} img={"https://images.unsplash.com/photo-1585734524189-30daa0b32a19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>
         <div className="content">
@@ -72,6 +77,7 @@ const AboutUs = () => {
             </div>
         </div>
     </Layout>
+    </>
   )
 }
 
