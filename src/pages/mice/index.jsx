@@ -16,7 +16,7 @@ export async function getStaticProps({locale}) {
 }
 
 
-const mice = () => {
+const Mice = () => {
 
   const {t} = useTranslation("mice")
 
@@ -63,4 +63,4 @@ const mice = () => {
   )
 }
 
-export default mice
+export default Mice
