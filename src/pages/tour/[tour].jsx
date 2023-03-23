@@ -14,7 +14,7 @@ import Head from 'next/head'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:3000/api/tours")
+  const res = await fetch("https://opts-travel.netlify.app/api/tours")
   const data = await res.json()
   const param = await context.params.tour.split('=').at(-1)
 
