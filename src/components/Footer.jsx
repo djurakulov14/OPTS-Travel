@@ -19,11 +19,11 @@ const Footer = () => {
         <footer className=''>
             <div className="top flex justify-between max-md:flex-col mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full max-md:gap-3">
                 <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
-                    <h1 className='text-2xl font-semibold text-[#1EB8D4]'>Наши Услуги</h1>
+                    <h1 className='text-2xl font-semibold text-[#1EB8D4]'>{t("services")}</h1>
                     <ul className=' list-disc pl-5'>
-                        <li><Link href='/tour'>Туры в Узбекистан</Link></li>
-                        <li><Link href='/hotel'>Отели Узбекистана</Link></li>
-                        <li>Транспортные услуги</li>
+                        <li><Link href='/tour'>{t("tours")}</Link></li>
+                        <li><Link href='/hotel'>{t("hotels")}</Link></li>
+                        <li>{t("transport")}</li>
                         <li><Link href='/mice'>MICE</Link></li>
                     </ul>
                 </div>
