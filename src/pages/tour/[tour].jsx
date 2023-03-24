@@ -51,8 +51,11 @@ const TourPage = ({data}) => {
         data[key] = value
       })
 
-      axios.post("http://localhost:3000/api/buyTour", data)
-        .then(res => {
+      fetch("https://opts-travel.netlify.app/api/buyTour", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+        }).then(res => {
         if (res.status !== 200){ 
             console.log("error")
         } else {
