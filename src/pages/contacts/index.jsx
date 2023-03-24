@@ -36,7 +36,7 @@ const Contacts = () => {
           data[key] = value
         })
     
-        fetch("http://localhost:3000/api/contact", {
+        fetch("https://opts-travel.netlify.app/api/contact", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -50,7 +50,6 @@ const Contacts = () => {
                 e.target.massage.value = ""
                 alert("Сообщение отправлено, спасибо за ваш отзыв.")
             }
-            return res.json();
           });
     }
 

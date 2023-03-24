@@ -51,6 +51,12 @@ export default function Accordionn({data}) {
     setExpanded(newExpanded ? panel : false);
   };
 
+
+  function removeLast (arr) {
+    let data = arr.split('.')
+    data.length--
+    return data
+  } 
   return (
     <div className='w-[100%] max-md:w-full'>
       {
@@ -63,9 +69,9 @@ export default function Accordionn({data}) {
           <Typography>
             <ul className='list-disc pl-3'>
             {
-              item.split('.').map((item, index) => 
-                <li key={index} className=''>{item}</li>  
-              )
+              removeLast(item).map((item2, index2) => 
+              <li key={index2}>{item2}</li>  
+            )
             }
             </ul>
           </Typography>
