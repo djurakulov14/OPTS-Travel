@@ -98,7 +98,7 @@ const cities = lng === 'ru' ? [
       link: "/cityPage/id=3",
   },
   {
-      id:3,
+      id:4,
       title: "Шахрисабс",
       link: "/cityPage/id=4",
   },

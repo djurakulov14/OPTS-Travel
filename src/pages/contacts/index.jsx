@@ -8,6 +8,8 @@ import Head from 'next/head';
 import React from 'react'
 import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
+
+
 export async function getStaticProps({locale}) {
   
   
@@ -34,20 +36,19 @@ const Contacts = () => {
           data[key] = value
         })
     
-        fetch("https://opts-travel.netlify.app/api/contact", {
+        fetch("http://localhost:3000/api/contact", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },
         }).then((res) => {
-            if (!res.ok){ 
+            if (res.status !== 200){ 
                 alert("error")
             } else {
                 e.target.name.value = ""
                 e.target.email.value = ""
                 e.target.phone.value = ""
                 e.target.massage.value = ""
-                alert("nice baby")
-
+                alert("Сообщение отправлено, спасибо за ваш отзыв.")
             }
             return res.json();
           });

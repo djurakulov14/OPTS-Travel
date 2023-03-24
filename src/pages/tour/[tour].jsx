@@ -54,9 +54,9 @@ const TourPage = ({data}) => {
       axios.post("http://localhost:3000/api/buyTour", data)
         .then(res => {
         if (res.status !== 200){ 
-            alert("error")
+            console.log("error")
         } else {
-          alert("Сообщение отправлено")
+          console.log("Сообщение отправлено")
             e.target.reset()
         }
       })
