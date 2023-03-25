@@ -6,12 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper";
-import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
-    const [image, setImage] = useState(img ? img : "/images/chimgan.png")
+    const [image, setImage] = useState(img)
 
     function changeImage(event) {
         if(arr){
@@ -47,7 +46,6 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
             modules={[Autoplay, Navigation]}
             className="mySwiper mt-24 h-fit"
             onSlideChangeTransitionStart={changeImage}
-            onClick={changeImage}
             >
             {
                 arr.map(item =>

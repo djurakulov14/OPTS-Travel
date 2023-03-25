@@ -7,7 +7,7 @@ const Services = () => {
     const {t} = useTranslation("expirience")
 
   return (
-    <div className='flex justify-between max-lg:flex-col max-lg:w-full max-lg:gap-8 mt-5 mb-14'>
+    <div className='flex gap-7 max-lg:flex-col max-lg:w-full max-lg:gap-8 mt-5 mb-14'>
         <div className="first flex gap-2 items-center w-2/6 max-lg:w-full max-lg:items-start">
             <Image src="/icons/bus.png" width={70} height={70} alt='image' className=' w-8'/>
             <div className="info">
