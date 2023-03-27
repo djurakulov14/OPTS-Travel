@@ -114,7 +114,7 @@ const TourPage = ({data}) => {
                 </div>
             </div>
             </div>
-              <div className="price sticky top-[20px] z-50 bg-[#1EB8D4] w-[40%] max-md:w-full mb-20 h-fit text-white p-3 rounded-lg flex flex-col justify-between gap-5">
+              <div className="price sticky top-[20px] z-50 bg-[#00AFD7] w-[40%] max-md:w-full mb-20 h-fit text-white p-3 rounded-lg flex flex-col justify-between gap-5">
                     <div className="prices">
                         <h1 className='text-lg font-semibold'>{t("price")}:</h1>
                         <table className=' border-solid border-2 p-4 w-full rounded-xl'>
@@ -136,7 +136,7 @@ const TourPage = ({data}) => {
                         </table>
                         <p className=' text-base leading-5'>{t("morePeople")}</p>
                     </div>
-                    <button onClick={handleClickOpen} className=' border-[#1EB8D4] border-solid border-2 bg-white text-[#1EB8D4] w-full py-2 rounded-xl'>{t("book")}</button>
+                    <button onClick={handleClickOpen} className=' border-[#00AFD7] border-solid border-2 bg-white text-[#00AFD7] w-full py-2 rounded-xl'>{t("book")}</button>
                 </div>
           </div>
             <div className="dsc mb-20">

@@ -19,7 +19,7 @@ const Footer = () => {
         <footer className=''>
             <div className="top flex justify-between max-md:flex-col mb-10 after:absolute after:left-0 after:z-[-1] after:bg-[#FAFAFA] after:w-full max-md:gap-3">
                 <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
-                    <h1 className='text-2xl font-semibold text-[#1EB8D4]'>{t("services")}</h1>
+                    <h1 className='text-2xl font-semibold text-[#00AFD7]'>{t("services")}</h1>
                     <ul className=' list-disc pl-5'>
                         <li><Link href='/tour'>{t("tours")}</Link></li>
                         <li><Link href='/hotel'>{t("hotels")}</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bot h-16 flex items-center justify-between text-white before:absolute before:left-0 before:z-[-1] before:bg-[#1EB8D4] before:w-full before:h-16">
+            <div className="bot h-16 flex items-center justify-between text-white before:absolute before:left-0 before:z-[-1] before:bg-[#00AFD7] before:w-full before:h-16">
                 <p className=' max-md:text-sm'>COPYRIGHT © 2023 - OMEGA PREMIER TRAVEL SERVIS</p>
                 <div className="links flex items-center gap-2">
                     <a href="#"><FaFacebook/></a>
