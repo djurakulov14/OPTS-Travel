@@ -8,6 +8,7 @@ import { RxCrossCircled } from 'react-icons/rx';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
+import CardsSection from '@/components/CardsSection'
 
 
 
@@ -21,12 +22,13 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data: filtered,
+      all: data,
       ...(await serverSideTranslations(context.locale, ["header", "footer", "main"])),
     }, // will be passed to the page component as props
   }
 }
 
-const TourPage = ({data}) => {
+const TourPage = ({data, all}) => {
 
     const [open, setOpen] = useState(false);
 
@@ -64,13 +66,27 @@ const TourPage = ({data}) => {
   
       
   }
+  let slides = 4
+  let pageWidth = 0
 
+  if (typeof window !== "undefined") {
+    var width = window.innerWidth;
+    pageWidth = width
+    if(pageWidth <= 640){
+     slides = 1
+    } else if(pageWidth <= 1024){
+     slides = 2
+    } else if(pageWidth <= 1280){
+     slides = 3
+    }
+ }
 
   const {t} = useTranslation("main")
 
 
   data = data[0]
 
+  all = all.filter(item => item.id !== data.id)
 
   return (
 <>
@@ -144,6 +160,7 @@ const TourPage = ({data}) => {
                 <h1 className='title'>{t("dsc")}:</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis officiis ea ut dicta, autem aliquam assumenda quis voluptas tenetur pariatur deleniti molestias hic quia nam blanditiis at eveniet possimus illo rerum eligendi, dolores repellat debitis repudiandae fuga? Distinctio inventore sequi repellendus harum quae! Obcaecati, praesentium alias libero veniam omnis maxime repudiandae, enim molestiae atque, fuga nam modi. Dolorem nam eos recusandae dolores animi adipisci temporibus voluptatem incidunt quidem, consequatur earum repellendus illum at quam, accusantium minus voluptatum dicta beatae repellat suscipit quaerat perferendis quia? Maiores cum magnam odit, veniam iusto omnis ea cupiditate deserunt libero dolore quasi saepe dolor eos!</p>
             </div>
+            <CardsSection title="Другие туры" arr={all} slides={slides}  />
         </div>
         <Dialog open={open} onClose={handleClose}>
         <DialogTitle className='flex justify-between'><span>{t("bookingTour")} "{data.title}"</span>
