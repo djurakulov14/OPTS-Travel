@@ -10,7 +10,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
-    const [image, setImage] = useState(img)
+    const [image, setImage] = useState(img ? img : arr[0].img)
 
     function changeImage(event) {
         if(arr){
@@ -21,6 +21,9 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
             });
         }
     }
+
+    console.log(image);
+
 
     const {t} = useTranslation("main")
     const router = useRouter()
