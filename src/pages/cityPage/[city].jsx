@@ -12,7 +12,7 @@ import Head from 'next/head'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch(context.locale === "ru" ? "https://opts-travel.netlify.app/api/city" : "http://localhost:3000/api/cityEn")
+  const res = await fetch(context.locale === "ru" ? "https://opts-travel.netlify.app/api/city" : "https://opts-travel.netlify.app/api/cityEn")
   const data = await res.json()
   const response = await fetch("https://main--opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
