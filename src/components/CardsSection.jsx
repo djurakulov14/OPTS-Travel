@@ -4,6 +4,7 @@ import TourCard from './_child/TourCard'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 const CardsSection = ({title, arr, slides}) => {
 
@@ -27,7 +28,7 @@ const CardsSection = ({title, arr, slides}) => {
           arr.map((item, index) => <SwiperSlide key={index}><TourCard {...item} /></SwiperSlide>)
         }
       </Swiper>
-        <MyButton>{t("alltours")}</MyButton>
+        <Link href='/tour'><MyButton>{t("alltours")}</MyButton></Link>
     </div>
   )
 }

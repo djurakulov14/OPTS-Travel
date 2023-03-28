@@ -28,7 +28,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="useful w-[30%] flex flex-col gap-3 max-md:w-full">
-                    <h1 className='text-2xl font-semibold '>{t("useful")}</h1>
+                    <h1 className='text-2xl font-semibold text-[#00AFD7]'>{t("useful")}</h1>
                     <div className="info">
                         <ul className='list-disc pl-5'>
                             <li><a className='hover:underline' href="https://book.uzairways.com/ru">{t("tickets")}</a></li>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="about w-[30%] flex flex-col gap-3 max-md:w-full">
-                    <h1 className='text-2xl font-semibold'>{t("contacts")}</h1>
+                    <h1 className='text-2xl font-semibold text-[#00AFD7]'>{t("contacts")}</h1>
                     <div className="info flex flex-col gap-1">
                         <a href='https://goo.gl/maps/K641jinTvtPexthq8' className=' flex items-center hover:underline'><MdLocationPin/>{t("addres")}</a>
                         <a href='tel:+998993333232' className=' flex items-center hover:underline'><FaPhoneAlt/>+99899 333-32-32, +99899 444-32-32</a>
@@ -49,8 +49,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bot h-16 flex items-center justify-between text-white before:absolute before:left-0 before:z-[-1] before:bg-[#00AFD7] before:w-full before:h-16">
-                <p className=' max-md:text-sm'>COPYRIGHT © 2023 - OMEGA PREMIER TRAVEL SERVIS</p>
+            <div className="bot h-16 flex items-center justify-between text-white before:absolute max-md:h-24 max-md:justify-center max-md:gap-3 max-md:flex-col max-md:before:h-24 before:left-0 before:z-[-1] before:bg-[#00AFD7] before:w-full before:h-16">
+                <p className=' max-md:text-sm max-md:text-center'>COPYRIGHT © 2023 - OMEGA PREMIER TRAVEL SERVIS</p>
                 <div className="links flex items-center gap-2">
                     <a href="#"><FaFacebook/></a>
                     <a href="#"><FaInstagram/></a>
