@@ -144,16 +144,6 @@ const cities = lng === 'ru' ? [
       id:5,
       title: "Tashkent",
       link: "/cityPage/id=5",
-  },
-  {
-      id:6,
-      title: "Kokand",
-      link: "/cityPage/id=6",
-  },
-  {
-      id:7,
-      title: "Namangan",
-      link: "/cityPage/id=7",
   }
 ]
 

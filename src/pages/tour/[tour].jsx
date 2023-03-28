@@ -64,11 +64,12 @@ const TourPage = ({data}) => {
   
       
   }
+
+
   const {t} = useTranslation("main")
 
 
   data = data[0]
-
 
 
   return (
@@ -114,7 +115,7 @@ const TourPage = ({data}) => {
                 </div>
             </div>
             </div>
-              <div className="price sticky top-[20px] z-50 bg-[#00AFD7] w-[40%] max-md:w-full mb-20 h-fit text-white p-3 rounded-lg flex flex-col justify-between gap-5">
+              <div className="price sticky top-[20px] z-10 bg-[#00AFD7] w-[40%] max-md:w-full mb-20 h-fit text-white p-3 rounded-lg flex flex-col justify-between gap-5">
                     <div className="prices">
                         <h1 className='text-lg font-semibold'>{t("price")}:</h1>
                         <table className=' border-solid border-2 p-4 w-full rounded-xl'>
@@ -145,12 +146,12 @@ const TourPage = ({data}) => {
             </div>
         </div>
         <Dialog open={open} onClose={handleClose}>
-        <DialogTitle className='flex justify-between'><span>Бронирование тура "{data.title}"</span>
+        <DialogTitle className='flex justify-between'><span>{t("bookingTour")} "{data.title}"</span>
         <RxCrossCircled onClick={handleClose} className=' cursor-pointer'/>
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
-            После отправки заявки на бронирование тура, с вами свяжется наш оператор.
+          {t("operator")}
           </DialogContentText>
           <form onSubmit={submitForm}>
           <TextField
@@ -167,7 +168,7 @@ const TourPage = ({data}) => {
             <TextField
             margin="dense"
             id="name"
-            label="Ф.И.О"
+            label={t("name")}
             type="text"
             fullWidth
             variant="outlined"
@@ -177,7 +178,7 @@ const TourPage = ({data}) => {
             <TextField
             margin="dense"
             id="phone"
-            label="Номер телефона"
+            label={t("phone")}
             type="tel"
             fullWidth
             variant="outlined"
@@ -185,7 +186,7 @@ const TourPage = ({data}) => {
             name='phone'
           />
             <DialogActions>
-              <Button onClick={handleClose}>Отмена</Button>
+              <Button onClick={handleClose}>{t("cancel")}</Button>
               <Button type='submit' onClick={handleClose}>{t("book")}</Button>
             </DialogActions>
           </form>

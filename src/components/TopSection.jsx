@@ -22,8 +22,6 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
         }
     }
 
-    console.log(image);
-
 
     const {t} = useTranslation("main")
     const router = useRouter()

@@ -3,10 +3,6 @@ import Link from 'next/link'
 
 const Menu = ({open, arr}) => {
 
-  // arr.map(item => {
-  //   console.log(typeof(item.link),item.link)
-  //   console.log(typeof(item.title),item.title)
-  // })
 
   const style = open ? {display: "block"} : {display: "none"}
   return (

@@ -12,7 +12,7 @@ import Head from 'next/head'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("https://opts-travel.netlify.app/api/city")
+  const res = await fetch(context.locale === "ru" ? "https://opts-travel.netlify.app/api/city" : "http://localhost:3000/api/cityEn")
   const data = await res.json()
   const response = await fetch("https://main--opts-travel.netlify.app/api/hotels")
   const hotelss = await response.json()
@@ -28,11 +28,12 @@ export async function getServerSideProps(context) {
       city: obj,
       hotels:hotels,
       ...(await serverSideTranslations(context.locale, ["header", "footer", "main"])),
+      locale: context.locale
     },
   }
 }
 
-const Cityid = ({city, hotels}) => {
+const Cityid = ({city, hotels, locale}) => {
 
   const {t} = useTranslation("main")
 
@@ -98,7 +99,7 @@ const Cityid = ({city, hotels}) => {
           className="mySwiper"
           >
         {
-          hotels.map(item => <SwiperSlide key={item.id}><HotelCard {...item} swiper={true}/></SwiperSlide>)
+          hotels.map(item => <SwiperSlide key={item.id}><HotelCard {...item} locale={locale} swiper={true}/></SwiperSlide>)
         }
       </Swiper>
         </>  
