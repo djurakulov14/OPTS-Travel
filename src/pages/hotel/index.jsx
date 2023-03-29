@@ -29,6 +29,7 @@ const Hotel = ({hotels}) => {
     <>
     <Head>
       <title>OPTS - Hotels</title>
+      <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <Layout>
         <TopSection isSwiper={false} title={t("hotelTtitle")} dsc={t("hotel")} img={"https://images.unsplash.com/photo-1665317535953-75f73dfe07d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>

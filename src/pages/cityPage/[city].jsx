@@ -62,6 +62,7 @@ const Cityid = ({city, hotels, locale}) => {
     <>
     <Head>
       <title>OPTS - City</title>
+      <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <Layout>
         <TopSection isSwiper={false} title={city.title} dsc={city.subTitle} img={city.img}/>

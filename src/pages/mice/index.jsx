@@ -24,6 +24,7 @@ const Mice = () => {
     <>
     <Head>
       <title>OPTS - MICE</title>
+      <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <div>
         <Layout>

@@ -92,6 +92,7 @@ const TourPage = ({data, all}) => {
 <>
     <Head>
       <title>OPTS - Tour</title>
+      <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <Layout>
         <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={`${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}`}/>

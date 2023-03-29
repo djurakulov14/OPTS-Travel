@@ -29,6 +29,7 @@ const City = ({city}) => {
     <>
     <Head>
       <title>OPTS - Cities</title>
+      <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <Layout>
     <TopSection isSwiper={false} title={t("citiesOfTitle")} dsc={t("citiesOf")} img={"https://images.unsplash.com/photo-1669664321446-d6f903bddc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>
