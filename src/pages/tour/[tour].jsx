@@ -97,9 +97,9 @@ const TourPage = ({data, all}) => {
     <Layout>
         <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={`${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}`}/>
         <div className="content">
-          <div className=" flex justify-between max-md:flex-col gap-5">
-            <div className="way ">
-                <div className="acc mb-20">
+          <div className=" flex w-full justify-between max-md:flex-col gap-5">
+            <div className="way w-[50%]">
+                <div className="acc mb-20 w-full">
                     <h1 className='title mb-3'>{t("route")}:</h1>
                     <Accordionn data={data}/>
                 </div>
@@ -143,12 +143,12 @@ const TourPage = ({data, all}) => {
                             </tr>
                             <tr className='text-center'>
                                 <td className='border-solid border-2'>1</td>
-                                <td className='border-solid border-2'>660$</td>
+                                <td className='border-solid border-2'>{data.price + 150}$</td>
                                 <td className='border-solid border-2'>+150$</td>
                             </tr>
                             <tr className='text-center'>
                                 <td className='border-solid border-2'>2</td>
-                                <td className='border-solid border-2'>600$</td>
+                                <td className='border-solid border-2'>{data.price}$</td>
                                 <td className='border-solid border-2'>+120$</td>
                             </tr>
                         </table>
@@ -159,7 +159,7 @@ const TourPage = ({data, all}) => {
           </div>
             <div className="dsc mb-20">
                 <h1 className='title'>{t("dsc")}:</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis officiis ea ut dicta, autem aliquam assumenda quis voluptas tenetur pariatur deleniti molestias hic quia nam blanditiis at eveniet possimus illo rerum eligendi, dolores repellat debitis repudiandae fuga? Distinctio inventore sequi repellendus harum quae! Obcaecati, praesentium alias libero veniam omnis maxime repudiandae, enim molestiae atque, fuga nam modi. Dolorem nam eos recusandae dolores animi adipisci temporibus voluptatem incidunt quidem, consequatur earum repellendus illum at quam, accusantium minus voluptatum dicta beatae repellat suscipit quaerat perferendis quia? Maiores cum magnam odit, veniam iusto omnis ea cupiditate deserunt libero dolore quasi saepe dolor eos!</p>
+                <p className=' w-1/2 max-md:w-full'>Программы пребывания 1-го и последнего дня на маршруте зависят от времени прибытия к месту начала тура и времени вылета из конечного пункта, поэтому могут меняться. В программе маршрута указаны только завтраки, поскольку они входят в стоимость проживания в гостиницах. Время и место обедов/ужинов можно обсудить с гидами. После того, как вы окончательно приняли решение в выборе тура и направили в наш адрес заявку, мы подробно распишем вам программу маршрута (конкретные даты, тайминг и т.п.) и рассчитаем стоимость такового. По желанию заказчика, в свободное от основных экскурсионных программ время, мы можем предложить дополнительные экскурсии или объекты посещения.</p>
             </div>
             <CardsSection title="Другие туры" arr={all} slides={slides}  />
         </div>

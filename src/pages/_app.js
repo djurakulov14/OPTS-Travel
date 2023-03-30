@@ -7,6 +7,7 @@ import NextI18nextConfig from '../../next-i18next.config'
 import { useRouter } from 'next/router';
 import Preloader from '@/components/_child/Preloader';
 import { useEffect, useState } from 'react';
+import "../fonts/stylesheet.css"
 
  function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);

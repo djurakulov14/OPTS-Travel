@@ -5,6 +5,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { useTranslation } from 'next-i18next';
 
 const Accordion = styled((props) => (
   <MuiAccordion className=' !max-lg:w-full' disableGutters elevation={0} square {...props} />
@@ -51,6 +52,7 @@ export default function Accordionn({data}) {
     setExpanded(newExpanded ? panel : false);
   };
 
+  const {t} = useTranslation("main")
 
   function removeLast (arr) {
     let data = arr.split('.')
@@ -63,7 +65,7 @@ export default function Accordionn({data}) {
         data.days.map((item, index) => 
       <Accordion key={index} expanded={expanded === `panel${index + 1}`} onChange={handleChange(`panel${index + 1}`)}>
         <AccordionSummary aria-controls={`panel${index + 1}d-content`} id={`panel${index + 1}d-header`}>
-          <Typography>{index + 1 + " День"}</Typography>
+          <Typography>{index + 1 + " " + t("day1")}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

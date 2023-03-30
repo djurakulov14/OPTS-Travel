@@ -22,7 +22,7 @@ const CardsSection = ({title, arr, slides}) => {
         slidesPerView={slides}
         spaceBetween={30}
         modules={[Autoplay]}
-        className="mySwiper !m-auto !p-4"
+        className="mySwiper !m-auto !p-4 !h-fit !pb-5"
         >
         {
           arr.map((item, index) => <SwiperSlide key={index}><TourCard {...item} /></SwiperSlide>)

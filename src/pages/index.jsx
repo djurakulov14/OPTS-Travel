@@ -6,13 +6,10 @@ import Video from '@/components/Video'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { useState } from 'react'
 
 export async function getStaticProps({locale}) {
 
-  const res = await fetch("https://opts-travel.netlify.app/api/tours", {
-    method: "GET"
-  })
+  const res = await fetch(locale === "ru" ? "http://localhost:3000/api/tours" : "http://localhost:3000/api/toursEn")
   const data = await res.json()
 
 
