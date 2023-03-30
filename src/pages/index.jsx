@@ -9,7 +9,7 @@ import { useTranslation } from 'next-i18next'
 
 export async function getStaticProps({locale}) {
 
-  const res = await fetch(locale === "ru" ? "http://localhost:3000/api/tours" : "http://localhost:3000/api/toursEn")
+  const res = await fetch("https://opts-travel.netlify.app/api/tours")
   const data = await res.json()
 
 
