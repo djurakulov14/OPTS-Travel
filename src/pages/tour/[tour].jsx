@@ -13,7 +13,7 @@ import CardsSection from '@/components/CardsSection'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch("https://opts-travel.netlify.app/api/tours")
+  const res = await fetch(context.locale === "ru" ? "https://opts-travel.netlify.app/api/tours" : "https://opts-travel.netlify.app/api/toursEn")
   const data = await res.json()
   const param = await context.params.tour.split('=').at(-1)
 
