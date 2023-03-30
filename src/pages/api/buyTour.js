@@ -23,7 +23,7 @@ const handler = async (req, res) => {
       ...mailOptions,
       text: "Бронь тура",
       subject: "Бронь тура",
-      html: `<h1>Бронь тура</h1> <p><strong>Имя:</strong> ${req.body.name}</p> <p><strong>Email:</strong>${req.body.email}</p> <p><strong>Phone:</strong>${req.body?.phone}</p>`
+      html: `<h1>Бронь тура</h1> <p><strong>Имя:</strong> ${req.body.title_of_tour}</p> <p><strong>Имя:</strong> ${req.body.name}</p> <p><strong>Email:</strong>${req.body.email}</p> <p><strong>Phone:</strong>${req.body?.phone}</p>`
   }).then(response => {
     if(response.accepted){
       return res.status(200).json({ success: true });

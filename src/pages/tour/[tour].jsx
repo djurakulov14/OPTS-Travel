@@ -203,6 +203,7 @@ const TourPage = ({data, all}) => {
             required
             name='phone'
           />
+          <input type="text" value={data.title} className='hidden' name='title_of_tour' />
             <DialogActions>
               <Button onClick={handleClose}>{t("cancel")}</Button>
               <Button type='submit' onClick={handleClose}>{t("book")}</Button>
