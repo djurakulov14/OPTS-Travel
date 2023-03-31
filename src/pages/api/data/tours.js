@@ -160,7 +160,7 @@ export const tours = [
     },
     {
         id:10,
-        title: "noname",
+        title: "Мотивы Востока",
         duration: 10,
         cities: "Ташкент/Самарканд/Бухара/Ургенч/Хива" ,
         days: [
@@ -180,7 +180,7 @@ export const tours = [
     },
     {
         id:11,
-        title: "without name",
+        title: "Мархамат в Чайхану",
         duration: 8,
         cities: "Ташкент/Самарканд/Бухара/Шахрисабс" ,
         days: [

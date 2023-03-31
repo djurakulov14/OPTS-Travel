@@ -160,7 +160,7 @@ export const tours = [
     },
     {
         id:10,
-        title: "noname",
+        title: "Motives of East",
         duration: 10,
         cities: "Tashkent/Samarkand/Bukhara/Urgench/Khiva" ,
         days: [
@@ -180,7 +180,7 @@ export const tours = [
     },
     {
         id:11,
-        title: "without name",
+        title: "Marhamat to Chaykhana",
         duration: 8,
         cities: "Tashkent/Samarkand/Bukhara/Shahrisabs" ,
         days: [
