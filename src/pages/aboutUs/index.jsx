@@ -66,15 +66,6 @@ const AboutUs = () => {
                     <li>{t("orgMeets")}</li>
                 </ul>
             </div>
-            <div className="magazine flex flex-col gap-3 mb-24">
-                <h1 className='title'>{t("journal")}</h1>
-                <div className="flex flex-wrap justify-between gap-8">
-                    <TourCard/>
-                    <TourCard/>
-                    <TourCard/>
-                    <TourCard/>
-                </div>
-            </div>
         </div>
     </Layout>
     </>
