@@ -24,6 +24,10 @@ const AboutUs = () => {
     <>
     <Head>
         <title>OPTS - {t("usTitle")}</title>
+        <meta name="keywords" content="Omega Premier Travel Servis" />
+        <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="Туристическая компания «Omega Premier Travel Servis» приглашает вас посетить гостеприимный и солнечный Узбекистан по нашим маршрутам! " />
+        <meta name="generator" content="opts.tours" />
     </Head>
     <Layout>
         <TopSection isSwiper={false} title={t("usTitle")} dsc={t("info")} img={"https://images.unsplash.com/photo-1585734524189-30daa0b32a19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}/>

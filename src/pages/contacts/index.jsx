@@ -74,7 +74,11 @@ const Contacts = () => {
     <>
     <Head>
         <title>OPTS - Contacts</title>
-      <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="icon" href="/icons/favicon.ico" />
+        <meta name="keywords" content="Omega Premier Travel Servis" />
+        <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="Туристическая компания «Omega Premier Travel Servis» приглашает вас посетить гостеприимный и солнечный Узбекистан по нашим маршрутам! " />
+        <meta name="generator" content="opts.tours" />
     </Head>
     <Layout>
         <TopSection isSwiper={false} title={t("contTitle")} dsc={t("cont")} img={"https://images.unsplash.com/photo-1561670653-9fb4207e997d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2166&q=80"}/>

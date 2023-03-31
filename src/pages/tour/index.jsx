@@ -29,7 +29,11 @@ const Tours = ({arr}) => {
     <>
       <Head>
         <title>OPTS - Tours</title>
-      <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="icon" href="/icons/favicon.ico" />
+        <meta name="keywords" content="Omega Premier Travel Servis" />
+	      <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="Туристическая компания «Omega Premier Travel Servis» приглашает вас посетить гостеприимный и солнечный Узбекистан по нашим маршрутам! " />
+	      <meta name="generator" content="opts.tours" />
       </Head>
       <Layout>
           <TopSection isSwiper={false} title={t("tourTitle")} dsc={t("tour")} img={"https://images.unsplash.com/photo-1662468698401-fa4c8a1b91cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"}/>
