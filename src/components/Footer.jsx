@@ -53,7 +53,7 @@ const Footer = () => {
                 <p className=' max-md:text-sm max-md:text-center'>COPYRIGHT © 2023 - OMEGA PREMIER TRAVEL SERVIS</p>
                 <div className="links flex items-center gap-2">
                     <a href="#"><FaFacebook/></a>
-                    <a href="#"><FaInstagram/></a>
+                    <a href="https://www.instagram.com/opts_uzb_tours/"><FaInstagram/></a>
                     <a href="#"><FaYoutube/></a>
                     <a href="#"><FaWhatsapp/></a>
                 </div>

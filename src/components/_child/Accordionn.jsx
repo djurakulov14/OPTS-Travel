@@ -69,10 +69,10 @@ export default function Accordionn({data}) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <ul className='list-disc pl-3'>
+            <ul className='list-disc pl-3 capitalize'>
             {
               removeLast(item).map((item2, index2) => 
-              <li key={index2}>{item2}</li>  
+              <li className='capitalize' key={index2}>{item2}</li>  
             )
             }
             </ul>

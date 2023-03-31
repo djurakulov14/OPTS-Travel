@@ -84,7 +84,7 @@ const Contacts = () => {
                     <div className="media flex flex-col gap-1 mb-16">
                         <h1 className='title'>{t("media")}</h1>
                         <div className="links flex gap-2">
-                            <a href="#"><BsInstagram color='#00AFD7' size={30}/></a>
+                            <a href="https://www.instagram.com/opts_uzb_tours/"><BsInstagram color='#00AFD7' size={30}/></a>
                             <a href="#"><BsFacebook color='#00AFD7' size={30}/></a>
                             <a href="#"><BsWhatsapp color='#00AFD7' size={30}/></a>
                         </div>

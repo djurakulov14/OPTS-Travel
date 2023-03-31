@@ -152,6 +152,7 @@ const TourPage = ({data, all}) => {
                                 <td className='border-solid border-2'>+120$</td>
                             </tr>
                         </table>
+                        <p>*{t("priceInfo")}</p>
                         <p className=' text-base leading-5'>{t("morePeople")}</p>
                     </div>
                     <button onClick={handleClickOpen} className=' border-[#00AFD7] border-solid border-2 bg-white text-[#00AFD7] w-full py-2 rounded-xl'>{t("book")}</button>

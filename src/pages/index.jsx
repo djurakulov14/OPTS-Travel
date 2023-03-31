@@ -39,7 +39,8 @@ export default function Home({data}) {
   slides = 3
  }
 
-
+ data = data.slice(0,4)
+ 
 
   return (
     <>

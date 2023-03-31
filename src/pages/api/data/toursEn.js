@@ -13,8 +13,9 @@ export const tours = [
             "Breakfast in the hotel. Acquaintance with the sights of Khiva. Pakhvalan Mahmud complex. Kunya Ark fortress. Minaret Islam Khoja. Tash-Howli Palace. Madrassah Alakuli Khan. Juma Mosque. Madrassah Muhammad Amin Khan. Museum Avesta. Night in the hotel. ",
             "Breakfast in the hotel. Transfer to the airport. Flight home"
         ],
-        img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
-        price: 700
+        img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        price: 750,
+        imgTop: "/images/po_drevnim.jpg"
     },
     {
         id:2,
@@ -33,8 +34,9 @@ export const tours = [
             "Breakfast in the hotel. Transfer to Tashkent. Arrival in Tashkent. Accommodation in the hotel. Tour of Tashkent. Overnight in the hotel. ",
             "Breakfast at the hotel. Departure to the airport. End of tour."
         ],
-        img: "https://images.unsplash.com/photo-1674723889508-53f32cad9ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjB8OFhYV0xueG51ZjR8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
-        price: 700
+        img: "https://images.unsplash.com/photo-1669664321853-da5e271e7591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        price: 1150,
+        imgTop: "/images/g_kupala.jpg"
     },
     {
         id:3,
@@ -46,8 +48,9 @@ export const tours = [
             "Breakfast in the hotel. Departure from Samarkand to Bukhara. Hotel accommodation. Lunch. Excursion program in Bukhara. Dinner. Evening free time. ",
             "Breakfast in the hotel. Departure to Tashkent. ",
         ],
-        img: "https://images.unsplash.com/photo-1672353927974-2461ba941e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1697&q=80",
-        price: 700
+        img: "https://images.unsplash.com/photo-1672353927974-2461ba941e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1997&q=80",
+        price: 420,
+        imgTop: "/images/2_jemchug.jpg"
     },
     {
         id:4,
@@ -61,8 +64,9 @@ export const tours = [
             'Breakfast in the hotel. Continuation of the excursion of architectural monuments. Lunch in the restaurant "Kushvin". Transfer to the railway station W/D to the electric train "Shark" on the route Bukhara-Tashkent (6 hours en route). Arrival in Tashkent. Transfer to the hotel "Uzbekistan" and accommodation upon arrival. Dinner in the hotel restaurant. Night in Tashkent ',
             "Breakfast at the hotel. Free time. Luggage removal. Lunch at the hotel restaurant. Transfer to the return road. End of the route",
         ],
-        img: "https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-        price: 700
+        img: "https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        price: 530,
+        imgTop: "/images/chudesa.jpg"
     },
     {
         id:5,
@@ -84,7 +88,7 @@ export const tours = [
             "Breakfast in the hotel. Departure to Chimgan. Homecoming in a great mood. " ,
         ],
         img: "https://images.unsplash.com/photo-1603221197221-e9b151b5c83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-        price: 700
+        price: 1400
     },
     {
         id:6,
@@ -101,7 +105,7 @@ export const tours = [
             "Breakfast in the hotel. Excursion program in Tashkent. Hasti Imam complex. Transfer to the international airport."
         ],
         img: "https://images.unsplash.com/photo-1665739825163-dce3ebdb3272?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        price: 700
+        price: 820
     },
     {
         id:7,
@@ -118,7 +122,7 @@ export const tours = [
             "Breakfast in the hotel. Departure to Tashkent. Lunch. Airport transfer."
         ],
         img: "https://images.unsplash.com/photo-1673446840855-1c82bafdb67d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1163&q=80",
-        price: 700
+        price: 770
     },
     {
         id:8,
@@ -134,7 +138,7 @@ export const tours = [
             "Breakfast in the hotel. Transfer to the airport. Flight home." ,
         ],
         img: "https://images.unsplash.com/photo-1674723889494-d136af700127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80",
-        price: 700
+        price: 620
     },
     {
         id:9,
@@ -152,7 +156,7 @@ export const tours = [
             "Breakfast in the hotel. Visit the world famous Igor Savitsky Museum. Transfer to Nukus International Airport. End of the route",
         ],
         img: "https://images.unsplash.com/photo-1670443147688-68800f5c90c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: 700
+        price: 880
     },
     {
         id:10,
@@ -172,7 +176,7 @@ export const tours = [
             "Breakfast in the hotel. Transfer to the airport. Flight home. "
         ],
         img: "https://images.unsplash.com/photo-1666803324218-2c06dffb1834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        price: 700
+        price: 1100
     },
     {
         id:11,
@@ -190,6 +194,26 @@ export const tours = [
             "Breakfast in the hotel. Transfer to the airport. Flight home."
         ],
         img: "https://images.unsplash.com/photo-1662468872162-633462e31e36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
-        price: 700
+        price: 860
+    },
+    {
+        id:12,
+        title: "In the wake of the caravans",
+        duration: 8,
+        cities: "Tashkent/Khiva/Bukhara/Samarkand/Shahrisabs/Samarkand/Tashkent",
+        days: [
+            "Arrival in Tashkent. Meeting at the airport and transfer to the hotel. Accommodation and overnight in the hotel",
+            "Beginning of registration Arrival in Urgench. Meeting with a guide and driver.  Beginning of the tour: Walking on Ichan Kala city museum under the open sky:. Pakhlavan Mahmud Complex. -Kunya Ark Fortress. -Minaret Islam Khoja (1908). LUNCH. Accommodation in hotel. Free time. Night in hotel. ",
+            "Breakfast in the hotel. Meeting with a guide in the hotel lobby. Beginning of the tour: Tour of Ichan Kala. Palace Tash-Howli (19th). -Madrassa Alakuli Khan. LUNCH. -Juma Mosque (10-18th century). -Madrassah Muhammad Amin Khan. Free time. Dinner. Night in the hotel. ",
+            "Breakfast in the hotel. Transfer to Bukhara across the desert (8-9 hours on the way). Lunch in the tea house. Stop by the Amu Darya River. Arrival in Bukhara. Accommodation. Overnight at the hotel. ",
+            "Breakfast in the hotel. Meeting with a guide in the lobby of the hotel. Beginning of the tour: - Mausoleum Samanidov (9-10v.B). - Bolo House complex. - Citadatel ARC (1-14 c.C). Lunch (national dish). Continuation of the tour: -Mosque Poi-Kalyan (14b). -Madrassah Miri Arab. -Madrassah Abulazizkhan. -Madrassah Ulugbek. Walking on the Shopping Domes. Free time. Overnight at the hotel." ,
+            "Breakfast in the hotel. Meeting with a guide in the hotel hall. Beginning of the tour: -Madrasah Chor Minor. -Complex Chor Bakr. -Summer Palace of Citorai Mohi Hos. LUNCH. -Madrassah Kukeldash (14v). -Madrassah Nodir Devonby (17c). -Monument to Hodge Nasriddin. Free time. Night in hotel." ,
+            "Arrival in Samarkand. You will be met by a driver and a guide. Coffee break. START EXCURSION: -Mausoleum of Amir Temur (15b). -Registan Square (14-17b.). Mosque Bibi Khanum (15c). -Visit Siaba Bazaar. LUNCH. Continuation of the excursion: -Mausoleum of Saint Daniel. -Necropolis of Shahi Zind (11-18c.c). Excursion to the winery «Bagizagan», wine tasting. - Visit the Theater El Merosi. DINNER (national dish). Night in the hotel",
+            "Early breakfast. Meeting with a guide in the hotel lobby. Departure to Shahrisabz to the homeland of the Turko-Mongol conquerors of the 14th century Amir Temur. Beginning of the tour: - Aksaray Square (14-15c.). - Monument to Amir Temur. - Ensemble Dorut-Tillawat (14-15c.C). Dorut Saodat Complex. -Kok-Gumbaz Mosque. Lunch:The road goes through a picturesque pass. Here you will try the best meat in tandyr, with cake and hot, aromatic tea.  Departure to Samarkand. Dinner. Night in the hotel. ",
+            "Breakfast in the hotel. Meeting with the guide in the hotel lobby. On this day we will visit the : -Museum «Afrosiab» - tells about the life, culture and traditions of people who inhabited this area in various eras. Hujum Carpet Factory, where you will follow the work of skilled craftsmen, creating handmade carpets. Konigil Paper Factory, where you will learn about the secrets of making silk paper, and the most interesting))) When making paper use a water mill. Here you will also visit: - workshop on ceramic products. - master class on cooking sesame oil. - the process of rice preparation at the mill . LUNCH. Free time ,walk on the evening Samarkand. NIGHT IN THE HOTEL. ",
+            "Transfer to Tashkent by train (Afrasiab) . Meeting with driver and guide. Beginning of the tour: -Complex Hast Imam. -Kukeldash  -Barak Khan. Market Chorsu. End of the tour. Lunch. Free time for shopping. Night in the hotel. ",
+        ],
+        img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        price: 1100
     }
 ]
