@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
+import ExportedImage from "next-image-export-optimizer"
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
@@ -155,7 +155,7 @@ const cities = lng === 'ru' ? [
 
   return (
     <header className='flex justify-between items-center'>
-      <div className="logo cursor-pointer" onClick={() => router.push('/')}><Image src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
+      <div className="logo cursor-pointer" onClick={() => router.push('/')}><ExportedImage src="/icons/logo.png" alt='image' width={220} height={50} className=' max-lg:w-44'/></div>
       <nav className=' flex gap-7 max-lg:hidden'>
         <Link href='/' className='hover:underline'>{t("main")}</Link>
         <div className="link"  onMouseLeave={() => setOpen({...open, cities: false})}>
@@ -217,7 +217,7 @@ const cities = lng === 'ru' ? [
         </div>
         <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
           <div className="flex items-center gap-1 hover:cursor-pointer">
-            <Image src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
+            <ExportedImage src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
             <p>{lng === 'ru' ? "РУ" : "EN"}</p>
           </div>
         </Link>
