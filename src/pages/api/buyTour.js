@@ -13,7 +13,7 @@ export const transporter = nodemailer.createTransport({
 
 export const mailOptions = {
   from: email, 
-  to: 'info@opts.tours',
+  to: 'omegapremiertravelservis@gmail.com',
 };
 
  
