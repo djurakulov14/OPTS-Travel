@@ -1,5 +1,5 @@
 import React from 'react'
-import ExportedImage from "next-image-export-optimizer"
+import Image from "next/image"
 import MyButton from './MyButton'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
@@ -15,7 +15,7 @@ const TourCard = ({id, title, duration, price, cities, img}) => {
   }
   return (
     <div className=' w-[300px] rounded-xl h-fit overflow-hidden bg-white shadow-lg max-sm:w-[100%]'>
-        <ExportedImage src={img} width={999} height={176}  alt='image' className='w-full h-44 '/>
+        <Image src={img} width={999} height={176}  alt='image' className='w-full h-44 '/>
         <div className="info p-3 flex flex-col justify-end">
             <h1 className=' text-xl font-bold h-14'>{title}</h1>
             <p>{duration} {t("days")}/{duration - 1} {t("nights")}</p>

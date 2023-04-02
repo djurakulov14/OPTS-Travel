@@ -13,7 +13,7 @@ import CardsSection from '@/components/CardsSection'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch(context.locale === "ru" ? "https://opts-travel.netlify.app/api/tours" : "https://opts-travel.netlify.app/api/toursEn")
+  const res = await fetch(context.locale === "ru" ? "https://opts-tours.netlify.app/api/tours" : "https://opts-tours.netlify.app/api/toursEn")
   const data = await res.json()
   const param = await context.params.tour.split('=').at(-1)
 
@@ -51,7 +51,7 @@ const TourPage = ({data, all}) => {
         data[key] = value
       })
 
-      fetch("https://opts-travel.netlify.app/api/buyTour", {
+      fetch("https://opts-tours.netlify.app/api/buyTour", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },

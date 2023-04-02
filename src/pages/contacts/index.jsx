@@ -36,7 +36,7 @@ const Contacts = () => {
           data[key] = value
         })
     
-        fetch("https://opts-travel.netlify.app/api/contact", {
+        fetch("https://opts-tours.netlify.app/api/contact", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },

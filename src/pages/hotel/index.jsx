@@ -8,7 +8,7 @@ import Head from 'next/head'
 
 
 export async function getStaticProps({locale}) {
-  const res = await fetch("https://main--opts-travel.netlify.app/api/hotels")
+  const res = await fetch("https://main--opts-tours.netlify.app/api/hotels")
   const data = await res.json()
 
 
