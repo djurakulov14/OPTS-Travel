@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="bot h-16 flex items-center justify-between text-white before:absolute max-md:h-24 max-md:justify-center max-md:gap-3 max-md:flex-col max-md:before:h-24 before:left-0 before:z-[-1] before:bg-[#00AFD7] before:w-full before:h-16">
                 <p className=' max-md:text-sm max-md:text-center'>COPYRIGHT © 2023 - OMEGA PREMIER TRAVEL SERVIS</p>
                 <div className="links flex items-center gap-2">
-                    <a href="#"><FaFacebook/></a>
+                    <a href="https://www.facebook.com/Omega-Premier-Travel-Servis-112972098291941/"><FaFacebook/></a>
                     <a href="https://www.instagram.com/opts_uzb_tours/"><FaInstagram/></a>
                 </div>
             </div>

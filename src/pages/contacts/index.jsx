@@ -88,9 +88,9 @@ const Contacts = () => {
                     <div className="media flex flex-col gap-1 mb-16">
                         <h1 className='title'>{t("media")}</h1>
                         <div className="links flex flex-col gap-2">
-                            <a href="https://www.instagram.com/opts_uzb_tours/"><BsInstagram color='#00AFD7' size={30}/> opts_uzb_tours</a>
-                            <a href="https://www.facebook.com/Omega-Premier-Travel-Servis-112972098291941/"><BsFacebook color='#00AFD7' size={30}/> Omega Premier Travel Servis</a>
-                            <p><BsWhatsapp color='#00AFD7' size={30}/>+998(99)333-32-32</p>
+                            <a href="https://www.instagram.com/opts_uzb_tours/" className='flex'><BsInstagram color='#00AFD7' size={30}/> opts_uzb_tours</a>
+                            <a href="https://www.facebook.com/Omega-Premier-Travel-Servis-112972098291941/" className='flex'><BsFacebook color='#00AFD7' size={30}/> Omega Premier Travel Servis</a>
+                            <p className='flex'><BsWhatsapp color='#00AFD7' size={30}/>+998(99)333-32-32</p>
                         </div>
                     </div>
                     <div className="media flex flex-col gap-1 mb-16">
