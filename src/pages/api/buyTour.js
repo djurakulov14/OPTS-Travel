@@ -1,19 +1,19 @@
 import nodemailer from "nodemailer";
 
-const email = "omegapremiertravelservis@gmail.com";
-// const pass = "qnrarjxnhxlrvuvl";
+const email = "opts.tours@gmail.com";
+const pass = "ridyvwookamucjob";
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: email,
-    // pass: pass,
+    pass: pass,
   },
 });
 
 export const mailOptions = {
   from: email, 
-  to: 'omegapremiertravelservis@gmail.com',
+  to: 'opts.tours@gmail.com',
 };
 
  

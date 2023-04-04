@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
-const email = "sarik.j2445@gmail.com";
-const pass = "qnrarjxnhxlrvuvl";
+const email = "opts.tours@gmail.com";
+const pass = "ridyvwookamucjob";
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
