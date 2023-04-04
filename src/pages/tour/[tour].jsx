@@ -51,7 +51,7 @@ const TourPage = ({data, all}) => {
         data[key] = value
       })
 
-      fetch("https://opts.tours/api/buyTour", {
+      fetch("https://opts-tours.netlify.app/api/buyTour", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json", Accept: "application/json" },
