@@ -95,7 +95,7 @@ const TourPage = ({data, all}) => {
       <link rel="icon" href="/icons/favicon.ico" />
     </Head>
     <Layout>
-        <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={`${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}`}/>
+        <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={data.duration > 1 ? `${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}` : ''}/>
         <div className="content">
           <div className=" flex w-full justify-between max-md:flex-col gap-5">
             <div className="way w-[50%]">
