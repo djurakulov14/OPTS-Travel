@@ -98,7 +98,7 @@ const TourPage = ({data, all}) => {
         <TopSection isSwiper={false} title={data.title} dsc={data.cities} img={data.img} dsc2={data.duration > 1 ? `${data.duration} ${t("days")}/${data.duration + 1} ${t("nights")}` : ''}/>
         <div className="content">
           <div className=" flex w-full justify-between max-md:flex-col gap-5">
-            <div className="way w-[50%]">
+            <div className="way w-[50%] max-md:w-full">
                 <div className="acc mb-20 w-full">
                     <h1 className='title mb-3'>{t("route")}:</h1>
                     <Accordionn data={data}/>
