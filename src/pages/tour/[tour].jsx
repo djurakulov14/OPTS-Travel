@@ -13,7 +13,7 @@ import CardsSection from '@/components/CardsSection'
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch(context.locale === "ru" ? "https://opts-tours.netlify.app/api/tours" : "https://opts-tours.netlify.app/api/toursEn")
+  const res = await fetch(context.locale === "ru" ? "http://localhost:3000/api/tours" : "https://opts-tours.netlify.app/api/toursEn")
   const data = await res.json()
   const param = await context.params.tour.split('=').at(-1)
 
@@ -137,20 +137,46 @@ const TourPage = ({data, all}) => {
                         <h1 className='text-lg font-semibold'>{t("price")}:</h1>
                         <table className=' border-solid border-2 p-4 w-full rounded-xl'>
                             <tr className='text-center'>
-                                <th className='border-solid border-2'>{t("person")}:</th>
-                                <th className='border-solid border-2'><ReactStars count={3} value={3} edit={false} className='flex justify-center'/></th>
-                                <th className='border-solid border-2'><ReactStars count={4} value={4} edit={false} className='flex justify-center'/></th>
+                                {
+                                  data.duration === 1 ? 
+                                  <>
+                                  <th className='border-solid border-2'>{t("person")}:</th>
+                                  <th className='border-solid border-2'>{t("price")}</th>
+                                  </>
+                                :
+                                  <>
+                                  <th className='border-solid border-2'>{t("person")}:</th>
+                                  <th className='border-solid border-2'><ReactStars count={3} value={3} edit={false} className='flex justify-center'/></th>
+                                  <th className='border-solid border-2'><ReactStars count={4} value={4} edit={false} className='flex justify-center'/></th>
+                                  </>
+                                }
                             </tr>
-                            <tr className='text-center'>
-                                <td className='border-solid border-2'>1</td>
-                                <td className='border-solid border-2'>{data.price + 150}$</td>
-                                <td className='border-solid border-2'>+150$</td>
-                            </tr>
-                            <tr className='text-center'>
-                                <td className='border-solid border-2'>2</td>
-                                <td className='border-solid border-2'>{data.price}$</td>
-                                <td className='border-solid border-2'>+120$</td>
-                            </tr>
+                            {
+                                  data.duration === 1 ? 
+                                  <>
+                                  <tr className='text-center'>
+                                    <td className='border-solid border-2'>меньшн 5</td>
+                                    <td className='border-solid border-2'>{data.price}$</td>
+                                  </tr>
+                                  <tr className='text-center'>
+                                    <td className='border-solid border-2'>больше 5</td>
+                                    <td className='border-solid border-2'>{data.price - 20}$</td>
+                                  </tr>
+                                  </>
+                                :
+                                  <>
+                                <tr className='text-center'>
+                                    <td className='border-solid border-2'>1</td>
+                                    <td className='border-solid border-2'>{data.price + 150}$</td>
+                                    <td className='border-solid border-2'>+150$</td>
+                                </tr>
+                                <tr className='text-center'>
+                                    <td className='border-solid border-2'>2</td>
+                                    <td className='border-solid border-2'>{data.price}$</td>
+                                    <td className='border-solid border-2'>+120$</td>
+                                </tr>
+                                  </>
+                                }
                         </table>
                         <p>*{t("priceInfo")}</p>
                         <p className=' text-base leading-5'>{t("morePeople")}</p>

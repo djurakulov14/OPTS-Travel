@@ -215,5 +215,16 @@ export const tours = [
         ],
         img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
         price: 1100
+    },
+    {
+        id:13,
+        title: "Tour to Shahisabs (one-day)",
+        duration: 1,
+        cities: "Shahrisabs",
+        days: [
+            "Collection at 6:00. Departure at 6:30 (1h 30min on the way). Oxaray Palace. Monument to Amir Temur. Dor-ut Tilovat. Mausoleum Shamsidin Kulal. Dorus Saodat. Mausoleum of Jahangir. Mausoleum of Amir Temur. Kuk-Gumbaz Mosque. Mausoleum of Gumbazi Seiidan. Free time. 13:00 Lunch. 15:00 departure to Samarkand. On the way to Samarkand familiarization of handmade carpet.",
+        ],
+        img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/DSC_0736-0-0-0-0-1592546576.jpg",
+        price: 50
     }
 ]

@@ -215,5 +215,16 @@ export const tours = [
         ],
         img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
         price: 1100
+    },
+    {
+        id:13,
+        title: "Тур в Шахисабс(однодневный)",
+        duration: 1,
+        cities: "Шахрисабс",
+        days: [
+            "Сбор в 6:00. Выезд в 6:30(1час 30мин в пути). Дворец Оксарай. Памятник Амира Темура. Дор-ут Тиловат. Мавзолей Шамсидина Куляла. Дорус Саодат. Мавзолей Джахангира. Мавзолей Амира Темура. Мечеть Кук-Гумбаз. Мавзолей Гумбази Сейидан. Свободное время. 13:00 Обед. 15:00 выезд в Самарканд. По дороге в Самарканд ознакомление ручной ковроделии.",
+        ],
+        img: "https://www.advantour.com/img/uzbekistan/images/shakhrisabz.jpg",
+        price: 50
     }
 ]

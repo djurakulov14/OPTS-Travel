@@ -8,7 +8,7 @@ const {i18n} = require("./next-i18next.config")
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com', "uzbekistan.travel", "www.advantour.com"],
   },
  i18n
 }
