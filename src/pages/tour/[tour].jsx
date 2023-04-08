@@ -26,7 +26,7 @@ export async function getServerSideProps(context) {
       data: filtered,
       all: data,
       ...(await serverSideTranslations(context.locale, ["header", "footer", "main"])),
-    }, // will be passed to the page component as props
+    },
   }
 }
 
