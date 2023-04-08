@@ -12,6 +12,8 @@ export default function handler(req, res) {
             res.status(200).json(toursEn)
           } else if(req.headers.lng === "it"){
             res.status(200).json(toursIt)
+          } else{
+            res.status(200).json(toursEn)
           }
     break
   }

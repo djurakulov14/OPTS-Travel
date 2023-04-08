@@ -25,6 +25,8 @@ useEffect(() => {
     setLang({img:"/icons/uk.png", text: "EN"})
   }else if(lng === "it"){
     setLang({img:"/icons/it.png", text: "IT"})
+  }else if(lng === "de"){
+    setLang({img:"/icons/de.png", text: "DE"})
   }
 }, [lng])
 
@@ -239,6 +241,7 @@ const cities = lng === 'ru' ? [
                   <li><Link href={router.asPath} locale={"ru"}>РУ</Link></li>
                   <li><Link href={router.asPath} locale={"en"}>EN</Link></li>
                   <li><Link href={router.asPath} locale={"it"}>IT</Link></li>
+                  <li><Link href={router.asPath} locale={"de"}>DE</Link></li>
               </ul>
           </div>
           </div>
