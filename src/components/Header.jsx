@@ -25,8 +25,6 @@ useEffect(() => {
     setLang({img:"/icons/uk.png", text: "EN"})
   }else if(lng === "it"){
     setLang({img:"/icons/it.png", text: "IT"})
-  }else if(lng === "de"){
-    setLang({img:"/icons/de.png", text: "DE"})
   }
 }, [lng])
 
