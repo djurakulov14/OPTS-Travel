@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from "next/image"
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
@@ -10,10 +10,24 @@ import { CSSTransition } from 'react-transition-group'
 
 
 const Header = () => {
-  const [open, setOpen] = useState({cities: false, hotels: false, menu: false})
+  const [open, setOpen] = useState({cities: false, hotels: false, menu: false, lang: false})
+  const [lang, setLang] = useState({img: '', text: ''})
+  const [list, setList] = useState(false)
+
   const {t, i18n} = useTranslation("header")
   const lng = i18n.language
   const router = useRouter()
+
+useEffect(() => {
+  if(lng === "ru"){
+    setLang({img:"/icons/ru.png", text: "РУ"})
+  } else if(lng === "en"){
+    setLang({img:"/icons/uk.png", text: "EN"})
+  }else if(lng === "it"){
+    setLang({img:"/icons/it.png", text: "IT"})
+  }
+}, [lng])
+
 
   const hotelsOfCities = lng === 'ru' ? [
     {
@@ -150,7 +164,7 @@ const cities = lng === 'ru' ? [
   const style = open.cities ? {display: "block"} : {display: "none"}
   const style2 = open.hotels ? {display: "block"} : {display: "none"}
   const style3 = open.menu ? {display: "block"} : {display: "none"}
-  const [list, setList] = useState(false)
+  const style4 = open.lang ? {display: "block"} : {display: "none"}
   
 
   return (
@@ -215,12 +229,19 @@ const cities = lng === 'ru' ? [
           </div>
           </CSSTransition>
         </div>
-        <Link href={router.asPath} locale={lng === 'ru' ? "en" : "ru"}>
-          <div className="flex items-center gap-1 hover:cursor-pointer">
-            <Image src={lng === 'ru' ? "/icons/ru.png" : "/icons/uk.png"} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
-            <p>{lng === 'ru' ? "РУ" : "EN"}</p>
+          <div className="" onMouseLeave={() => setOpen({...open, lang: !open.lang})}>
+            <div className="flex items-center gap-3">
+              <Image src={lang.img} onMouseEnter={() => setOpen({...open, lang: true})} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
+              <p>{lang.text}</p>
+            </div>
+            <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style4}  >
+              <ul className='trans text-black' style={open.lang ? {opacity: 1} : {opacity: 0}} >
+                  <li><Link href={router.asPath} locale={"ru"}>РУ</Link></li>
+                  <li><Link href={router.asPath} locale={"en"}>EN</Link></li>
+                  <li><Link href={router.asPath} locale={"it"}>IT</Link></li>
+              </ul>
           </div>
-        </Link>
+          </div>
       </div>
     </header>
   )

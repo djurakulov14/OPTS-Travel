@@ -9,7 +9,9 @@ import Head from 'next/head'
 
 
 export async function getStaticProps({locale}) {
-  const res = await fetch(locale === "ru" ? "https://opts-tours.netlify.app/api/tours" : "https://opts-tours.netlify.app/api/toursEn")
+  const res = await fetch("https://opts-tours.netlify.app/api/tours", {headers: {
+    lng: locale
+  }})
   const data = await res.json()
 
   return {

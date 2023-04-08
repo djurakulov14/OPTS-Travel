@@ -1,4 +1,4 @@
-export const tours = [
+export const toursEn = [
     {
         id:1,
         title: "On ancient cities of Uzbekistan",
@@ -224,7 +224,7 @@ export const tours = [
         days: [
             "Collection at 6:00. Departure at 6:30 (1h 30min on the way). Oxaray Palace. Monument to Amir Temur. Dor-ut Tilovat. Mausoleum Shamsidin Kulal. Dorus Saodat. Mausoleum of Jahangir. Mausoleum of Amir Temur. Kuk-Gumbaz Mosque. Mausoleum of Gumbazi Seiidan. Free time. 13:00 Lunch. 15:00 departure to Samarkand. On the way to Samarkand familiarization of handmade carpet.",
         ],
-        img: "https://uzbekistan.travel/storage/app/media/nargiza/cropped-images/DSC_0736-0-0-0-0-1592546576.jpg",
+        img: "https://www.advantour.com/img/uzbekistan/images/shakhrisabz.jpg",
         price: 50
     }
 ]
