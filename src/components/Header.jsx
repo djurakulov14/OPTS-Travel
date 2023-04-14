@@ -233,9 +233,9 @@ const cities = lng === 'ru' ? [
           </div>
           </CSSTransition>
         </div>
-          <div className="" onMouseLeave={() => setOpen({...open, lang: !open.lang})}>
+          <div className="" onClick={() => setOpen({...open, lang: !open.lang})}>
             <div className="flex items-center gap-3">
-              <Image src={lang.img} onMouseEnter={() => setOpen({...open, lang: true})} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
+              <Image src={lang.img} width={30} height={30} alt='image' className=' max-lg:w-[20px]'/>
               <p>{lang.text}</p>
             </div>
             <div className=' bg-slate-50 p-3 rounded-xl rounded-tl-none	absolute z-10' style={style4}  >

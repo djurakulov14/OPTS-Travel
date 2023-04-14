@@ -27,7 +27,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
     const router = useRouter()
 
     return (
-        <section className='h-[600px] w-full text-white mb-18 max-md:h-[450px]'>
+        <section className='h-[600px] w-full text-white max-md:h-[450px]'>
         <Header/>
             <div className="bg absolute top-0 left-0 z-[-1] h-[600px] max-md:h-[450px] w-full after:absolute after:inset-0 after:bg-[rgba(0,0,0,.4)] after:z-[-1]  delay-200" style={{background: `url(${image})`,backgroundSize: "cover",backgroundPosition: "center"}}>
             </div>
@@ -68,7 +68,7 @@ const TopSection = ({ isSwiper,title, arr, dsc, dsc2, img}) => {
         :
         <div className="info mt-32 max-md:mt-20">
             <div className="dsc flex flex-col">
-                <h1 className=' text-4xl font-bold mb-7 max-md:text-2xl'>{title}</h1>
+                <h1 className=' text-4xl font-bold max-md:text-2xl'>{title}</h1>
                 <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4 max-md:text-xl max-md:w-full max-[400px]:text-lg'>{dsc}</p>
                 {dsc2 ? 
                     <p className=' text-2xl font-normal text-[#DFDFDF] w-2/4 max-md:w-5/6'>{dsc2}</p>

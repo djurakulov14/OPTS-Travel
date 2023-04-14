@@ -16,7 +16,7 @@ export async function getStaticProps({locale}) {
     props: {
       hotels: data,
       ...(await serverSideTranslations(locale, ["header", "footer", "main"])),
-    }, // will 
+    },
   }
 }
 
