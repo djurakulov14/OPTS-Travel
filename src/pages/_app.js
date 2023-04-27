@@ -36,4 +36,4 @@ import "../fonts/stylesheet.css"
 }
 
 export default appWithTranslation(App, NextI18nextConfig)
-
+// check
