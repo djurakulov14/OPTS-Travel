@@ -33,5 +33,6 @@ const Services = () => {
     </div>
   )
 }
-// before:absolute before:left-0 before:w-full before:h-[105%] before:bg-[#00AFD7] before:z-[-1]
+
+
 export default Services
