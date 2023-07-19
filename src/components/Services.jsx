@@ -21,7 +21,7 @@ const Services = () => {
                 <h1 className=' text-6xl font-semibold max-xl:text-3xl'>{t("approachTitle")}</h1>
                 <p className='w-2/4 text-xl max-xl:w-4/5 max-xl:text-lg max-lg:w-full'>{t("approach")}</p>
             </div>
-            <Image src="https://www.orexca.com/img/uzbekistan/samarkand/registan-square3.jpg" width={500} height={300} alt='image' className='rounded-3xl max-xl:w-96 max-lg:w-72 max-md:w-full'/>
+            <Image src="/images/registan-square.jpg" width={500} height={300} alt='image' className='rounded-3xl max-xl:w-96 max-lg:w-72 max-md:w-full'/>
         </div>
         <div className="first flex justify-between w-full pb-10 text-white relative max-md:flex-col -top-[150px] max-xl:-top-[70px] max-lg:-top-[25px] items-center max-lg:w-full max-lg:items-start max-md:top-0">
             <Image src="/images/bus.png" width={500} height={300} alt='image' className=' rounded-3xl max-xl:w-96 max-lg:w-72 max-md:w-full'/>
