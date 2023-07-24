@@ -18,7 +18,7 @@ export async function getServerSideProps(context) {
     props: {
       hotels: filtered,
       ...(await serverSideTranslations(context.locale, ["header", "footer"])),
-    }, // will be passed to the page component as props
+    }, // will be passed to the page component as pro
   }
 }
 
