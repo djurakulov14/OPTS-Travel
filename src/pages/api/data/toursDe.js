@@ -13,7 +13,7 @@ export const toursDe = [
             "Frühstück im Hotel. Bekanntschaft mit den Sehenswürdigkeiten von Chiwa. Pakhvalan Mahmud Komplex. Kunya Ark Festung. Minarett Islam Khoja. Tash-Howli Palast. Madrassah Alakuli Khan. Juma Moschee. Madrassah Muhammad Amin Khan. Museum Avesta. Nacht im Hotel. ",
             "Frühstück im Hotel. Transfer zum Flughafen. Flug nach Hause"
         ],
-        img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/1.png",
         price: 750,
         imgTop: "/images/po_drevnim.jpg"
     },
@@ -34,7 +34,7 @@ export const toursDe = [
             "Frühstück im Hotel. Transfer nach Taschkent. Ankunft in Taschkent. Unterkunft im Hotel. Tour von Taschkent. Übernachtung im Hotel. ",
             "Frühstück im Hotel. Abfahrt zum Flughafen. Ende der Tour."
         ],
-        img: "https://images.unsplash.com/photo-1669664321853-da5e271e7591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/2.png",
         price: 1150,
         imgTop: "/images/g_kupala.jpg"
     },
@@ -48,7 +48,7 @@ export const toursDe = [
             "Frühstück im Hotel. Abfahrt von Samarkand nach Buchara. Hotelübernachtung. Mittagessen. Ausflugsprogramm in Buchara. Abendessen. Abendfreizeit. ",
             "Frühstück im Hotel. Abreise nach Taschkent. ",
         ],
-        img: "https://images.unsplash.com/photo-1672353927974-2461ba941e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1997&q=80",
+        img: "/images/3.png",
         price: 420,
         imgTop: "/images/2_jemchug.jpg"
     },
@@ -64,7 +64,7 @@ export const toursDe = [
             'Frühstück im Hotel. Fortsetzung der Exkursion der Baudenkmäler. Mittagessen im Restaurant "Kushvin". Transfer zum Bahnhof W/ D zum elektrischen Zug "Shark" auf der Strecke Buchara-Taschkent (6 Stunden unterwegs). Ankunft in Taschkent. Transfer zum Hotel "Usbekistan" und Unterkunft bei der Ankunft. Abendessen im Hotelrestaurant. Nacht in Taschkent ',
             "Frühstück im Hotel. Freizeit. Gepäckentnahme. Mittagessen im Hotelrestaurant. Transfer zur Rückfahrt. Ende der Route",
         ],
-        img: "https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/4.png",
         price: 530,
         imgTop: "/images/chudesa.jpg"
     },
@@ -87,7 +87,7 @@ export const toursDe = [
             "Frühstück im Hotel. Transfer zum Bahnhof W/D. Transfer nach Taschkent mit dem Zug (Afrasiab). Ankunft in Taschkent, Treffen mit Fahrer und Führer. Beginn der Tour: Koran von Khalifa Osman ( geschrieben im 7. Jahrhundert). Komplex Hast Imam Markt Chorsu. Museum für angewandte Kunst. Mittagessen (auf eigene Kosten). Spaziergang durch den Park «Lokomotive». Ausflug durch den Park «Magische Stadt». Nacht im Hotel. ",
             "Frühstück im Hotel. Abfahrt nach Chimgan. Heimkehr in guter Stimmung." ,
         ],
-        img: "https://images.unsplash.com/photo-1603221197221-e9b151b5c83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img: "/images/5.png",
         price: 1400
     },
     {
@@ -104,7 +104,7 @@ export const toursDe = [
             "Frühstück im Hotel. Ausflugsprogramm. Basar (Freizeit, um Souvenirs zu kaufen). Papierfabrik, in der Seidenpapier mit alten Technologien hergestellt wird. Ulugbek Observatorium. Shahi Zinda Komplex. Mittagessen. Abfahrt nach Taschkent mit dem Zug (Shark). Ankunft in Taschkent. Hotelunterkunft. ",
             "Frühstück im Hotel. Ausflugsprogramm in Taschkent. Hasti Imam Komplex. Transfer zum internationalen Flughafen."
         ],
-        img: "https://images.unsplash.com/photo-1665739825163-dce3ebdb3272?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/11.png",
         price: 820
     },
     {
@@ -121,7 +121,7 @@ export const toursDe = [
             "Frühstück im Hotel. Abfahrt in die Stadt Samarkand. Ankunft. Hotelunterkunft. Mittagessen Ausflugsprogramm . Abendessen. Übernachtung im Hotel. ",
             "Frühstück im Hotel. Abfahrt nach Taschkent. Mittagessen. Flughafentransfer."
         ],
-        img: "https://images.unsplash.com/photo-1673446840855-1c82bafdb67d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1163&q=80",
+        img: "/images/14.png",
         price: 770
     },
     {
@@ -137,7 +137,7 @@ export const toursDe = [
             "Frühstück im Hotel. Mausoleum Samanidov. Mausoleum Cup Ayub. Bolo House Komplex. Festung Ark. Mausoleum poy Kalyan. Madrassah Abdulaziz Khan. Madrassah ulugbek. Transfer zum w/ d Station. Transfer nach Taschkent mit dem Hochgeschwindigkeitszug. Bei der Ankunft, Treffen am g/ d Station und Unterkunft im Hotel. Übernachtung im Hotel. ",
             "Frühstück im Hotel. Transfer zum Flughafen." ,
         ],
-        img: "https://images.unsplash.com/photo-1674723889494-d136af700127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80",
+        img: "/images/8.png",
         price: 620
     },
     {
@@ -155,7 +155,7 @@ export const toursDe = [
             "Frühstück im Hotel. Fahrt zur Mizdahkan-Nekropole (70 km). Fahrzeugtransfer nach Muynak (180 km). Rückkehr nach Nukus (200 km). Übernachtung im Hotel. ",
             "Frühstück im Hotel. Besuch des weltberühmten Igor Savitsky Museum. Transfer zum Nukus International Airport. Ende der Route",
         ],
-        img: "https://images.unsplash.com/photo-1670443147688-68800f5c90c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/9.png",
         price: 880
     },
     {
@@ -175,7 +175,7 @@ export const toursDe = [
             "Frühstück im Hotel. Bekanntschaft mit den Sehenswürdigkeiten von Chiwa. Pakhlavan Mahmud Komplex. Kunya Ark Festung. Minarett Islam-Khoja. Tash-Howli Palast. Madrassah Alakuli Khan. Juma Moschee. Madrassah Muhammad Amin Khan. Transfer nach Urgench. Transfer zum Flughafen. Flug nach Taschkent. Übernachtung im Hotel. ",
             "Frühstück im Hotel. Transfer zum Flughafen. Flug nach Hause. "
         ],
-        img: "https://images.unsplash.com/photo-1666803324218-2c06dffb1834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/10.png",
         price: 1100
     },
     {
@@ -213,7 +213,7 @@ export const toursDe = [
             "Frühstück im Hotel. Treffen mit dem Guide in der Hotellobby. An diesem Tag besuchen wir das : -Museum «Afrosiab» - erzählt über das Leben, die Kultur und die Traditionen der Menschen, die diese Gegend in verschiedenen Epochen bewohnt haben. Hujum Carpet Factory, wo Sie die Arbeit von erfahrenen Handwerkern verfolgen, handgemachte Teppiche zu schaffen. Konigil Paper Factory, wo Sie über die Geheimnisse der Herstellung von Seidenpapier lernen, und die interessantesten))) Bei der Herstellung von Papier verwenden Sie eine Wassermühle. Hier besuchen Sie auch: - Workshop über keramische Produkte. - Meisterklasse zum Kochen von Sesamöl. - der Prozess der Reiszubereitung in der Mühle . MITTAGESSEN. Freizeit ,Spaziergang am Abend Samarkand. NACHT IM HOTEL. ",
             "Transfer nach Taschkent mit dem Zug (Afrasiab) . Treffen mit Fahrer und Führer. Beginn der Tour: -Complex Hast Imam. -Kukeldash  -Barak Khan. Markt Chorsu. Ende der Tour. Mittagessen. Freizeit zum Einkaufen. Übernachtung im Hotel. ",
         ],
-        img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        img: "/images/12.png",
         price: 1100
     },
     {

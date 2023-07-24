@@ -13,7 +13,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Connaissance des attractions de Khiva. Pakhvalan Mahmud complexe. Kunya Ark forteresse. Minaret Islam Khoja. Tash-Howli Palace. Madrassah Alakuli Khan. Juma Mosque. Madrassah Muhammad Amin Khan. Musée Avesta. Nuit à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Transfert à l’aéroport. Vol retour"
         ],
-        img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/1.png",
         price: 750,
         imgTop: "/images/po_drevnim.jpg"
     },
@@ -34,7 +34,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Transfert à Tachkent. Arrivée à Tachkent. Hébergement à l’hôtel. Visite de Tachkent. Nuit à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Départ pour l’aéroport. Fin de la visite."
         ],
-        img: "https://images.unsplash.com/photo-1669664321853-da5e271e7591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/2.png",
         price: 1150,
         imgTop: "/images/g_kupala.jpg"
     },
@@ -48,7 +48,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Départ de Samarcande à Boukhara. Hébergement à l’hôtel. Déjeuner. Programme d’excursions à Boukhara. Dîner. Temps libre en soirée. " ,
             "Petit déjeuner à l’hôtel. Départ pour Tachkent. ",
         ],
-        img: "https://images.unsplash.com/photo-1672353927974-2461ba941e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1997&q=80",
+        img: "/images/3.png",
         price: 420,
         imgTop: "/images/2_jemchug.jpg"
     },
@@ -64,7 +64,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Continuation de l’excursion des monuments architecturaux. Déjeuner au restaurant Kushvin. Transfert à la gare W / D au train électrique Shark sur la route Boukhara-Tachkent (6 heures en route). Arrivée à Tachkent. Transfert à l’hôtel Ouzbékistan et hébergement à l’arrivée. Dîner au restaurant de l’hôtel. Nuit à Tachkent",
             "Petit-déjeuner à l’hôtel. Temps libre. Enlèvement des bagages. Déjeuner au restaurant de l’hôtel. Transfert sur le chemin du retour. Fin du parcours",
         ],
-        img: "https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/4.png",
         price: 530,
         imgTop: "/images/chudesa.jpg"
     },
@@ -88,7 +88,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Transfert à la gare W/D. Transfert à Tachkent en train (Afrasiab). Arrivée à Tachkent, rencontre avec chauffeur et guide. Début de la visite : Coran de Khalifa Osman ( écrit au 7ème siècle). Complexe Hast Imam Marché Chorsu. Musée des Arts Appliqués. Déjeuner (à vos frais). Promenade autour du parc « Locomotive ». Excursion autour du parc « Magic City ». Nuit à l’hôtel. ",
             "Petit déjeuner à l’hôtel. Départ pour Chimgan. Retour à la maison de bonne humeur. " ,
         ],
-        img: "https://images.unsplash.com/photo-1603221197221-e9b151b5c83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img: "/images/5.png",
         price: 1400
     },
     {
@@ -105,7 +105,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Programme d’excursions. Bazar (temps libre pour acheter des souvenirs). Usine de papier où le papier de soie est fabriqué avec de vieilles technologies. Ulugbek Observatory. Shahi Zinda Complex. Déjeuner. Départ pour Tachkent en train (Shark). Arrivée à Tachkent. Hébergement à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Programme d’excursions à Tachkent. Hasti Imam complexe. Transfert à l’aéroport international."
         ],
-        img: "https://images.unsplash.com/photo-1665739825163-dce3ebdb3272?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/11.png",
         price: 820
     },
     {
@@ -122,7 +122,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Départ pour la ville de Samarcande. Arrivée. Hébergement à l’hôtel. Programme d’excursions pour le déjeuner. Dîner. Nuit à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Départ pour Tachkent. Déjeuner. Transfert aéroport."
         ],
-        img: "https://images.unsplash.com/photo-1673446840855-1c82bafdb67d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1163&q=80",
+        img: "/images/14.png",
         price: 770
     },
     {
@@ -138,7 +138,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Mausolée Samanidov. Mausolée Coupe Ayub. Bolo House complexe. Forteresse Ark. Mausolée Poy Kalyan. Madrassah Abdulaziz Khan. Madrassah Ulugbek. Transfert à la station w/d. Transfert à Tachkent en train à grande vitesse. À l’arrivée, rendez-vous à la gare g / d et hébergement à l’hôtel. Nuit à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Transfert à l’aéroport. Vol retour."
         ],
-        img: "https://images.unsplash.com/photo-1674723889494-d136af700127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80",
+        img: "/images/8.png",
         price: 620
     },
     {
@@ -156,7 +156,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Conduire à la nécropole Mizdahkan (70 km). Transfert de voiture à Muynak (180 km). Retour à Nukus (200 km). Nuit à l’hôtel. " ,
             "Petit-déjeuner à l’hôtel. Visite du célèbre musée Igor Savitsky. Transfert à l’aéroport international de Nukus. Fin de l’itinéraire",
         ],
-        img: "https://images.unsplash.com/photo-1670443147688-68800f5c90c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/9.png",
         price: 880
     },
     {
@@ -176,7 +176,7 @@ export const toursFr = [
             "Petit déjeuner à l’hôtel. Connaissance des attractions de Khiva. Pakhlavan Mahmud complexe. Kunya Ark forteresse. Minaret Islam-Khoja. Tash-Howli Palace. Madrassah Alakuli Khan. Juma Mosque. Madrassah Muhammad Amin Khan. Transfert à Urgench. Transfert à l’aéroport. Vol pour Tachkent. Nuit à l’hôtel. " ,
             "Petit déjeuner à l’hôtel. Transfert à l’aéroport. Vol retour. "
         ],
-        img: "https://images.unsplash.com/photo-1666803324218-2c06dffb1834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/10.png",
         price: 1100
     },
     {
@@ -212,7 +212,7 @@ export const toursFr = [
             "Arrivée à Samarcande. Vous serez accueillis par un chauffeur et un guide. Pause café. EXCURSION START : -Mausolée d’Amir Temur. -Place Registan (14-17b). Mosquée Bibi Khanum (15c). -Visite Siaba Bazaar. DÉJEUNER. Continuation de l’excursion : -Mausolée de Saint Daniel. -Nécropole de Shahi Zinda. Excursion à la cave « Bagizagan », dégustation de vins. - Visite au Théâtre El Merosi. DÎNER (plat national). Nuit à l’hôtel",
             "Petit déjeuner. Rencontre avec un guide dans le hall de l’hôtel. Départ pour Shahrisabz à la patrie des conquérants Turko-mongols du 14ème siècle Amir Temur. Début de la visite : - Place Aksaray (14-15c). - Monument à Amir Temur. - Ensemble Dorut-Tillawat. Dorut Saodat Complex. -Kok-Gumbaz Mosque. Déjeuner:La rue passe par un passage pittoresque. Ici vous pouvez essayer la meilleure viande en tandyr, avec gâteau et chaud, thé aromatique.  Départ pour Samarcande. Dîner. Nuit à l’hôtel. " ,
         ],
-        img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        img: "/images/12.png",
         price: 1100
     },
     {

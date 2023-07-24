@@ -13,7 +13,7 @@ export const toursIt = [
             "Prima colazione in hotel. Conoscenza con le attrazioni di Khiva. Pakhvalan Mahmud complesso. Kunya Ark fortezza. Minareto Islam Khoja. Tash-Howli Palace. Madrassah Alakuli Khan. Juma Mosque. Madrassah Muhammad Amin Khan. Museo Avesta. Notte in hotel. ",
             "Prima colazione in hotel. Trasferimento in aeroporto. Volo di ritorno"
         ],
-        img: "https://images.unsplash.com/photo-1582875032833-69b46679ec06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/1.png",
         price: 750,
         imgTop: "/images/po_drevnim.jpg"
     },
@@ -34,7 +34,7 @@ export const toursIt = [
             "Colazione in hotel. Trasferimento a Tashkent. Arrivo a Tashkent. Sistemazione in hotel. Tour di Tashkent. Pernottamento in hotel. ",
             "Colazione in hotel. Partenza per l'aeroporto. Fine del tour."
         ],
-        img: "https://images.unsplash.com/photo-1669664321853-da5e271e7591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/2.png",
         price: 1150,
         imgTop: "/images/g_kupala.jpg"
     },
@@ -48,7 +48,7 @@ export const toursIt = [
             "Colazione in hotel. Partenza da Samarcanda a Bukhara. Sistemazione in hotel. Pranzo. Programma di escursioni a Bukhara. Cena. Tempo libero serale. ",
             "Prima colazione in hotel. Partenza per Tashkent. ",
         ],
-        img: "https://images.unsplash.com/photo-1672353927974-2461ba941e66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1997&q=80",
+        img: "/images/3.png",
         price: 420,
         imgTop: "/images/2_jemchug.jpg"
     },
@@ -64,7 +64,7 @@ export const toursIt = [
             "Colazione in hotel. Continuazione dell'escursione di monumenti architettonici. Pranzo nel ristorante 'Kushvin'. Trasferimento alla stazione ferroviaria W/ D al treno elettrico Shark sulla rotta Bukhara-Tashkent (6 ore in viaggio). Arrivo a Tashkent. Trasferimento in hotel Uzbekistan e alloggio all'arrivo. Cena nel ristorante dell'hotel. Notte a Tashkent",
             "Colazione in hotel. Tempo libero. Rimozione bagagli. Pranzo al ristorante dell'hotel. Trasferimento sulla strada di ritorno. Fine del percorso",
         ],
-        img: "https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        img: "/images/4.png",
         price: 530,
         imgTop: "/images/chudesa.jpg"
     },
@@ -87,7 +87,7 @@ export const toursIt = [
             "Prima colazione in hotel. Trasferimento alla stazione ferroviaria W/D. Trasferimento a Tashkent in treno (Afrasiab). Arrivo a Tashkent, incontro con autista e guida. Inizio del tour: Corano di Khalifa Osman ( scritto nel 7 º secolo). Complesso Hast Imam Mercato Chorsu. Museo di Arti Applicate. Pranzo (a proprie spese). Passeggiata intorno al parco «Locomotiva». Escursione intorno al parco «Magic City». Notte in hotel. ",
             "Colazione in hotel. Partenza per Chimgan. Ritorno a casa di ottimo umore. " ,
         ],
-        img: "https://images.unsplash.com/photo-1603221197221-e9b151b5c83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        img: "/images/5.png",
         price: 1400
     },
     {
@@ -104,7 +104,7 @@ export const toursIt = [
             "Colazione in hotel. Programma di escursioni. Bazar (tempo libero per acquistare souvenir). Fabbrica di carta dove la carta di seta è fatta con vecchie tecnologie. Ulugbek Observatory. Shahi Zinda Complex. Pranzo. Partenza per Tashkent in treno (Shark). Arrivo a Tashkent. Sistemazione in hotel. ",
             "Colazione in hotel. Programma di escursioni a Tashkent. Hasti Imam complesso. Trasferimento all'aeroporto internazionale."
         ],
-        img: "https://images.unsplash.com/photo-1665739825163-dce3ebdb3272?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        img: "/images/11.png",
         price: 820
     },
     {
@@ -121,7 +121,7 @@ export const toursIt = [
             "Prima colazione in hotel. Partenza per la città di Samarcanda. Arrivo. Sistemazione in hotel. Programma di escursioni a pranzo . Cena. Pernottamento in hotel. ",
             "Colazione in hotel. Partenza per Tashkent. Pranzo. Trasferimento aeroportuale."
         ],
-        img: "https://images.unsplash.com/photo-1673446840855-1c82bafdb67d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1163&q=80",
+        img: "/images/14.png",
         price: 770
     },
     {
@@ -137,7 +137,7 @@ export const toursIt = [
             "Prima colazione in hotel. Mausoleo Samanidov. Mausoleo Cup Ayub. Bolo House complesso. Fortezza Ark. Mausoleo Poy Kalyan. Madrassah Abdulaziz Khan. Madrassah Ulugbek. Trasferimento alla stazione w/d. Trasferimento a Tashkent in treno ad alta velocità. All'arrivo, incontro alla stazione g/ d e alloggio in hotel. Pernottamento in hotel. ",
             "Colazione in hotel. Trasferimento in aeroporto. Volo di ritorno.",
         ],
-        img: "https://images.unsplash.com/photo-1674723889494-d136af700127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80",
+        img: "/images/8.png",
         price: 620
     },
     {
@@ -155,7 +155,7 @@ export const toursIt = [
             "Prima colazione in hotel. Guidare alla necropoli Mizdahkan (70 km). Trasferimento veicolare a Muynak (180 km). Ritorno a Nukus (200 km). Pernottamento in hotel. ",
             "Colazione in hotel. Visita al famoso Museo Igor Savitsky. Trasferimento all'aeroporto internazionale di Nukus. Fine del percorso",
         ],
-        img: "https://images.unsplash.com/photo-1670443147688-68800f5c90c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/9.png",
         price: 880
     },
     {
@@ -175,7 +175,7 @@ export const toursIt = [
             "Prima colazione in hotel. Conoscenza con le attrazioni di Khiva. Pakhlavan Mahmud complesso. Kunya Ark fortezza. Minareto Islam-Khoja. Tash-Howli Palace. Madrassah Alakuli Khan. Juma Mosque. Madrassah Muhammad Amin Khan. Trasferimento a Urgench. Trasferimento in aeroporto. Volo per Tashkent. Notte in hotel. ",
             "Colazione in hotel. Trasferimento in aeroporto. Volo di ritorno. "
         ],
-        img: "https://images.unsplash.com/photo-1666803324218-2c06dffb1834?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        img: "/images/10.png",
         price: 1100
     },
     {
@@ -213,7 +213,7 @@ export const toursIt = [
             "Prima colazione in hotel. Incontro con la guida nella hall dell'hotel. In questo giorno visiteremo il : -Museo «Afrosiab» - racconta la vita, la cultura e le tradizioni delle persone che abitavano questa zona in varie epoche. Hujum Carpet Factory, dove seguirai il lavoro di abili artigiani, creando tappeti fatti a mano. Konigil Paper Factory, dove imparerai a conoscere i segreti della produzione di carta di seta, e il più interessante))) Quando si fa uso di carta un mulino ad acqua. Qui potrete anche visitare: - laboratorio sui prodotti ceramici. - master class sulla cottura di olio di sesamo. - il processo di preparazione del riso al mulino . PRANZO. Tempo libero , passeggiata la sera Samarcanda. NOTTE IN HOTEL. ",
             "Trasferimento a Tashkent in treno (Afrasiab) . Incontro con autista e guida. Inizio del tour: -Complex Hast Imam. -Kukeldash  -Barak Khan. Mercato Chorsu. Fine del tour. Pranzo. Tempo libero per lo shopping. Notte in hotel. ",
         ],
-        img: "https://images.unsplash.com/photo-1673005583373-189a2baa2ed9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        img: "/images/12.png",
         price: 1100
     },
     {
